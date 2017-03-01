@@ -4,16 +4,26 @@
 <!--[if IE 8]><html class="no-js lt-ie9" <?php language_attributes() ?>><![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js" <?php language_attributes() ?>><!--<![endif]-->
     <head>
-        <meta charset="<?php bloginfo( 'charset' ) ?>">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="viewport" content="width=device-width">
-        <title><?php wp_title( '|', true, 'right' ) ?></title>
-		<meta name="author" content="">
-		<link rel="author" href="">
-		<?php wp_head() ?>
+      <meta charset="<?php bloginfo( 'charset' ) ?>">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="viewport" content="width=device-width">
+      <title><?php wp_title( '|', true, 'right' ) ?></title>
+      <meta name="author" content="">
+    <link rel="author" href="">
+    <?php wp_head() ?>
     </head>
     <body <?php body_class() ?>>
-		<header id="page-header">
+      <header class="header">
+        <a class="header__lg" href="<?php bloginfo('url') ?>" title="<?php bloginfo('name') ?> - <?php bloginfo('description') ?>"></a>
+        <div class="header__wrapper">
+
+        </div>
+        <a href="#" class="header__hamb"></a>
+      </header>
+
+
+
+		<!-- <header id="page-header">
 			<h1 id="page-logo">
 				<?php if (!is_front_page()): ?>
 					<a href="<?php bloginfo('url') ?>" title="<?php bloginfo('name') ?> - <?php bloginfo('description') ?>">
@@ -30,5 +40,8 @@
 				'container'      => 'nav',
 				'container_id'   => 'primary-nav'
 			)) ?>
-		</header>
-		<div id="content-wrap">
+		</header> -->
+
+
+
+    <div class="main">

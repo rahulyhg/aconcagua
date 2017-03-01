@@ -26,6 +26,11 @@ canvas,
 video {
 	display: inline-block;
 }
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
 audio:not([controls]) {
 	display: none;
 	height: 0;
@@ -97,6 +102,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+ul,
 nav ul,
 nav ol {
 	list-style: none;

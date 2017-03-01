@@ -7,6 +7,8 @@
 /* Directories */
 /* Colors */
 /* Font Sizes */
+/* Header */
+/* Footer */
 article,
 aside,
 details,
@@ -34,6 +36,11 @@ audio,
 canvas,
 video {
   display: inline-block;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
 }
 
 audio:not([controls]) {
@@ -125,6 +132,7 @@ table {
   border-spacing: 0;
 }
 
+ul,
 nav ul,
 nav ol {
   list-style: none;
@@ -210,365 +218,81 @@ img {
 /* Directories */
 /* Colors */
 /* Font Sizes */
-/* ==========================================================================
-	Base
-/* ========================================================================== */
-html {
-  height: 100%;
-  font-size: 100%;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-}
-
-html,
-button,
-input,
-select,
-textarea {
-  font-family: Arial, sans-serif;
-  color: #444;
-}
-
-body {
-  height: 100%;
-  margin: 0;
-  font-size: 1em;
-  line-height: 1.4;
-  background: #e1e1e1;
-}
-
-/*	Apply to all elements. In a responsive design, this is almost always a good idea */
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-/* ==========================================================================
-	Links
-/* ========================================================================== */
-a {
-  color: #26527c;
-  text-decoration: underline;
-}
-
-a:focus,
-a:hover {
-  color: #08111a;
-}
-
-a:focus {
-  outline: thin dotted;
-}
-
-a:active,
-a:hover {
-  outline: 0;
-}
-
-/* ==========================================================================
-	Typography
-/* ========================================================================== */
-/* Headers */
-h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 1em;
-  line-height: 1.5em;
-}
-
-h1 {
-  font-size: 2em;
-}
-
-h2 {
-  font-size: 1.5em;
-}
-
-h3 {
-  font-size: 1.3em;
-}
-
-h4 {
-  font-size: 1.3em;
-  font-weight: normal;
-}
-
-h5, h6 {
-  font-size: 1.1em;
-}
-
-/* Content Block Elements */
-dl,
-menu,
-ol,
-ul,
-p,
-pre {
-  margin: 0 0 1em;
-}
-
-/* Paragraphs */
-/* Lists */
-menu,
-ol,
-ul {
-  padding: 0 0 0 2em;
-}
-
-/* Selection Colors */
-::-moz-selection {
-  background: #444;
-  color: #fff;
-  text-shadow: none;
-}
-
-::selection {
-  background: #444;
-  color: #fff;
-  text-shadow: none;
-}
-
-/* =============================================================================
-	Helper Classes
-/* ========================================================================== */
-/* Prefixed with tags to override default tag styling for these elemets if .button is added */
-button,
-.button,
-a.button,
-input.button {
-  display: inline-block;
-}
-
-/* Responsive Media Styles */
-.media {
-  /* Set width on this selector based on design and needs */
-}
-
-.media img,
-.media video,
-.media object,
-.media iframe {
+/* Header */
+/* Footer */
+.header {
+  position: fixed;
+  background: #c7c7c7;
   width: 100%;
-  height: auto;
+  height: 50px;
+}
+.header__lg {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  background: #59c1c0 url("/aconcagua/wp-content/themes/yeopress/images/lg.png") center center no-repeat;
+  background-size: 40px;
+}
+.header__hamb {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background: #59c1c0;
 }
 
-/* Clear Fix */
-.clearfix:before, .clearfix:after {
-  content: " ";
+.herospace {
+  height: 28.125rem;
+  width: 100%;
+  background: #dedede;
+}
+
+.footer {
+  position: relative;
+  padding: 1.875rem;
+  background: #1a1a1a;
+}
+.footer:before {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 1.875rem;
+  bottom: 1.875rem;
+  height: 1.875rem;
+  width: 1.875rem;
+  background: #59c1c0;
+}
+.footer__down::after {
+  clear: both;
+  content: "";
   display: table;
 }
-.clearfix:after {
+.footer__down__copyright {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+.footer__down__social {
+  padding-top: 0.9375rem;
+}
+.footer__down__social__list::after {
   clear: both;
+  content: "";
+  display: table;
 }
-
-/* Floats */
-.floatleft {
+.footer__down__social__list__item {
   float: left;
+  padding-right: 1.25rem;
 }
-
-.floatright {
-  float: right;
-}
-
-/* =============================================================================
-	Structural Styles, Media Queries & Page Styling
-/* ========================================================================== */
-/* Less than 320px but will apply at all sizes */
-#page-wrap {
-  width: 90%;
-  margin: 0 auto;
-  -webkit-box-shadow: 0 0 3em 0 #444;
-  box-shadow: 0 0 3em 0 #444;
-}
-
-#page-header {
-  padding: 1em;
-  background: url("/wp-content/themes/yeopress/images/black_lozenge.png");
-}
-
-#page-logo {
-  color: #fff;
-}
-#page-logo a {
-  color: #fff;
-}
-
-#page-header ul {
-  list-style: none;
-  padding: 0;
-}
-#page-header ul li {
-  cursor: pointer;
-  padding: 0.5em 1em;
-  margin: 0 0 0.5em;
-  -webkit-border-radius: 2em;
-  border-radius: 2em;
-  background: #298cba;
-  /* Old browsers */
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI5OGNiYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxZDYzODUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-  background: -moz-linear-gradient(top, #298cba 0%, #1d6385 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #298cba), color-stop(100%, #1d6385));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #298cba 0%, #1d6385 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #298cba 0%, #1d6385 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #298cba 0%, #1d6385 100%);
-  /* IE10+ */
-  background: linear-gradient(to bottom, #298cba 0%, #1d6385 100%);
-  /* W3C */
-}
-.lt-ie9 #page-header ul li {
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#298cba', endColorstr='#1d6385',GradientType=0 );
-  /* IE6-8 */
-}
-#page-header ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-#page-header ul li:hover a {
-  color: #444;
-}
-
-/* Content */
-#content-wrap {
-  padding: 1em;
-  background: #fff;
-}
-
-.article {
-  margin-bottom: 1em;
-  border-bottom: 1px solid #444;
-}
-
-.article-header {
-  margin-bottom: 1em;
-  padding-bottom: 1em;
-  border-bottom: 1px solid #444;
-}
-
-.article-title {
-  margin-bottom: 0;
-}
-.article-title a {
-  text-decoration: none;
-}
-
-.article-info {
-  font-size: .825em;
-}
-
-/* Sidebar */
-#page-sidebar {
-  background: #eee;
-  padding: 1em;
-  -webkit-border-radius: 1em;
-  border-radius: 1em;
-}
-#page-sidebar > ul {
-  list-style: none;
-  padding: 0;
-}
-
-.search-form {
-  background: url("/wp-content/themes/yeopress/images/black_lozenge.png");
-  overflow: hidden;
-  padding: 1em;
-  margin-bottom: 1em;
-  -webkit-border-radius: 1em;
-  border-radius: 1em;
-}
-.search-form .input-wrap {
-  float: left;
-}
-.search-form .input-wrap label {
-  display: none;
-}
-.search-form .input-wrap input {
-  width: 100%;
-}
-.search-form .search {
-  width: 75%;
-  margin-right: 3%;
-}
-.search-form .submit {
-  width: 22%;
-}
-
-/* Footer */
-#page-footer {
-  width: 90%;
-  margin: 0 auto;
-  padding: 1em 0;
-}
-
-/* 320px to 479px */
-/* 480px to 639px */
-@media only screen and (min-width: 480px) {
-  #page-header ul {
-    overflow: auto;
-  }
-  #page-header ul li {
-    float: left;
-  }
-}
-/* 640px to 767px */
-/* 768px to 1024px */
-@media only screen and (min-width: 768px) {
-  #page-header {
-    padding: 1em 2em;
-  }
-
-  #content-wrap {
-    overflow: auto;
-  }
-
-  #page-content {
-    float: left;
-    width: 55%;
-  }
-
-  #page-sidebar {
-    float: right;
-    width: 40%;
-  }
-
-  .search-form .search {
-    width: 70%;
-  }
-  .search-form .submit {
-    width: 27%;
-  }
-}
-/* 1024px to 1534px */
-@media only screen and (min-width: 1024px) {
-  #page-wrap {
-    width: 80%;
-  }
-
-  #page-content {
-    width: 65%;
-    padding: 1em;
-  }
-
-  #page-sidebar {
-    width: 31%;
-  }
-
-  #page-footer {
-    width: 80%;
-  }
-}
-/* More than 1534px */
-/* High PX Density */
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
-  #page-header {
-    background: url("/wp-content/themes/yeopress/images/black_lozenge_@2X.png");
-  }
-
-  .search-form {
-    background: url("/wp-content/themes/yeopress/images/black_lozenge_@2X.png");
-  }
+.footer__down__social__list__item a {
+  display: block;
+  height: 1.5625rem;
+  width: 1.5625rem;
+  background: white;
 }
 
 /*# sourceMappingURL=global.css.map */

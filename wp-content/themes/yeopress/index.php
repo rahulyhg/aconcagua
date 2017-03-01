@@ -1,6 +1,10 @@
 <?php get_header() ?>
-<div id="page-content">
+<section class="herospace">
+  <div class="herospace__wrapper">
+  </div>
+</section>
+<!-- <div id="page-content">
 	<?php get_template_part('loop', 'index') ?>
-</div>
+</div> -->
 <?php get_sidebar() ?>
 <?php get_footer() ?>
