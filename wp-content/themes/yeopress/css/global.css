@@ -5,10 +5,14 @@
 	Variables
 /* ========================================================================== */
 /* Directories */
+/* Fonts */
 /* Colors */
 /* Font Sizes */
 /* Header */
 /* Footer */
+/* Herospace */
+/* Change */
+/* Domingo */
 article,
 aside,
 details,
@@ -41,6 +45,11 @@ video {
 html, body {
   padding: 0;
   margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, small {
+  margin: 0;
+  padding: 0;
 }
 
 audio:not([controls]) {
@@ -148,113 +157,228 @@ img {
 }
 
 /* ==========================================================================
-	Print styles.
-	Inlined to avoid required HTTP connection: h5bp.com/r
-/* ========================================================================== */
-@media print {
-  * {
-    background: transparent !important;
-    color: #000 !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-
-  .ir a:after,
-  a[href^="javascript:"]:after,
-  a[href^="#"]:after {
-    content: "";
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #444;
-    page-break-inside: avoid;
-  }
-
-  thead {
-    display: table-header-group;
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  img {
-    max-width: 100% !important;
-  }
-
-  @page {
-    margin: 0.5cm;
-  }
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-}
-/* ==========================================================================
 	Variables
 /* ========================================================================== */
 /* Directories */
+/* Fonts */
 /* Colors */
 /* Font Sizes */
 /* Header */
 /* Footer */
+/* Herospace */
+/* Change */
+/* Domingo */
+@font-face {
+  font-family: 'SpaceMono-Regular';
+  src: url("../fonts/SpaceMono-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/SpaceMono-Regular.woff") format("woff"), url("../fonts/SpaceMono-Regular.ttf") format("truetype"), url("../fonts/SpaceMono-Regular.svg#SpaceMono-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SpaceMono-Bold';
+  src: url("../fonts/SpaceMono-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/SpaceMono-Bold.woff") format("woff"), url("../fonts/SpaceMono-Bold.ttf") format("truetype"), url("../fonts/SpaceMono-Bold.svg#SpaceMono-Bold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PlantinStd';
+  src: url("../fonts/PlantinStd.eot?#iefix") format("embedded-opentype"), url("../fonts/PlantinStd.otf") format("opentype"), url("../fonts/PlantinStd.woff") format("woff"), url("../fonts/PlantinStd.ttf") format("truetype"), url("../fonts/PlantinStd.svg#PlantinStd") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PlantinStd-Semibold';
+  src: url("../fonts/PlantinStd-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/PlantinStd-Semibold.otf") format("opentype"), url("../fonts/PlantinStd-Semibold.woff") format("woff"), url("../fonts/PlantinStd-Semibold.ttf") format("truetype"), url("../fonts/PlantinStd-Semibold.svg#PlantinStd-Semibold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 .header {
   position: fixed;
+  z-index: 100;
   background: #c7c7c7;
+  height: 3.125rem;
   width: 100%;
-  height: 50px;
 }
 .header__lg {
   display: block;
   position: absolute;
   top: 0;
   left: 0;
-  width: 80px;
-  height: 80px;
+  height: 5rem;
+  width: 5rem;
   background: #59c1c0 url("/aconcagua/wp-content/themes/yeopress/images/lg.png") center center no-repeat;
-  background-size: 40px;
+  background-size: 2.5rem;
 }
 .header__hamb {
   display: block;
   position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 30px;
-  height: 30px;
+  top: 0.625rem;
+  right: 0.625rem;
+  height: 1.875rem;
+  width: 1.875rem;
   background: #59c1c0;
 }
 
 .herospace {
-  height: 28.125rem;
+  position: relative;
+  height: 33.125rem;
   width: 100%;
-  background: #dedede;
+  margin-bottom: 3.75rem;
+}
+.herospace__wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.herospace__category {
+  position: absolute;
+  top: 8.125rem;
+  left: 3.125rem;
+  font-family: "SpaceMono-Bold";
+  font-size: 0.8125rem;
+  color: #fff;
+}
+.herospace__data {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: auto;
+  width: 100%;
+  padding: 3.125rem 3.125rem 3.75rem;
+  box-sizing: border-box;
+}
+.herospace__data__title {
+  font-family: "PlantinStd-Semibold";
+  font-size: 1.8125rem;
+  line-height: 2rem;
+  color: #fff;
+}
+.herospace__data__description {
+  padding-top: 1.875rem;
+  padding-bottom: 1.875rem;
+  font-family: "PlantinStd";
+  font-size: 1rem;
+  line-height: 1.3125rem;
+  color: #fff;
+}
+.herospace__data__author {
+  font-family: "SpaceMono-Bold";
+  font-size: 0.6875rem;
+  color: #fff;
+}
+.herospace__dots {
+  position: absolute;
+  bottom: -1.875rem;
+  height: 3.75rem;
+  width: calc(100% - 60px);
+  margin-right: 1.875rem;
+  margin-left: 1.875rem;
+  box-sizing: border-box;
+  background: #1a1a1a;
+}
+.herospace__dots__btn {
+  display: block;
+  height: 0.625rem;
+  width: 1.25rem;
+  background: #fff;
+}
+.herospace__dots__btn--inactive {
+  background: #626262;
+}
+.herospace__dots__next {
+  position: absolute;
+  top: 0.9375rem;
+  right: 0.9375rem;
+}
+.herospace__dots__prev {
+  position: absolute;
+  top: 0.9375rem;
+  right: 3.75rem;
+}
+
+.herospace-slider {
+  background: #fff;
+}
+.herospace-slider__mobile__list {
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
+}
+.herospace-slider__mobile__list::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.herospace-slider__mobile__list__item {
+  height: 11.25rem;
+  width: 100%;
+}
+.herospace-slider__mobile__box {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 1.875rem;
+  border-right: 0.0625rem solid #b7b7b7;
+  border-left: 0.0625rem solid #b7b7b7;
+  box-sizing: border-box;
+}
+.herospace-slider__mobile__box:before {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 1.875rem;
+  bottom: 1.875rem;
+  height: 0.625rem;
+  width: 1.25rem;
+  background: #0d0d0d;
+}
+.herospace-slider__mobile__box__category {
+  font-family: "SpaceMono-Bold";
+  font-size: 0.8125rem;
+  color: #0d0d0d;
+}
+.herospace-slider__mobile__box__title {
+  padding-top: 0.9375rem;
+  font-family: "PlantinStd";
+  font-style: italic;
+  font-weight: 100;
+  font-size: 1.25rem;
+  color: #0d0d0d;
+}
+.herospace-slider__mobile__box__author {
+  position: absolute;
+  bottom: 1.875rem;
+  left: 1.875rem;
+  font-family: "SpaceMono-Bold";
+  font-size: 0.6875rem;
+  color: #0d0d0d;
+}
+.herospace-slider__mobile__dots {
+  height: 3.125rem;
+  width: 100%;
+  padding-top: 0.875rem;
+  background: #b7b7b7;
+  box-sizing: border-box;
+  text-align: center;
+}
+.herospace-slider__mobile__dots__link {
+  display: inline-block;
+  height: 0.4375rem;
+  width: 0.4375rem;
+  margin-right: 0.1875rem;
+  margin-left: 0.1875rem;
+  background: #fff;
+  border-radius: 100%;
+}
+.herospace-slider__mobile__dots__link--active {
+  background: #59c1c0;
 }
 
 .footer {
   position: relative;
-  padding: 1.875rem;
+  padding: 3.75rem 1.875rem 1.875rem;
   background: #1a1a1a;
 }
 .footer:before {
@@ -267,17 +391,64 @@ img {
   width: 1.875rem;
   background: #59c1c0;
 }
+.footer__newsletter__title {
+  padding-bottom: 1.25rem;
+  font-family: "PlantinStd";
+  font-style: italic;
+  font-weight: 100;
+  font-size: 1.4375rem;
+  color: white;
+}
+.footer__newsletter__btn {
+  height: 3.75rem;
+  width: 100%;
+  box-sizing: border-box;
+  border: 0.0625rem solid #4a4a4a;
+}
+.footer__about {
+  padding-top: 1.875rem;
+  padding-bottom: 1.875rem;
+}
+.footer__about__title {
+  font-family: "SpaceMono-Bold";
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.2);
+}
+.footer__about__list {
+  padding-top: 0.625rem;
+}
+.footer__about__list__items {
+  padding-top: 0.9375rem;
+}
+.footer__about__list__items a {
+  font-family: "SpaceMono-Bold";
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+}
+.footer__sections {
+  display: none;
+}
+.footer__camping {
+  padding-bottom: 3.125rem;
+}
+.footer__camping__wrapper {
+  height: 3.75rem;
+  width: 100%;
+  background: #59c1c0;
+}
 .footer__down::after {
   clear: both;
   content: "";
   display: table;
 }
 .footer__down__copyright {
-  font-size: 0.8125rem;
+  font-family: Arial;
+  font-size: 0.75rem;
   color: rgba(255, 255, 255, 0.3);
 }
 .footer__down__social {
-  padding-top: 0.9375rem;
+  padding-top: 1.25rem;
 }
 .footer__down__social__list::after {
   clear: both;
@@ -293,6 +464,277 @@ img {
   height: 1.5625rem;
   width: 1.5625rem;
   background: white;
+}
+
+.change {
+  height: auto;
+  width: 100%;
+  margin-bottom: 3.75rem;
+  background: #fff;
+}
+.change__wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.change__category {
+  display: block;
+  padding: 3.125rem 3.125rem 3.75rem;
+  font-family: "SpaceMono-Bold";
+  font-size: 0.8125rem;
+  color: #59c1c0;
+}
+.change__data {
+  height: auto;
+  width: 100%;
+  padding: 3.125rem 3.125rem 3.75rem;
+  box-sizing: border-box;
+}
+.change__data__title {
+  font-family: "PlantinStd-Semibold";
+  font-size: 1.8125rem;
+  line-height: 2rem;
+  color: #59c1c0;
+}
+.change__data__description {
+  padding-top: 1.875rem;
+  padding-bottom: 1.875rem;
+  font-family: "PlantinStd";
+  font-size: 1rem;
+  line-height: 1.3125rem;
+  color: #333;
+}
+.change__data__author {
+  font-family: "SpaceMono-Bold";
+  font-size: 0.6875rem;
+  color: #333;
+}
+.change__dots {
+  position: absolute;
+  bottom: -1.875rem;
+  height: 3.75rem;
+  width: calc(100% - 60px);
+  margin-right: 1.875rem;
+  margin-left: 1.875rem;
+  box-sizing: border-box;
+  background: #59c1c0;
+}
+.change__dots__btn {
+  display: block;
+  height: 0.625rem;
+  width: 1.25rem;
+  background: #fff;
+}
+.change__dots__btn--inactive {
+  background: #626262;
+}
+.change__dots__next {
+  position: absolute;
+  top: 0.9375rem;
+  right: 0.9375rem;
+}
+.change__dots__prev {
+  position: absolute;
+  top: 0.9375rem;
+  right: 3.75rem;
+}
+
+.change-slider__mobile__list {
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
+}
+.change-slider__mobile__list::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.change-slider__mobile__list__item {
+  height: 11.25rem;
+  width: 100%;
+}
+.change-slider__mobile__box {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 1.875rem;
+  border-right: 0.0625rem solid #b7b7b7;
+  border-left: 0.0625rem solid #b7b7b7;
+  box-sizing: border-box;
+}
+.change-slider__mobile__box__category {
+  font-family: "SpaceMono-Bold";
+  font-size: 0.8125rem;
+  color: #333;
+}
+.change-slider__mobile__box__time {
+  padding-top: 0.125rem;
+  display: block;
+  font-family: "PlantinStd";
+  font-style: italic;
+  font-weight: 100;
+  font-size: 0.6875rem;
+  color: rgba(26, 26, 26, 0.5);
+}
+.change-slider__mobile__box__extra {
+  position: absolute;
+  bottom: 1.875rem;
+  left: 1.875rem;
+}
+.change-slider__mobile__box__extra__text {
+  font-family: "PlantinStd";
+  font-size: 1.125rem;
+  color: #333;
+}
+.change-slider__mobile__dots {
+  height: 3.125rem;
+  width: 100%;
+  padding-top: 0.875rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+.change-slider__mobile__dots__link {
+  display: inline-block;
+  height: 0.4375rem;
+  width: 0.4375rem;
+  margin-right: 0.1875rem;
+  margin-left: 0.1875rem;
+  background: #fff;
+  border-radius: 100%;
+}
+.change-slider__mobile__dots__link--active {
+  background: #59c1c0;
+}
+
+.camping__mobile__header {
+  padding-top: 1.875rem;
+  padding-right: 1.875rem;
+  padding-left: 1.875rem;
+}
+.camping__mobile__header__content {
+  position: relative;
+  height: calc(100vw - 60px);
+  width: 100%;
+  padding: 1.875rem;
+  background: url("/aconcagua/wp-content/themes/yeopress/images/camping.jpg") center center no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+}
+.camping__mobile__header__title {
+  font-family: "SpaceMono-Regular";
+  font-size: 2.8125rem;
+  letter-spacing: 0.1875rem;
+  color: #fff;
+}
+.camping__mobile__header__description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: auto;
+  width: 100%;
+  padding: 1.875rem;
+  box-sizing: border-box;
+  font-family: "PlantinStd";
+  font-size: 1.0625rem;
+  line-height: 1.3125rem;
+  color: #fff;
+}
+.camping__mobile__wrapper {
+  background: #fff;
+  padding-right: 1.875rem;
+  padding-left: 1.875rem;
+}
+.camping__mobile__wrapper__text {
+  padding: 1.875rem 1.875rem 3.75rem;
+  font-family: "PlantinStd";
+  font-style: italic;
+  font-weight: 100;
+  font-size: 1.375rem;
+  line-height: 1.6875rem;
+  color: #222325;
+}
+.camping__mobile__email {
+  position: relative;
+  top: -1.875rem;
+  padding: 1.875rem;
+  margin-right: 1.875rem;
+  margin-left: 1.875rem;
+  background: #59c1c0;
+}
+
+.domingo__mobile__header {
+  padding-top: 1.875rem;
+  padding-right: 1.875rem;
+  padding-left: 1.875rem;
+}
+.domingo__mobile__header__content {
+  position: relative;
+  height: calc(100vw - 60px);
+  width: 100%;
+  padding: 1.875rem;
+  background: url("/aconcagua/wp-content/themes/yeopress/images/domingo.jpg") center center no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+}
+.domingo__mobile__header__title {
+  font-family: "SpaceMono-Regular";
+  font-size: 2.8125rem;
+  letter-spacing: 0.1875rem;
+  color: #fff;
+}
+.domingo__mobile__header__description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: auto;
+  width: 100%;
+  padding: 1.875rem;
+  box-sizing: border-box;
+  font-family: "PlantinStd";
+  font-size: 1.0625rem;
+  line-height: 1.3125rem;
+  color: #fff;
+}
+.domingo__mobile__wrapper {
+  background: #fff;
+  padding-right: 1.875rem;
+  padding-left: 1.875rem;
+}
+.domingo__mobile__wrapper__text {
+  padding: 1.875rem 1.875rem 3.75rem;
+  font-family: "PlantinStd";
+  font-style: italic;
+  font-weight: 100;
+  font-size: 1.375rem;
+  line-height: 1.6875rem;
+  color: #222325;
+}
+.domingo__mobile__email {
+  position: relative;
+  top: -1.875rem;
+  padding: 1.875rem;
+  margin-right: 1.875rem;
+  margin-left: 1.875rem;
+  background: #59c1c0;
+}
+
+.banner {
+  padding-top: 1.875rem;
+  padding-bottom: 1.875rem;
+}
+.banner--bottom {
+  padding-top: 0;
+}
+.banner__content {
+  height: 3.125rem;
+  width: 100%;
+  background: #000;
+}
+
+/* ==========================================================================
+	Base
+/* ========================================================================== */
+body {
+  background: #c7c7c7;
 }
 
 /*# sourceMappingURL=global.css.map */

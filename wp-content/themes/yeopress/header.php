@@ -9,8 +9,8 @@
       <meta name="viewport" content="width=device-width">
       <title><?php wp_title( '|', true, 'right' ) ?></title>
       <meta name="author" content="">
-    <link rel="author" href="">
-    <?php wp_head() ?>
+      <link rel="author" href="">
+      <?php wp_head() ?>
     </head>
     <body <?php body_class() ?>>
       <header class="header">

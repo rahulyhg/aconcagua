@@ -2,6 +2,27 @@
 		<footer class="footer">
 			<!-- <p class="footer-copyright">Copyright &copy; <?= date('Y') ?> <?php bloginfo('name') ?></p> -->
 
+      <div class="footer__top">
+        <div class="footer__newsletter">
+          <h2 class="footer__newsletter__title">Suscribite a nuestro newsletter</h2>
+          <div class="footer__newsletter__btn"></div>
+        </div>
+        <div class="footer__about">
+          <h2 class="footer__about__title">Acerca de Aconcagua</h2>
+          <ul class="footer__about__list">
+            <li class="footer__about__list__items"><a href="#">Quiénes Somos</a></li>
+            <li class="footer__about__list__items"><a href="#">Publicidad</a></li>
+            <li class="footer__about__list__items"><a href="#">Contactános</a></li>
+          </ul>
+        </div>
+        <div class="footer__sections">
+          sadsdbdadsd
+        </div>
+        <div class="footer__camping">
+          <div class="footer__camping__wrapper"></div>
+        </div>
+      </div>
+
       <div class="footer__down">
         <p class="footer__down__copyright">Copyright &copy; <?= date('Y') ?></p>
         <div class="footer__down__social">

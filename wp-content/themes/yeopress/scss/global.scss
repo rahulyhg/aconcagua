@@ -1,13 +1,24 @@
 /* ==========================================================================
 	Imports
 /* ========================================================================== */
-@import 'reset', 'variables', 'mixin';
+@import 'reset', 'variables', 'mixin', 'fonts';
 @import "bourbon/bourbon";
-@import 'components/header', 'components/herospace', 'components/footer';
-//
-// /* ==========================================================================
-// 	Base
-// /* ========================================================================== */
+@import 'components/header',
+        'components/herospace',
+        'components/footer',
+        'components/change',
+        'components/think',
+        'components/camping',
+        'components/domingo',
+        'components/banners';
+
+/* ==========================================================================
+	Base
+/* ========================================================================== */
+
+body {
+  background: $color-body;
+}
 // html {
 // 	height: 100%;
 // 	font-size: 100%;

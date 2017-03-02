@@ -1,6 +1,6 @@
 .footer {
   @include position(relative, null null null null);
-  @include padding(rem(30));
+  @include padding(rem(60) rem(30) rem(30));
   background: $footer-bg;
 
   &:before {
@@ -11,16 +11,77 @@
     background: $footer-arrow;
   }
 
+  &__top {
+
+  }
+
+  &__newsletter {
+    &__title {
+      @include padding(null null rem(20));
+
+      font-family: $platin;
+      font-style: italic;
+      font-weight: 100;
+      font-size: rem(23);
+      color: white;
+    }
+
+    &__btn {
+      @include size(100% rem(60));
+      box-sizing: border-box;
+      border: rem(1) solid #4a4a4a,
+    }
+  }
+
+  &__about {
+    @include padding(rem(30) null);
+
+    &__title {
+      font-family: $mono;
+      font-size: rem(16);
+      color: rgba(255, 255, 255, 0.2);
+    }
+
+    &__list {
+      @include padding(rem(10) null null null);
+
+      &__items {
+        @include padding(rem(15) null null null);
+
+        a {
+          font-family: $mono;
+          font-size: rem(16);
+          color: white;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  &__sections {
+    display: none;
+  }
+
+  &__camping {
+    @include padding(null null rem(50));
+
+    &__wrapper {
+      @include size(100% rem(60));
+      background: #59c1c0;
+    }
+  }
+
   &__down {
     @include clearfix;
 
     &__copyright {
-      font-size: rem(13);
+      font-family: $arial;
+      font-size: rem(12);
       color: rgba(255, 255, 255, 0.3);
     }
 
     &__social {
-      @include padding(rem(15) null null);
+      @include padding(rem(20) null null);
 
       &__list {
         @include clearfix;

@@ -1,0 +1,12 @@
+.banner {
+  @include padding(rem(30) null);
+
+  &--bottom {
+    padding-top: 0;
+  }
+
+  &__content {
+    @include size(100% rem(50));
+    background: #000;
+  }
+}

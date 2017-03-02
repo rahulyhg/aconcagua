@@ -1,0 +1,58 @@
+.domingo {
+  &__mobile {
+    &__header {
+      @include padding(rem(30) rem(30) null);
+
+      &__content {
+        @include position(relative, null null null null);
+        @include size(100% calc(100vw - 60px));
+        @include padding(rem(30));
+        background: url($images_dir + 'domingo.jpg') center center no-repeat;
+        background-size: cover;
+        box-sizing: border-box;
+      }
+
+      &__title {
+        font-family: $mono-regular;
+        font-size: rem(45);
+        letter-spacing: rem(3);
+        color: $domingo-text;
+      }
+
+      &__description {
+        @include position(absolute, null null 0 0);
+        @include size(100% auto);
+        @include padding(rem(30));
+        box-sizing: border-box;
+
+        font-family: $platin;
+        font-size: rem(17);
+        line-height: rem(21);
+        color: $domingo-text;
+      }
+    }
+
+    &__wrapper {
+      background: $domingo-bg;
+      @include padding(null rem(30));
+
+      &__text {
+        @include padding(rem(30) rem(30) rem(60));
+
+        font-family: $platin;
+        font-style: italic;
+        font-weight: 100;
+        font-size: rem(22);
+        line-height: rem(27);
+        color: $domingo-wrapper-text;
+      }
+    }
+
+    &__email {
+      @include position(relative, rem(-30) null null null);
+      @include padding(rem(30));
+      @include margin(null rem(30));
+      background: $domingo-wrapper-email;
+    }
+  }
+}

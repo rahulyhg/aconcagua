@@ -5,7 +5,15 @@
 $theme_dir: '/wp-content/themes/yeopress/';
 $images_dir: '/aconcagua/wp-content/themes/yeopress/images/';
 
+/* Fonts */
+$arial: Arial;
+$mono-regular: 'SpaceMono-Regular';
+$mono: 'SpaceMono-Bold';
+$platin: 'PlantinStd';
+$platin-semibold: 'PlantinStd-Semibold';
+
 /* Colors */
+$color-body: #c7c7c7;
 $color_body_copy: #444;
 $color_link: #26527c;
 $color_opposite: #fff;
@@ -18,7 +26,33 @@ $size_base: 1em;
 $header-bg: #c7c7c7;
 $header-lg: #59c1c0;
 
-
 /* Footer */
 $footer-bg: #1a1a1a;
 $footer-arrow: #59c1c0;
+
+/* Herospace */
+$herospace-text: #fff;
+$herospace-dots: #1a1a1a;
+$herospace-dots-active: #fff;
+$herospace-dots-inactive: #626262;
+$herospace-slider-bg: #fff;
+$herospace-slider-border: #b7b7b7;
+$herospace-slider-text-color: #0d0d0d;
+$herospace-slider-dots-active: #59c1c0;
+
+/* Change */
+$change-bg: #fff;
+$change-text-title: #59c1c0;
+$change-text-desc: #333;
+$change-dots: #59c1c0;
+$change-dots-active: #fff;
+$change-dots-inactive: #626262;
+
+$change-slider-category: #333;
+$change-slider-time: rgba(26, 26, 26, 0.5);
+
+/* Domingo */
+$domingo-text: #fff;
+$domingo-bg: #fff;
+$domingo-wrapper-text: #222325;
+$domingo-wrapper-email: #59c1c0;

@@ -1,26 +1,23 @@
-.herospace {
-  @include position(relative, null null null null);
-  @include size(100% rem(530));
+.change {
+  @include size(100% auto);
   @include margin(null null rem(60));
+  background: $change-bg;
 
   &__wrapper {
     @include position(relative, null null null null);
     @include size(100%);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
   }
 
   &__category {
-    @include position(absolute, rem(130) null null rem(50));
+    display: block;
+    @include padding(rem(50) rem(50) rem(60));
 
     font-family: $mono;
     font-size: rem(13);
-    color: $herospace-text;
+    color: $change-text-title;
   }
 
   &__data {
-    @include position(absolute, null null 0 0);
     @include size(100% auto);
     @include padding(rem(50) rem(50) rem(60));
     box-sizing: border-box;
@@ -29,7 +26,7 @@
       font-family: $platin-semibold;
       font-size: rem(29);
       line-height: rem(32);
-      color: $herospace-text;
+      color: $change-text-title;
     }
 
     &__description {
@@ -38,13 +35,13 @@
       font-family: $platin;
       font-size: rem(16);
       line-height: rem(21);
-      color: $herospace-text;
+      color: $change-text-desc;
     }
 
     &__author {
       font-family: $mono;
-      font-size: rem(11);
-      color: $herospace-text;
+      font-size: rem(11);;
+      color: $change-text-desc;
     }
   }
 
@@ -53,15 +50,15 @@
     @include size(calc(100% - 60px) rem(60));
     @include margin(null rem(30));
     box-sizing: border-box;
-    background: $herospace-dots;
+    background: $change-dots;
 
     &__btn {
       display: block;
       @include size(rem(20) rem(10));
-      background: $herospace-dots-active;
+      background: $change-dots-active;
 
       &--inactive {
-        background: $herospace-dots-inactive;
+        background: $change-dots-inactive;
       }
     }
 
@@ -75,9 +72,7 @@
   }
 }
 
-.herospace-slider {
-  background: $herospace-slider-bg;
-
+.change-slider {
   &__mobile {
     &__list {
       @include padding(null rem(20));
@@ -96,43 +91,37 @@
       border-left: rem(1) solid $herospace-slider-border;
       box-sizing: border-box;
 
-      &:before {
-        content: '';
-        display: block;
-        @include position(absolute, null rem(30) rem(30) null);
-        @include size(rem(20) rem(10));
-        background: $herospace-slider-text-color;
-      }
-
       &__category {
         font-family: $mono;
         font-size: rem(13);
-        color: $herospace-slider-text-color;
+        color: $change-slider-category;
       }
 
-      &__title {
-        @include padding(rem(15) null null null);
+      &__time {
+        @include padding(rem(2) null null null);
+        display: block;
 
         font-family: $platin;
         font-style: italic;
         font-weight: 100;
-        font-size: rem(20);
-        color: $herospace-slider-text-color;
+        font-size: rem(11);
+        color: $change-slider-time;
       }
 
-      &__author {
+      &__extra {
         @include position(absolute, null null rem(30) rem(30));
 
-        font-family: $mono;
-        font-size: rem(11);
-        color: $herospace-slider-text-color;
+        &__text {
+          font-family: $platin;
+          font-size: rem(18);
+          color: $change-slider-category;
+        }
       }
     }
 
     &__dots {
       @include size(100% rem(50));
       @include padding(rem(14) null null null);
-      background: $herospace-slider-border;
       box-sizing: border-box;
 
       text-align: center;
