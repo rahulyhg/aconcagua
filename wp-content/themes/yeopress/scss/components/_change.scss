@@ -19,14 +19,23 @@
 
   &__data {
     @include size(100% auto);
-    @include padding(rem(50) rem(50) rem(60));
+    @include padding(0 rem(50) rem(60));
     box-sizing: border-box;
+
+    @include breakpoint('small-landscape') {
+      padding-top: rem(50)
+    }
 
     &__title {
       font-family: $platin-semibold;
-      font-size: rem(29);
-      line-height: rem(32);
+      font-size: rem(24);
+      line-height: rem(26);
       color: $change-text-title;
+
+      @include breakpoint('small-landscape') {
+        font-size: rem(29);
+        line-height: rem(32);
+      }
     }
 
     &__description {
@@ -51,6 +60,38 @@
     @include margin(null rem(30));
     box-sizing: border-box;
     background: $change-dots;
+
+    &__actions {
+      @include position(relative, null null null);
+      @include size(rem(60));
+
+      &:before {
+        content: '';
+        display: block;
+        @include position(absolute, rem(30) null null rem(10));
+        @include size(rem(40) rem(1));
+        background: white;
+        @include transform(rotate(-45deg));
+      }
+
+      &__current {
+        @include position(absolute, rem(10) null null rem(10));
+
+        font-family: $roboto;
+        font-weight: bold;
+        font-size: rem(13);
+        color: white;
+      }
+
+      &__total {
+        @include position(absolute, null rem(10) rem(10) null);
+
+        font-family: $roboto;
+        font-weight: bold;
+        font-size: rem(12);
+        color: white;
+      }
+    }
 
     &__btn {
       display: block;
@@ -110,11 +151,18 @@
 
       &__extra {
         @include position(absolute, null null rem(30) rem(30));
+        @include size(calc(100% - 60px) auto);
 
         &__text {
           font-family: $platin;
-          font-size: rem(18);
+          font-size: rem(16);
+          line-height: rem(18);
           color: $change-slider-category;
+
+          @include breakpoint('small-landscape') {
+            font-size: rem(18);
+            line-height: rem(20);
+          }
         }
       }
     }

@@ -1,0 +1,116 @@
+.news {
+  @include position(relative, null null null);
+
+  &__content {
+    &__box {
+      &__image {
+        @include size(100% 100vw);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      &__data {
+        @include position(relative, null null null null);
+        @include size(calc(100% - 60px) calc(100vw - 60px));
+        @include margin(rem(30) rem(30) null);
+        @include padding(rem(30));
+        box-sizing: border-box;
+        background: #1a1a1a;
+
+        &__title {
+          font-family: $platin-semibold;
+          font-size: rem(24);
+          line-height: rem(28);
+          color: white;
+
+          @include breakpoint('small-landscape') {
+            font-size: rem(28);
+            line-height: rem(30);
+          }
+        }
+
+        &__description {
+          @include padding(rem(15) null null);
+
+          font-family: $platin;
+          font-size: rem(13);
+          line-height: rem(17);
+          color: white;
+
+          @include breakpoint('small-landscape') {
+            @include padding(rem(30) null null);
+
+            font-size: rem(17);
+            line-height: rem(25);
+          }
+        }
+
+        &__author {
+          @include position(absolute, null null rem(30) rem(30));
+          font-family: $mono;
+          font-size: rem(11);
+          color: white;
+        }
+      }
+    }
+  }
+
+  &__dots {
+    @include position(absolute, calc(50% - 15px) null null null);
+    @include size(calc(100% - 60px) rem(60));
+    @include margin(null rem(30));
+    box-sizing: border-box;
+    background: $change-dots;
+
+    &__actions {
+      @include position(relative, null null null);
+      @include size(rem(60));
+
+      &:before {
+        content: '';
+        display: block;
+        @include position(absolute, rem(30) null null rem(10));
+        @include size(rem(40) rem(1));
+        background: white;
+        @include transform(rotate(-45deg));
+      }
+
+      &__current {
+        @include position(absolute, rem(10) null null rem(10));
+
+        font-family: $roboto;
+        font-weight: bold;
+        font-size: rem(13);
+        color: white;
+      }
+
+      &__total {
+        @include position(absolute, null rem(10) rem(10) null);
+
+        font-family: $roboto;
+        font-weight: bold;
+        font-size: rem(12);
+        color: white;
+      }
+    }
+
+    &__btn {
+      display: block;
+      @include size(rem(20) rem(10));
+      background: $change-dots-active;
+
+      &--inactive {
+        background: $change-dots-inactive;
+      }
+    }
+
+    &__next {
+      @include position(absolute, rem(15) rem(15) null null);
+    }
+
+    &__prev {
+      @include position(absolute, rem(15) rem(60) null null);
+    }
+  }
+}

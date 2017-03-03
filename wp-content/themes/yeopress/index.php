@@ -10,6 +10,10 @@
   </div>
 
   <div class="herospace__dots">
+    <div class="herospace__dots__actions">
+      <div class="herospace__dots__actions__current">01</div>
+      <div class="herospace__dots__actions__total">03</div>
+    </div>
     <a href="" class="herospace__dots__btn herospace__dots__prev herospace__dots__btn--inactive"></a>
     <a href="" class="herospace__dots__btn herospace__dots__next"></a>
   </div>
@@ -45,6 +49,10 @@
     </div>
 
     <div class="change__dots">
+      <div class="change__dots__actions">
+        <div class="change__dots__actions__current">01</div>
+        <div class="change__dots__actions__total">03</div>
+      </div>
       <a href="" class="change__dots__btn change__dots__prev herospace__dots__btn--inactive"></a>
       <a href="" class="change__dots__btn change__dots__next"></a>
     </div>
@@ -93,6 +101,28 @@
 
 <section class="banner banner--bottom">
   <div class="banner__content"></div>
+</section>
+
+<section class="news">
+  <div class="news__content">
+    <div class="news__content__box">
+      <div class="news__content__box__image" style="background-image: url('/aconcagua/wp-content/themes/yeopress/images/news.jpg')"></div>
+      <div class="news__content__box__data">
+        <h3 class="news__content__box__data__title">El rey regresa a su selva</h3>
+        <p class="news__content__box__data__description">Un proyecto ecologista busca reintroducir al mítico yaguareté en los Esteros del Iberá para devolver el equilibrio al ecosistema del noroeste del del país.</p>
+        <span class="news__content__box__data__author">Por Guillermo Alduncin</span>
+      </div>
+    </div>
+
+    <div class="news__dots">
+      <div class="news__dots__actions">
+        <div class="news__dots__actions__current">01</div>
+        <div class="news__dots__actions__total">03</div>
+      </div>
+      <a href="" class="news__dots__btn news__dots__prev herospace__dots__btn--inactive"></a>
+      <a href="" class="news__dots__btn news__dots__next"></a>
+    </div>
+  </div>
 </section>
 
 <section class="domingo">

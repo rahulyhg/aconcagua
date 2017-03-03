@@ -13,6 +13,7 @@
 /* Herospace */
 /* Change */
 /* Domingo */
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 article,
 aside,
 details,
@@ -252,9 +253,15 @@ img {
 }
 .herospace__data__title {
   font-family: "PlantinStd-Semibold";
-  font-size: 1.8125rem;
-  line-height: 2rem;
+  font-size: 1.5rem;
+  line-height: 1.625rem;
   color: #fff;
+}
+@media (min-width: 410px) {
+  .herospace__data__title {
+    font-size: 1.8125rem;
+    line-height: 2rem;
+  }
 }
 .herospace__data__description {
   padding-top: 1.875rem;
@@ -278,6 +285,44 @@ img {
   margin-left: 1.875rem;
   box-sizing: border-box;
   background: #1a1a1a;
+}
+.herospace__dots__actions {
+  position: relative;
+  height: 3.75rem;
+  width: 3.75rem;
+}
+.herospace__dots__actions:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 1.875rem;
+  left: 0.625rem;
+  height: 0.0625rem;
+  width: 2.5rem;
+  background: white;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.herospace__dots__actions__current {
+  position: absolute;
+  top: 0.625rem;
+  left: 0.625rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 0.8125rem;
+  color: white;
+}
+.herospace__dots__actions__total {
+  position: absolute;
+  right: 0.625rem;
+  bottom: 0.625rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 0.75rem;
+  color: white;
 }
 .herospace__dots__btn {
   display: block;
@@ -344,8 +389,15 @@ img {
   font-family: "PlantinStd";
   font-style: italic;
   font-weight: 100;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
   color: #0d0d0d;
+}
+@media (min-width: 410px) {
+  .herospace-slider__mobile__box__title {
+    font-size: 1.25rem;
+    line-height: 1.375rem;
+  }
 }
 .herospace-slider__mobile__box__author {
   position: absolute;
@@ -487,14 +539,25 @@ img {
 .change__data {
   height: auto;
   width: 100%;
-  padding: 3.125rem 3.125rem 3.75rem;
+  padding: 0 3.125rem 3.75rem;
   box-sizing: border-box;
+}
+@media (min-width: 410px) {
+  .change__data {
+    padding-top: 3.125rem;
+  }
 }
 .change__data__title {
   font-family: "PlantinStd-Semibold";
-  font-size: 1.8125rem;
-  line-height: 2rem;
+  font-size: 1.5rem;
+  line-height: 1.625rem;
   color: #59c1c0;
+}
+@media (min-width: 410px) {
+  .change__data__title {
+    font-size: 1.8125rem;
+    line-height: 2rem;
+  }
 }
 .change__data__description {
   padding-top: 1.875rem;
@@ -518,6 +581,44 @@ img {
   margin-left: 1.875rem;
   box-sizing: border-box;
   background: #59c1c0;
+}
+.change__dots__actions {
+  position: relative;
+  height: 3.75rem;
+  width: 3.75rem;
+}
+.change__dots__actions:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 1.875rem;
+  left: 0.625rem;
+  height: 0.0625rem;
+  width: 2.5rem;
+  background: white;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.change__dots__actions__current {
+  position: absolute;
+  top: 0.625rem;
+  left: 0.625rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 0.8125rem;
+  color: white;
+}
+.change__dots__actions__total {
+  position: absolute;
+  right: 0.625rem;
+  bottom: 0.625rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 0.75rem;
+  color: white;
 }
 .change__dots__btn {
   display: block;
@@ -579,11 +680,20 @@ img {
   position: absolute;
   bottom: 1.875rem;
   left: 1.875rem;
+  height: auto;
+  width: calc(100% - 60px);
 }
 .change-slider__mobile__box__extra__text {
   font-family: "PlantinStd";
-  font-size: 1.125rem;
+  font-size: 1rem;
+  line-height: 1.125rem;
   color: #333;
+}
+@media (min-width: 410px) {
+  .change-slider__mobile__box__extra__text {
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+  }
 }
 .change-slider__mobile__dots {
   height: 3.125rem;
@@ -621,9 +731,14 @@ img {
 }
 .camping__mobile__header__title {
   font-family: "SpaceMono-Regular";
-  font-size: 2.8125rem;
+  font-size: 2rem;
   letter-spacing: 0.1875rem;
   color: #fff;
+}
+@media (min-width: 410px) {
+  .camping__mobile__header__title {
+    font-size: 2.8125rem;
+  }
 }
 .camping__mobile__header__description {
   position: absolute;
@@ -634,9 +749,15 @@ img {
   padding: 1.875rem;
   box-sizing: border-box;
   font-family: "PlantinStd";
-  font-size: 1.0625rem;
-  line-height: 1.3125rem;
+  font-size: 0.875rem;
+  line-height: 1.0625rem;
   color: #fff;
+}
+@media (min-width: 410px) {
+  .camping__mobile__header__description {
+    font-size: 1.0625rem;
+    line-height: 1.3125rem;
+  }
 }
 .camping__mobile__wrapper {
   background: #fff;
@@ -648,9 +769,15 @@ img {
   font-family: "PlantinStd";
   font-style: italic;
   font-weight: 100;
-  font-size: 1.375rem;
-  line-height: 1.6875rem;
+  font-size: 1.125rem;
+  line-height: 1.3125rem;
   color: #222325;
+}
+@media (min-width: 410px) {
+  .camping__mobile__wrapper__text {
+    font-size: 1.375rem;
+    line-height: 1.6875rem;
+  }
 }
 .camping__mobile__email {
   position: relative;
@@ -659,6 +786,129 @@ img {
   margin-right: 1.875rem;
   margin-left: 1.875rem;
   background: #59c1c0;
+}
+
+.news {
+  position: relative;
+}
+.news__content__box__image {
+  height: 100vw;
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.news__content__box__data {
+  position: relative;
+  height: calc(100vw - 60px);
+  width: calc(100% - 60px);
+  margin-top: 1.875rem;
+  margin-right: 1.875rem;
+  margin-left: 1.875rem;
+  padding: 1.875rem;
+  box-sizing: border-box;
+  background: #1a1a1a;
+}
+.news__content__box__data__title {
+  font-family: "PlantinStd-Semibold";
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  color: white;
+}
+@media (min-width: 410px) {
+  .news__content__box__data__title {
+    font-size: 1.75rem;
+    line-height: 1.875rem;
+  }
+}
+.news__content__box__data__description {
+  padding-top: 0.9375rem;
+  font-family: "PlantinStd";
+  font-size: 0.8125rem;
+  line-height: 1.0625rem;
+  color: white;
+}
+@media (min-width: 410px) {
+  .news__content__box__data__description {
+    padding-top: 1.875rem;
+    font-size: 1.0625rem;
+    line-height: 1.5625rem;
+  }
+}
+.news__content__box__data__author {
+  position: absolute;
+  bottom: 1.875rem;
+  left: 1.875rem;
+  font-family: "SpaceMono-Bold";
+  font-size: 0.6875rem;
+  color: white;
+}
+.news__dots {
+  position: absolute;
+  top: calc(50% - 15px);
+  height: 3.75rem;
+  width: calc(100% - 60px);
+  margin-right: 1.875rem;
+  margin-left: 1.875rem;
+  box-sizing: border-box;
+  background: #59c1c0;
+}
+.news__dots__actions {
+  position: relative;
+  height: 3.75rem;
+  width: 3.75rem;
+}
+.news__dots__actions:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 1.875rem;
+  left: 0.625rem;
+  height: 0.0625rem;
+  width: 2.5rem;
+  background: white;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.news__dots__actions__current {
+  position: absolute;
+  top: 0.625rem;
+  left: 0.625rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 0.8125rem;
+  color: white;
+}
+.news__dots__actions__total {
+  position: absolute;
+  right: 0.625rem;
+  bottom: 0.625rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 0.75rem;
+  color: white;
+}
+.news__dots__btn {
+  display: block;
+  height: 0.625rem;
+  width: 1.25rem;
+  background: #fff;
+}
+.news__dots__btn--inactive {
+  background: #626262;
+}
+.news__dots__next {
+  position: absolute;
+  top: 0.9375rem;
+  right: 0.9375rem;
+}
+.news__dots__prev {
+  position: absolute;
+  top: 0.9375rem;
+  right: 3.75rem;
 }
 
 .domingo__mobile__header {
@@ -677,9 +927,14 @@ img {
 }
 .domingo__mobile__header__title {
   font-family: "SpaceMono-Regular";
-  font-size: 2.8125rem;
+  font-size: 2rem;
   letter-spacing: 0.1875rem;
   color: #fff;
+}
+@media (min-width: 410px) {
+  .domingo__mobile__header__title {
+    font-size: 2.8125rem;
+  }
 }
 .domingo__mobile__header__description {
   position: absolute;
@@ -690,9 +945,15 @@ img {
   padding: 1.875rem;
   box-sizing: border-box;
   font-family: "PlantinStd";
-  font-size: 1.0625rem;
-  line-height: 1.3125rem;
+  font-size: 0.875rem;
+  line-height: 1.0625rem;
   color: #fff;
+}
+@media (min-width: 410px) {
+  .domingo__mobile__header__description {
+    font-size: 1.0625rem;
+    line-height: 1.3125rem;
+  }
 }
 .domingo__mobile__wrapper {
   background: #fff;
@@ -704,9 +965,15 @@ img {
   font-family: "PlantinStd";
   font-style: italic;
   font-weight: 100;
-  font-size: 1.375rem;
-  line-height: 1.6875rem;
+  font-size: 1.125rem;
+  line-height: 1.3125rem;
   color: #222325;
+}
+@media (min-width: 410px) {
+  .domingo__mobile__wrapper__text {
+    font-size: 1.375rem;
+    line-height: 1.6875rem;
+  }
 }
 .domingo__mobile__email {
   position: relative;

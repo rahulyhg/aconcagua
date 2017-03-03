@@ -14,9 +14,13 @@
 
       &__title {
         font-family: $mono-regular;
-        font-size: rem(45);
+        font-size: rem(32);
         letter-spacing: rem(3);
         color: $domingo-text;
+
+        @include breakpoint('small-landscape') {
+          font-size: rem(45);
+        }
       }
 
       &__description {
@@ -26,9 +30,14 @@
         box-sizing: border-box;
 
         font-family: $platin;
-        font-size: rem(17);
-        line-height: rem(21);
+        font-size: rem(14);
+        line-height: rem(17);
         color: $domingo-text;
+
+        @include breakpoint('small-landscape') {
+          font-size: rem(17);
+          line-height: rem(21);
+        }
       }
     }
 
@@ -42,9 +51,14 @@
         font-family: $platin;
         font-style: italic;
         font-weight: 100;
-        font-size: rem(22);
-        line-height: rem(27);
+        font-size: rem(18);
+        line-height: rem(21);
         color: $domingo-wrapper-text;
+
+        @include breakpoint('small-landscape') {
+          font-size: rem(22);
+          line-height: rem(27);
+        }
       }
     }
 
