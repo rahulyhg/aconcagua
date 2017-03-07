@@ -91,15 +91,27 @@
       float: left;
       @include size(66.66% rem(210));
       @include padding(rem(40) rem(40) rem(40) rem(180));
-      background: white;
-      //background: url($images_dir + 'camping.jpg') center center no-repeat;
       box-sizing: border-box;
+
+      @include breakpoint('medium') {
+        background: white url($images_dir + 'doming-desktop.jpg') 0 0 no-repeat;
+        background-size: auto rem(280);
+      }
+
+      @include breakpoint('large') {
+        @include size(66.66% rem(280));
+        @include padding(rem(50) rem(80) rem(80) 30%);
+      }
 
       &__title {
         font-family: $mono-regular;
         font-size: rem(40);
         letter-spacing: rem(3);
         color: #c7c7c7;
+
+        @include breakpoint('large') {
+          font-size: rem(50);
+        }
       }
 
       &__description {
@@ -117,6 +129,10 @@
       @include padding(rem(30) null null null);
       box-sizing: border-box;
 
+      @include breakpoint('large') {
+        @include padding(rem(80) null null null);
+      }
+
       &__text {
         @include padding(null rem(60) rem(25) rem(15));
         text-align: left;
@@ -126,12 +142,21 @@
         line-height: rem(22);
         font-style: italic;
         color: #222325;
+
+        @include breakpoint('large') {
+          @include padding(null rem(160) rem(25) rem(15));
+        }
       }
 
       &__input {
         @include size(90% rem(36));
         @include margin(null 10% null null);
         background: #59c1c0;
+
+        @include breakpoint('large') {
+          @include size(75% rem(36));
+          @include margin(null 25% null null);
+        }
       }
     }
   }

@@ -3,12 +3,21 @@
   @include padding(rem(60) rem(30) rem(30));
   background: $footer-bg;
 
+  @include breakpoint('large') {
+    @include padding(rem(80));
+  }
+
   &:before {
     content: '';
     display: block;
     @include position(absolute, null rem(30) rem(30) null);
     @include size(rem(30));
     background: $footer-arrow;
+
+    @include breakpoint('large') {
+      right: rem(80);
+      bottom: rem(80);
+    }
   }
 
   &__top {
@@ -24,6 +33,10 @@
       @include size(50% auto);
     }
 
+    @include breakpoint('large') {
+      @include size(rem(420) auto);
+    }
+
     &__title {
       @include padding(null null rem(20));
 
@@ -32,12 +45,20 @@
       font-weight: 100;
       font-size: rem(23);
       color: white;
+
+      @include breakpoint('large') {
+        font-size: rem(20);
+      }
     }
 
     &__btn {
       @include size(100% rem(60));
       box-sizing: border-box;
-      border: rem(1) solid #4a4a4a,
+      border: rem(1) solid #4a4a4a;
+
+      @include breakpoint('large') {
+        height: rem(40);
+      }
     }
   }
 
@@ -49,6 +70,12 @@
       @include size(50% auto);
       @include padding(0 null);
       text-align: right;
+    }
+
+    @include breakpoint('large') {
+      float: right;
+      @include size(auto);
+      @include padding(null rem(100));
     }
 
     &__title {
@@ -75,6 +102,33 @@
 
   &__sections {
     display: none;
+    float: right;
+    text-align: right;
+
+    @include breakpoint('large') {
+      display: block;
+    }
+
+    &__title {
+      font-family: $mono;
+      font-size: rem(16);
+      color: rgba(255, 255, 255, 0.2);
+    }
+
+    &__list {
+      @include padding(rem(10) null null null);
+
+      &__items {
+        @include padding(rem(15) null null null);
+
+        a {
+          font-family: $mono;
+          font-size: rem(16);
+          color: white;
+          text-decoration: none;
+        }
+      }
+    }
   }
 
   &__camping {

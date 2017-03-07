@@ -7,6 +7,17 @@
           <h2 class="footer__newsletter__title">Suscribite a nuestro newsletter</h2>
           <div class="footer__newsletter__btn"></div>
         </div>
+
+        <div class="footer__sections">
+          <h2 class="footer__sections__title">Secciones</h2>
+          <ul class="footer__sections__list">
+            <li class="footer__sections__list__items"><a href="#">Hacer</a></li>
+            <li class="footer__sections__list__items"><a href="#">Pensar</a></li>
+            <li class="footer__sections__list__items"><a href="#">Explorar</a></li>
+            <li class="footer__sections__list__items"><a href="#">Cambiar</a></li>
+          </ul>
+        </div>
+
         <div class="footer__about">
           <h2 class="footer__about__title">Acerca de Aconcagua</h2>
           <ul class="footer__about__list">
@@ -15,9 +26,7 @@
             <li class="footer__about__list__items"><a href="#">Contactános</a></li>
           </ul>
         </div>
-        <div class="footer__sections">
-          sadsdbdadsd
-        </div>
+
         <div class="footer__camping">
           <div class="footer__camping__wrapper"></div>
         </div>

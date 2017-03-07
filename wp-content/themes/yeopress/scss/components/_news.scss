@@ -121,6 +121,11 @@
       @include position(relative, null null null);
       @include size(rem(60));
 
+      @include breakpoint('large') {
+        top: rem(10);
+        left: rem(10);
+      }
+
       &:before {
         content: '';
         display: block;
@@ -161,10 +166,19 @@
 
     &__next {
       @include position(absolute, rem(15) rem(15) null null);
+
+      @include breakpoint('large') {
+        top: rem(20);
+        right: rem(20);
+      }
     }
 
     &__prev {
       @include position(absolute, rem(15) rem(60) null null);
+
+      @include breakpoint('large') {
+        top: rem(20);
+      }
     }
   }
 }

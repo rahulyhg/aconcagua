@@ -239,6 +239,60 @@ img {
   width: 1.875rem;
   background: #59c1c0;
 }
+@media (min-width: 768px) {
+  .header__hamb {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .header__wrapper::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+.header__nav {
+  display: none;
+  float: right;
+  padding-right: 1.875rem;
+}
+@media (min-width: 768px) {
+  .header__nav {
+    display: block;
+  }
+}
+@media (min-width: 1024px) {
+  .header__nav {
+    padding-top: 0.9375rem;
+    padding-right: 3.125rem;
+  }
+}
+.header__nav__list::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.header__nav__list__item {
+  float: left;
+  margin-top: 0.3125rem;
+  margin-bottom: 0.3125rem;
+  border-right: 0.0625rem solid rgba(46, 46, 46, 0.3);
+}
+.header__nav__list__item:last-child {
+  border-right: 0 none;
+}
+.header__nav__list__item a {
+  display: brun-in;
+  height: 2.5rem;
+  width: auto;
+  padding-right: 1.875rem;
+  padding-left: 1.875rem;
+  font-family: "SpaceMono-Bold";
+  font-size: 0.75rem;
+  line-height: 2.5rem;
+  text-decoration: none;
+  color: #2e2e2e;
+}
 
 .herospace {
   position: relative;
@@ -395,6 +449,12 @@ img {
   height: 3.75rem;
   width: 3.75rem;
 }
+@media (min-width: 1024px) {
+  .herospace__dots__actions {
+    top: 0.625rem;
+    left: 0.625rem;
+  }
+}
 .herospace__dots__actions:before {
   content: '';
   display: block;
@@ -442,10 +502,21 @@ img {
   top: 0.9375rem;
   right: 0.9375rem;
 }
+@media (min-width: 1024px) {
+  .herospace__dots__next {
+    top: 1.25rem;
+    right: 1.25rem;
+  }
+}
 .herospace__dots__prev {
   position: absolute;
   top: 0.9375rem;
   right: 3.75rem;
+}
+@media (min-width: 1024px) {
+  .herospace__dots__prev {
+    top: 1.25rem;
+  }
 }
 
 .herospace-slider {
@@ -561,6 +632,7 @@ img {
   .herospace-articles .herospace-slider__mobile__box {
     height: 16.3125rem;
     width: calc(33.33vw - 87px);
+    padding: 1.25rem;
   }
 }
 @media (min-width: 1024px) {
@@ -595,6 +667,11 @@ img {
   padding: 3.75rem 1.875rem 1.875rem;
   background: #1a1a1a;
 }
+@media (min-width: 1024px) {
+  .footer {
+    padding: 5rem;
+  }
+}
 .footer:before {
   content: '';
   display: block;
@@ -604,6 +681,12 @@ img {
   height: 1.875rem;
   width: 1.875rem;
   background: #59c1c0;
+}
+@media (min-width: 1024px) {
+  .footer:before {
+    right: 5rem;
+    bottom: 5rem;
+  }
 }
 @media (min-width: 768px) {
   .footer__top {
@@ -622,6 +705,12 @@ img {
     width: 50%;
   }
 }
+@media (min-width: 1024px) {
+  .footer__newsletter {
+    height: auto;
+    width: 26.25rem;
+  }
+}
 .footer__newsletter__title {
   padding-bottom: 1.25rem;
   font-family: "PlantinStd";
@@ -630,11 +719,21 @@ img {
   font-size: 1.4375rem;
   color: white;
 }
+@media (min-width: 1024px) {
+  .footer__newsletter__title {
+    font-size: 1.25rem;
+  }
+}
 .footer__newsletter__btn {
   height: 3.75rem;
   width: 100%;
   box-sizing: border-box;
   border: 0.0625rem solid #4a4a4a;
+}
+@media (min-width: 1024px) {
+  .footer__newsletter__btn {
+    height: 2.5rem;
+  }
 }
 .footer__about {
   padding-top: 1.875rem;
@@ -648,6 +747,15 @@ img {
     padding-top: 0;
     padding-bottom: 0;
     text-align: right;
+  }
+}
+@media (min-width: 1024px) {
+  .footer__about {
+    float: right;
+    height: auto;
+    width: auto;
+    padding-right: 6.25rem;
+    padding-left: 6.25rem;
   }
 }
 .footer__about__title {
@@ -669,6 +777,30 @@ img {
 }
 .footer__sections {
   display: none;
+  float: right;
+  text-align: right;
+}
+@media (min-width: 1024px) {
+  .footer__sections {
+    display: block;
+  }
+}
+.footer__sections__title {
+  font-family: "SpaceMono-Bold";
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.2);
+}
+.footer__sections__list {
+  padding-top: 0.625rem;
+}
+.footer__sections__list__items {
+  padding-top: 0.9375rem;
+}
+.footer__sections__list__items a {
+  font-family: "SpaceMono-Bold";
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
 }
 .footer__camping {
   display: none;
@@ -881,6 +1013,12 @@ img {
   height: 3.75rem;
   width: 3.75rem;
 }
+@media (min-width: 1024px) {
+  .change__dots__actions {
+    top: 0.625rem;
+    left: 0.625rem;
+  }
+}
 .change__dots__actions:before {
   content: '';
   display: block;
@@ -928,10 +1066,21 @@ img {
   top: 0.9375rem;
   right: 0.9375rem;
 }
+@media (min-width: 1024px) {
+  .change__dots__next {
+    top: 1.25rem;
+    right: 1.25rem;
+  }
+}
 .change__dots__prev {
   position: absolute;
   top: 0.9375rem;
   right: 3.75rem;
+}
+@media (min-width: 1024px) {
+  .change__dots__prev {
+    top: 1.25rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1050,6 +1199,7 @@ img {
   .change-articles .change-slider__mobile__box {
     height: 16.3125rem;
     width: 22%;
+    padding: 1.25rem;
   }
 }
 
@@ -1379,6 +1529,12 @@ img {
   height: 3.75rem;
   width: 3.75rem;
 }
+@media (min-width: 1024px) {
+  .news__dots__actions {
+    top: 0.625rem;
+    left: 0.625rem;
+  }
+}
 .news__dots__actions:before {
   content: '';
   display: block;
@@ -1426,10 +1582,21 @@ img {
   top: 0.9375rem;
   right: 0.9375rem;
 }
+@media (min-width: 1024px) {
+  .news__dots__next {
+    top: 1.25rem;
+    right: 1.25rem;
+  }
+}
 .news__dots__prev {
   position: absolute;
   top: 0.9375rem;
   right: 3.75rem;
+}
+@media (min-width: 1024px) {
+  .news__dots__prev {
+    top: 1.25rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1533,14 +1700,31 @@ img {
   height: 13.125rem;
   width: 66.66%;
   padding: 2.5rem 2.5rem 2.5rem 11.25rem;
-  background: white;
   box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  .domingo__desktop__content {
+    background: white url("/aconcagua/wp-content/themes/yeopress/images/doming-desktop.jpg") 0 0 no-repeat;
+    background-size: auto 17.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .domingo__desktop__content {
+    height: 17.5rem;
+    width: 66.66%;
+    padding: 3.125rem 5rem 5rem 30%;
+  }
 }
 .domingo__desktop__content__title {
   font-family: "SpaceMono-Regular";
   font-size: 2.5rem;
   letter-spacing: 0.1875rem;
   color: #c7c7c7;
+}
+@media (min-width: 1024px) {
+  .domingo__desktop__content__title {
+    font-size: 3.125rem;
+  }
 }
 .domingo__desktop__content__description {
   padding-top: 0.9375rem;
@@ -1556,6 +1740,11 @@ img {
   padding-top: 1.875rem;
   box-sizing: border-box;
 }
+@media (min-width: 1024px) {
+  .domingo__desktop__data {
+    padding-top: 5rem;
+  }
+}
 .domingo__desktop__data__text {
   padding-right: 3.75rem;
   padding-bottom: 1.5625rem;
@@ -1567,11 +1756,25 @@ img {
   font-style: italic;
   color: #222325;
 }
+@media (min-width: 1024px) {
+  .domingo__desktop__data__text {
+    padding-right: 10rem;
+    padding-bottom: 1.5625rem;
+    padding-left: 0.9375rem;
+  }
+}
 .domingo__desktop__data__input {
   height: 2.25rem;
   width: 90%;
   margin-right: 10%;
   background: #59c1c0;
+}
+@media (min-width: 1024px) {
+  .domingo__desktop__data__input {
+    height: 2.25rem;
+    width: 75%;
+    margin-right: 25%;
+  }
 }
 
 .banner {

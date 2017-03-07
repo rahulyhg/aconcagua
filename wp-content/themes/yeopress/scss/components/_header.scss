@@ -31,5 +31,56 @@
     @include position(absolute, rem(10) rem(10) null null);
     @include size(rem(30));
     background: $header-lg;
+
+    @include breakpoint('medium') {
+      display: none;
+    }
+  }
+
+  &__wrapper {
+    @include breakpoint('medium') {
+      @include clearfix;
+    }
+  }
+
+  &__nav {
+    display: none;
+    float: right;
+    @include padding(null rem(30) null null);
+
+    @include breakpoint('medium') {
+      display: block;
+    }
+
+    @include breakpoint('large') {
+      padding-top: rem(15);
+      padding-right: rem(50);
+    }
+
+    &__list {
+      @include clearfix;
+
+      &__item {
+        float: left;
+        @include margin(rem(5) null);
+        border-right: rem(1) solid rgba(46, 46, 46, 0.3);
+
+        &:last-child {
+          border-right: 0 none;
+        }
+
+        a {
+          display: brun-in;
+          @include size(auto rem(40));
+          @include padding(null rem(30));
+
+          font-family: $mono;
+          font-size: rem(12);
+          line-height: rem(40);
+          text-decoration: none;
+          color: #2e2e2e;
+        }
+      }
+    }
   }
 }

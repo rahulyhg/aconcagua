@@ -16,7 +16,14 @@
       <header class="header">
         <a class="header__lg" href="<?php bloginfo('url') ?>" title="<?php bloginfo('name') ?> - <?php bloginfo('description') ?>"></a>
         <div class="header__wrapper">
-
+          <nav class="header__nav">
+            <ul class="header__nav__list">
+              <li class="header__nav__list__item"><a href="#">Hacer</a></li>
+              <li class="header__nav__list__item"><a href="#">Pensar</a></li>
+              <li class="header__nav__list__item"><a href="#">Explorar</a></li>
+              <li class="header__nav__list__item"><a href="#">Cambiar</a></li>
+            </ul>
+          </nav>
         </div>
         <a href="#" class="header__hamb"></a>
       </header>
