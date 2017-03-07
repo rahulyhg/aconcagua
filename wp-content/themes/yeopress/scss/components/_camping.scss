@@ -1,5 +1,9 @@
 .camping {
   &__mobile {
+    @include breakpoint('medium') {
+      display: none;
+    }
+
     &__header {
       @include padding(rem(30) rem(30) null);
 
@@ -67,6 +71,91 @@
       @include padding(rem(30));
       @include margin(null rem(30));
       background: $domingo-wrapper-email;
+    }
+  }
+
+  &__desktop {
+    @include clearfix;
+    padding-top: rem(40);
+    display: none;
+
+    @include breakpoint('medium') {
+      display: block;
+    }
+
+    &__content {
+      float: right;
+      @include size(66.66% rem(210));
+      @include padding(rem(40));
+      background: url($images_dir + 'camping.jpg') center center no-repeat;
+      background-size: cover;
+      box-sizing: border-box;
+
+      @include breakpoint('large') {
+        @include size(66.66% rem(280));
+        @include padding(rem(50) rem(80) rem(80));
+      }
+
+      &__title {
+        font-family: $mono-regular;
+        font-size: rem(40);
+        letter-spacing: rem(3);
+        color: $domingo-text;
+
+        @include breakpoint('large') {
+          font-size: rem(50);
+        }
+      }
+
+      &__description {
+        @include padding(rem(15) null null);
+        @include size(75% auto);
+        font-family: $platin;
+        font-size: rem(16);
+        line-height: rem(19);
+        color: $domingo-text;
+
+        @include breakpoint('large') {
+          @include size(45% auto);
+        }
+      }
+    }
+
+    &__data {
+      float: left;
+      @include size(33.33% rem(210));
+      @include padding(rem(30) null null null);
+      box-sizing: border-box;
+
+      @include breakpoint('large') {
+        @include padding(rem(80) null null null);
+      }
+
+      &__text {
+        @include padding(null rem(15) rem(25) rem(60));
+        text-align: right;
+
+        font-family: $platin;
+        font-size: rem(20);
+        line-height: rem(22);
+        font-style: italic;
+        color: #222325;
+
+        @include breakpoint('large') {
+          @include padding(null rem(15) rem(25) rem(160));
+        }
+      }
+
+      &__input {
+        @include size(90% rem(36));
+        @include margin(null null null 10%);
+        background: #59c1c0;
+
+        @include breakpoint('large') {
+          @include size(75% rem(36));
+          @include margin(null null null 25%);
+        }
+      }
     }
   }
 }

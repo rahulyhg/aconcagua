@@ -16,7 +16,7 @@
   }
 
   @else if $point == "medium" {
-    @media (min-width: 960px) { @content; }
+    @media (min-width: 768px) { @content; }
   }
 
   // @else if $point == "medium-landscape" {
@@ -28,11 +28,11 @@
   }
 
   @else if $point == "large" {
-    @media (min-width: 1441px) { @content; }
+    @media (min-width: 1024px) { @content; }
   }
 
   @else if $point == "extra-large" {
-    @media (min-width: 1720px) { @content; }
+    @media (min-width: 1441px) { @content; }
   }
 
   @else if $point == "super-extra-large" {

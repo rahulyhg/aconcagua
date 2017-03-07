@@ -1,11 +1,33 @@
 .change {
+  @include position(relative, null null null null);
   @include size(100% auto);
   @include margin(null null rem(60));
   background: $change-bg;
 
+  @include breakpoint('medium') {
+    height: rem(530);
+    margin-bottom: 0;
+    background: transparent;
+  }
+
+  @include breakpoint('large') {
+    @include size(100% rem(700));
+  }
+
   &__wrapper {
     @include position(relative, null null null null);
     @include size(100%);
+
+    @include breakpoint('medium') {
+      @include size(calc(100% - 40px) 100%);
+      margin-left: rem(40);
+      background: $change-bg;
+    }
+
+    @include breakpoint('large') {
+      @include size(calc(100% - 80px) 100%);
+      margin-left: rem(80);
+    }
   }
 
   &__category {
@@ -15,6 +37,10 @@
     font-family: $mono;
     font-size: rem(13);
     color: $change-text-title;
+
+    @include breakpoint('medium') {
+      display: none;
+    }
   }
 
   &__data {
@@ -26,6 +52,32 @@
       padding-top: rem(50)
     }
 
+    @include breakpoint('medium') {
+      @include position(absolute, calc(50% + 20px) null null calc(50% + -40px));
+      @include transform(translate(-50%, -50%));
+      @include size(calc(50%) auto);
+      @include padding(0);
+    }
+
+    &__category {
+      display: none;
+      @include padding(null null rem(25));
+
+      font-family: $mono;
+      font-size: rem(13);
+      color: $change-text-title;
+
+      @include breakpoint('medium') {
+        display: block;
+      }
+
+      @include breakpoint('large') {
+        @include padding(null null rem(30));
+
+        font-size: rem(16);
+      }
+    }
+
     &__title {
       font-family: $platin-semibold;
       font-size: rem(24);
@@ -35,6 +87,11 @@
       @include breakpoint('small-landscape') {
         font-size: rem(29);
         line-height: rem(32);
+      }
+
+      @include breakpoint('large') {
+        font-size: rem(54);
+        line-height: rem(58);
       }
     }
 
@@ -60,6 +117,19 @@
     @include margin(null rem(30));
     box-sizing: border-box;
     background: $change-dots;
+
+    @include breakpoint('medium') {
+      @include size(rem(170) rem(60));
+      @include margin(0);
+      left: rem(-40);
+      bottom: rem(30);
+    }
+
+    @include breakpoint('large') {
+      @include size(rem(200) rem(75));
+      left: rem(-80);
+      bottom: rem(50);
+    }
 
     &__actions {
       @include position(relative, null null null);
@@ -114,6 +184,11 @@
 }
 
 .change-slider {
+
+  @include breakpoint('medium') {
+    display: none;
+  }
+
   &__mobile {
     &__list {
       @include padding(null rem(20));
@@ -185,6 +260,36 @@
           background: $herospace-slider-dots-active;
         }
       }
+    }
+  }
+}
+
+.change-articles {
+  display: none;
+  padding-left: rem(40);
+
+  @include breakpoint('large') {
+    padding-left: rem(80);
+  }
+
+  @include breakpoint('medium') {
+    display: block;
+    @include clearfix;
+  }
+
+  .change-slider__mobile__box {
+    float: left;
+    @include size(30% 25vw);
+
+    &:nth-child(3) {
+      display: none;
+
+      @include breakpoint('large') {
+        display: block;
+      }
+    }
+    @include breakpoint('large') {
+      @include size(22% rem(261));
     }
   }
 }

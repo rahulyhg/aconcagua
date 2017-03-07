@@ -4,12 +4,26 @@
   background: $header-bg;
   @include size(100% rem(50));
 
+  @include breakpoint('large') {
+    @include size(100% rem(80));
+  }
+
   &__lg {
     display: block;
     @include position(absolute, 0 null null 0);
     @include size(rem(80));
     background: $header-lg url($images_dir + 'lg.png') center center no-repeat;
     background-size: rem(40);
+
+    @include breakpoint('medium') {
+      @include size(rem(170));
+      background-position: rem(20) rem(20);
+    }
+
+    @include breakpoint('large') {
+      @include size(rem(200));
+      background-position: rem(35) rem(35);
+    }
   }
 
   &__hamb {

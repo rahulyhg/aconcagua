@@ -3,12 +3,30 @@
   @include size(100% rem(530));
   @include margin(null null rem(60));
 
+  @include breakpoint('medium') {
+    margin-bottom: 0;
+  }
+
+  @include breakpoint('large') {
+    @include size(100% rem(700));
+  }
+
   &__wrapper {
     @include position(relative, null null null null);
     @include size(100%);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+
+    @include breakpoint('medium') {
+      @include size(calc(100% - 40px) 100%);
+      margin-left: rem(40);
+    }
+
+    @include breakpoint('large') {
+      @include size(calc(100% - 80px) 100%);
+      margin-left: rem(80);
+    }
   }
 
   &__category {
@@ -17,6 +35,10 @@
     font-family: $mono;
     font-size: rem(13);
     color: $herospace-text;
+
+    @include breakpoint('medium') {
+      display: none;
+    }
   }
 
   &__data {
@@ -24,6 +46,34 @@
     @include size(100% auto);
     @include padding(rem(50) rem(50) rem(60));
     box-sizing: border-box;
+
+    @include breakpoint('medium') {
+      top: calc(50% + 20px);
+      left: calc(50% + -40px);
+      bottom: inherit;
+      @include transform(translate(-50%, -50%));
+      @include size(calc(50%) auto);
+      @include padding(0);
+    }
+
+    &__category {
+      display: none;
+      @include padding(null null rem(25));
+
+      font-family: $mono;
+      font-size: rem(13);
+      color: $herospace-text;
+
+      @include breakpoint('medium') {
+        display: block;
+      }
+
+      @include breakpoint('large') {
+        @include padding(null null rem(30));
+
+        font-size: rem(16);
+      }
+    }
 
     &__title {
       font-family: $platin-semibold;
@@ -34,6 +84,11 @@
       @include breakpoint('small-landscape') {
         font-size: rem(29);
         line-height: rem(32);
+      }
+
+      @include breakpoint('large') {
+        font-size: rem(54);
+        line-height: rem(58);
       }
     }
 
@@ -59,6 +114,17 @@
     @include margin(null rem(30));
     box-sizing: border-box;
     background: $herospace-dots;
+
+    @include breakpoint('medium') {
+      @include size(rem(170) rem(60));
+      @include margin(0);
+      bottom: rem(30);
+    }
+
+    @include breakpoint('large') {
+      @include size(rem(200) rem(75));
+      bottom: rem(50);
+    }
 
     &__actions {
       @include position(relative, null null null);
@@ -114,6 +180,10 @@
 
 .herospace-slider {
   background: $herospace-slider-bg;
+
+  @include breakpoint('medium') {
+    display: none;
+  }
 
   &__mobile {
     &__list {
@@ -192,5 +262,50 @@
         }
       }
     }
+  }
+}
+
+.herospace-articles {
+  @include clearfix;
+  background: $herospace-slider-bg;
+  display: none;
+
+  @include breakpoint('medium') {
+    display: block;
+  }
+
+  .herospace-slider__mobile__box {
+    float: left;
+    @include size(25% 25vw);
+    border-left: 0 none;
+
+    @include breakpoint('large') {
+      @include size(calc(33.33vw - 87px) rem(261));
+    }
+
+    &:nth-child(3) {
+      @include breakpoint('large') {
+        border-right: 0 none;
+      }
+    }
+
+    &:nth-child(4) {
+      border-right: 0 none;
+
+      @include breakpoint('large') {
+        display: none;
+      }
+    }
+  }
+}
+
+.herospace-banner {
+  display: none;
+  float: left;
+  @include size(rem(261));
+  background: #1a1a1a;
+
+  @include breakpoint('large') {
+    display: block;
   }
 }

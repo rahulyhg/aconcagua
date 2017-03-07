@@ -1,12 +1,32 @@
 .banner {
   @include padding(rem(30) null);
 
+  @include breakpoint('medium') {
+    @include padding(rem(30));
+  }
+
+  @include breakpoint('large') {
+    @include padding(rem(50) rem(80));
+  }
+
   &--bottom {
     padding-top: 0;
+
+    @include breakpoint('medium') {
+      padding-top: rem(30);
+    }
+
+    @include breakpoint('large') {
+      padding-top: rem(50);
+    }
   }
 
   &__content {
     @include size(100% rem(50));
     background: #000;
+
+    @include breakpoint('medium') {
+      @include size(100% rem(120));
+    }
   }
 }

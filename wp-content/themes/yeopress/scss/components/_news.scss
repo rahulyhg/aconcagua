@@ -1,13 +1,35 @@
 .news {
   @include position(relative, null null null);
 
+  @include breakpoint('medium') {
+    padding-bottom: rem(30);
+  }
+
+  @include breakpoint('large') {
+    padding-bottom: rem(130);
+  }
+
   &__content {
+    @include breakpoint('medium') {
+      @include position(relative, null null null);
+    }
+
     &__box {
       &__image {
         @include size(100% 100vw);
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
+
+        @include breakpoint('medium') {
+          @include size(calc(100% - 60px) rem(500));
+          @include margin(null rem(30));
+        }
+
+        @include breakpoint('large') {
+          @include size(calc(100% - 160px) rem(700));
+          @include margin(null rem(80));
+        }
       }
 
       &__data {
@@ -17,6 +39,18 @@
         @include padding(rem(30));
         box-sizing: border-box;
         background: #1a1a1a;
+
+        @include breakpoint('medium') {
+          @include position(absolute, null 0 rem(-30) null);
+          @include size(60% rem(250));
+        }
+
+        @include breakpoint('large') {
+          @include position(absolute, null 0 rem(-80) null);
+          @include size(60% rem(320));
+          @include padding(rem(50));
+          @include margin(0);
+        }
 
         &__title {
           font-family: $platin-semibold;
@@ -44,6 +78,10 @@
             font-size: rem(17);
             line-height: rem(25);
           }
+
+          @include breakpoint('large') {
+            width: 60%;
+          }
         }
 
         &__author {
@@ -51,6 +89,10 @@
           font-family: $mono;
           font-size: rem(11);
           color: white;
+
+          @include breakpoint('large') {
+            @include position(absolute, null null rem(50) rem(50));
+          }
         }
       }
     }
@@ -62,6 +104,18 @@
     @include margin(null rem(30));
     box-sizing: border-box;
     background: $change-dots;
+
+    @include breakpoint('medium') {
+      top: inherit;
+      bottom: rem(60);
+      @include size(rem(170) rem(60));
+    }
+
+    @include breakpoint('large') {
+      @include size(rem(200) rem(75));
+      bottom: rem(165);
+      @include margin(0);
+    }
 
     &__actions {
       @include position(relative, null null null);

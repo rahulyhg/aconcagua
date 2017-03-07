@@ -3,6 +3,7 @@
   <div class="herospace__wrapper" style="background-image: url('/aconcagua/wp-content/themes/yeopress/images/herospace.jpg')">
     <span class="herospace__category">Cambiar</span>
     <div class="herospace__data">
+      <span class="herospace__data__category">Cambiar</span>
       <h2 class="herospace__data__title">El Gobierno declara el 2017 como el año de las energías renovables</h2>
       <p class="herospace__data__description">La medida forma parte de una serie de iniciativas para impulsar las inversiones a gran escala en el sector...</p>
       <small class="herospace__data__author">Por Manuel Torino</small>
@@ -39,10 +40,35 @@
   </div>
 </section>
 
+<section class="herospace-articles">
+  <div class="herospace-slider__mobile__box">
+    <span class="herospace-slider__mobile__box__category">Explorar</span>
+    <h3 class="herospace-slider__mobile__box__title">Trump, paredón y después</h3>
+    <small class="herospace-slider__mobile__box__author">Por Leonardo Volpe</small>
+  </div>
+  <div class="herospace-slider__mobile__box">
+    <span class="herospace-slider__mobile__box__category">Explorar</span>
+    <h3 class="herospace-slider__mobile__box__title">Trump, paredón y después</h3>
+    <small class="herospace-slider__mobile__box__author">Por Leonardo Volpe</small>
+  </div>
+  <div class="herospace-slider__mobile__box">
+    <span class="herospace-slider__mobile__box__category">Explorar</span>
+    <h3 class="herospace-slider__mobile__box__title">Trump, paredón y después</h3>
+    <small class="herospace-slider__mobile__box__author">Por Leonardo Volpe</small>
+  </div>
+  <div class="herospace-slider__mobile__box">
+    <span class="herospace-slider__mobile__box__category">Explorar</span>
+    <h3 class="herospace-slider__mobile__box__title">Trump, paredón y después</h3>
+    <small class="herospace-slider__mobile__box__author">Por Leonardo Volpe</small>
+  </div>
+  <div class="herospace-banner"></div>
+</section>
+
 <section class="change">
   <div class="change__wrapper">
     <span class="change__category">Cambiar</span>
     <div class="change__data">
+      <span class="change__data__category">Cambiar</span>
       <h2 class="change__data__title">El Gobierno declara el 2017 como el año de las energías renovables</h2>
       <p class="change__data__description">La medida forma parte de una serie de iniciativas para impulsar las inversiones a gran escala en el sector...</p>
       <small class="change__data__author">Por Manuel Torino</small>
@@ -81,6 +107,37 @@
   </div>
 </section>
 
+<section class="change-articles">
+  <div class="change-slider__mobile__box">
+    <span class="change-slider__mobile__box__category">Carreras Verdes</span>
+    <big class="change-slider__mobile__box__time">Hace 3 min</big>
+    <div class="change-slider__mobile__box__extra">
+      <p class="change-slider__mobile__box__extra__text">Las "carreras verdes" pican en punta: el sector atraerá inversiones por más de...</p>
+    </div>
+  </div>
+  <div class="change-slider__mobile__box">
+    <span class="change-slider__mobile__box__category">Carreras Verdes</span>
+    <big class="change-slider__mobile__box__time">Hace 3 min</big>
+    <div class="change-slider__mobile__box__extra">
+      <p class="change-slider__mobile__box__extra__text">Las "carreras verdes" pican en punta: el sector atraerá inversiones por más de...</p>
+    </div>
+  </div>
+  <div class="change-slider__mobile__box">
+    <span class="change-slider__mobile__box__category">Carreras Verdes</span>
+    <big class="change-slider__mobile__box__time">Hace 3 min</big>
+    <div class="change-slider__mobile__box__extra">
+      <p class="change-slider__mobile__box__extra__text">Las "carreras verdes" pican en punta: el sector atraerá inversiones por más de...</p>
+    </div>
+  </div>
+  <div class="change-slider__mobile__box">
+    <span class="change-slider__mobile__box__category">Carreras Verdes</span>
+    <big class="change-slider__mobile__box__time">Hace 3 min</big>
+    <div class="change-slider__mobile__box__extra">
+      <p class="change-slider__mobile__box__extra__text">Las "carreras verdes" pican en punta: el sector atraerá inversiones por más de...</p>
+    </div>
+  </div>
+</section>
+
 <section class="camping">
   <div class="camping__mobile">
     <div class="camping__mobile__header">
@@ -95,6 +152,18 @@
     <div class="camping__mobile__email">
       <input class="camping__mobile__email__text" type="text">
       <button class="camping__mobile__email__submit"></submit>
+    </div>
+  </div>
+
+  <div class="camping__desktop">
+    <div class="camping__desktop__content">
+      <h3 class="camping__desktop__content__title">Camping</h3>
+      <p class="camping__desktop__content__description">Periodismo positivo, contenidos inspiradores, información para vivir mejor. En tu día de descanso, lo mejor de Aconcagua en la palma de tu mano. </p>
+    </div>
+    <div class="camping__desktop__data">
+      <p class="camping__desktop__data__text">Se parte de nuestra comunidad y participa de foros actividades únicas!</p>
+      <div class="camping__desktop__data__input">
+      </div>
     </div>
   </div>
 </section>
@@ -130,7 +199,7 @@
     <div class="domingo__mobile__header">
       <div class="domingo__mobile__header__content">
         <h3 class="domingo__mobile__header__title">Domingo</h3>
-        <p class="domingo__mobile__header__description">Periodismo positivo, contenidos inspiradores, información para vivir mejor. En tu día de descanso, lo mejor de Aconcagua en la palma de tu mano. </p>
+        <p class="domingo__mobile__header__description">Periodismo positivo, contenidos inspiradores, información para vivir mejor. En tu día de descanso, lo mejor de Aconcagua en la palma de tu mano.</p>
       </div>
     </div>
     <div class="domingo__mobile__wrapper">
@@ -139,6 +208,18 @@
     <div class="domingo__mobile__email">
       <input class="domingo__mobile__email__text" type="text">
       <button class="domingo__mobile__email__submit"></submit>
+    </div>
+  </div>
+
+  <div class="domingo__desktop">
+    <div class="domingo__desktop__content">
+      <h3 class="domingo__desktop__content__title">Domingo</h3>
+      <p class="domingo__desktop__content__description">Periodismo positivo, contenidos inspiradores, información para vivir mejor. En tu día de descanso, lo mejor de Aconcagua.</p>
+    </div>
+    <div class="domingo__desktop__data">
+      <p class="domingo__desktop__data__text">Se parte de nuestra comunidad y participa de foros actividades únicas!</p>
+      <div class="domingo__desktop__data__input">
+      </div>
     </div>
   </div>
 </section>

@@ -12,10 +12,18 @@
   }
 
   &__top {
-
+    @include breakpoint('medium') {
+      @include padding(null null rem(60));
+      @include clearfix;
+    }
   }
 
   &__newsletter {
+    @include breakpoint('medium') {
+      float: left;
+      @include size(50% auto);
+    }
+
     &__title {
       @include padding(null null rem(20));
 
@@ -35,6 +43,13 @@
 
   &__about {
     @include padding(rem(30) null);
+
+    @include breakpoint('medium') {
+      float: left;
+      @include size(50% auto);
+      @include padding(0 null);
+      text-align: right;
+    }
 
     &__title {
       font-family: $mono;
@@ -63,6 +78,7 @@
   }
 
   &__camping {
+    display: none;
     @include padding(null null rem(50));
 
     &__wrapper {
@@ -78,10 +94,21 @@
       font-family: $arial;
       font-size: rem(12);
       color: rgba(255, 255, 255, 0.3);
+
+      @include breakpoint('medium') {
+        @include position(relative, rem(12) null null null);
+        float: left;
+        padding-right: rem(20);
+      }
     }
 
     &__social {
       @include padding(rem(20) null null);
+
+      @include breakpoint('medium') {
+        float: left;
+        @include padding(0 null null);
+      }
 
       &__list {
         @include clearfix;
