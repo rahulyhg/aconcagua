@@ -9,6 +9,10 @@
     @include padding(rem(50) rem(80));
   }
 
+  img {
+    max-width: 100%!important;
+  }
+
   &--bottom {
     padding-top: 0;
 

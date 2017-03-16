@@ -292,6 +292,7 @@
     float: left;
     @include size(25% 25vw);
     border-left: 0 none;
+    text-decoration: none;
 
     @include breakpoint('large') {
       @include size(calc(33.33vw - 87px) rem(261));

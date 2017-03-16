@@ -18,10 +18,10 @@
         <div class="header__wrapper">
           <nav class="header__nav">
             <ul class="header__nav__list">
-              <li class="header__nav__list__item"><a href="#">Hacer</a></li>
-              <li class="header__nav__list__item"><a href="#">Pensar</a></li>
-              <li class="header__nav__list__item"><a href="#">Explorar</a></li>
-              <li class="header__nav__list__item"><a href="#">Cambiar</a></li>
+              <li class="header__nav__list__item"><a href="/aconcagua/hacer">Hacer</a></li>
+              <li class="header__nav__list__item"><a href="/aconcagua/pensar">Pensar</a></li>
+              <li class="header__nav__list__item"><a href="/aconcagua/explorar">Explorar</a></li>
+              <li class="header__nav__list__item"><a href="/aconcagua/cambiar">Cambiar</a></li>
             </ul>
           </nav>
         </div>

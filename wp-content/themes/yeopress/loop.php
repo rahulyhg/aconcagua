@@ -3,27 +3,28 @@
 		<?php the_content(); ?>
 	</article>
 <?php else: ?>
-	<?php if (have_posts()):
-		while (have_posts()) : the_post() ?>
-			<article id="article-<?php the_ID() ?>" class="article">
-				<header class="article-header">
-					<?php if (has_post_thumbnail() and !is_singular()): ?>
-						<div class="featured-image">
-							<a href="<?php the_permalink() ?>" title="<?php the_title_attribute() ?>"><?php the_post_thumbnail() ?></a>
-						</div>
-					<?php endif; ?>
-					<h1 class="article-title"><?php if(!is_singular()): ?><a href="<?php the_permalink() ?>" title="<?php the_title_attribute() ?>"><?php endif; the_title() ?><?php if(!is_singular()): ?></a><?php endif; ?></h1>
-					<div class="article-info">
-						<span class="date"><?php the_date('m-d-Y') ?></span>
-						<span class="comments"><?php comments_popup_link(__('Leave a comment'), __('1 Comment'), __('% Comments')) ?></span> 
-					</div>
-				</header>
-				<div class="article-content">
-					<?php (is_single()) ? the_content() : the_excerpt() ?>
-				</div>
-			</article>
+  <div class="list">
+	<?php if (have_posts()): ?>
+    <ul class="list__content">
+		<?php while (have_posts()) : the_post() ?>
+      <li class="list__content__item">
+  			<a href="<?php the_permalink() ?>" title="<?php the_title_attribute() ?>" id="article-<?php the_ID() ?>" class="article">
+          <div class="article__image">
+            <?php the_post_thumbnail() ?>
+          </div>
+  				<div class="article__data">
+            <div class="article__data__content">
+              <h3 class="article__data__title"><?php the_title(); ?></h3>
+              <p class="article__data__description"><?php the_excerpt(); ?></p>
+              <span class="article__data__author">Por <?php echo get_post_meta($post->ID, 'writter', true); ?></span>
+            </div>
+          </div>
+  			</a>
+      </li>
 		<?php endwhile; ?>
+    </ul>
 	<?php else: ?>
 		<p>Nothing matches your query.</p>
 	<?php  endif; ?>
+  </div>
 <?php  endif; ?>

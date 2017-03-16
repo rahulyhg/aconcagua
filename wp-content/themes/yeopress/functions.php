@@ -17,6 +17,9 @@ function theme_enqueue_scripts(){
 	wp_enqueue_style('global', get_bloginfo('template_url') . '/css/global.css');
 }
 
+remove_filter( 'the_content', 'wpautop' );
+remove_filter( 'the_excerpt', 'wpautop' );
+
 //Add Featured Image Support
 add_theme_support('post-thumbnails');
 

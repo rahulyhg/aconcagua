@@ -1,0 +1,28 @@
+.category-page {
+  @include padding(rem(130) null rem(30));
+  background: white;
+
+  @include breakpoint('medium') {
+    @include padding(rem(230) null rem(50));
+  }
+
+  @include breakpoint('large') {
+    padding-top: rem(280);
+  }
+
+  &__title {
+    @include padding(null rem(50));
+
+    font-family: $platin-semibold;
+    font-size: rem(20);
+    color: #0d0d0d;
+
+    @include breakpoint('medium') {
+      font-size: rem(25);
+    }
+
+    @include breakpoint('large') {
+      @include padding(null rem(80));
+    }
+  }
+}
