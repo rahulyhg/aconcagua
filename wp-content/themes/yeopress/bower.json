@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "dependencies": {
     "jquery": "~1.9.0",
-    "requirejs": "~2.1.5"
+    "requirejs": "~2.1.5",
+    "slick-carousel": "^1.6.0"
   }
 }

@@ -11,21 +11,32 @@
     @include size(100% rem(700));
   }
 
+  &__container {
+    @include clearfix;
+    overflow: hidden;
+  }
+
   &__wrapper {
+    display: block;
+    float: left;
     @include position(relative, null null null null);
-    @include size(100%);
+    @include size(100% rem(530));
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
 
     @include breakpoint('medium') {
-      @include size(calc(100% - 40px) 100%);
+      @include size(calc(100% - 40px) rem(530));
       margin-left: rem(40);
     }
 
     @include breakpoint('large') {
-      @include size(calc(100% - 80px) 100%);
+      @include size(calc(100% - 80px) rem(700));
       margin-left: rem(80);
+    }
+
+    &:focus {
+      outline: 0 none;
     }
   }
 
@@ -168,7 +179,7 @@
       @include size(rem(20) rem(10));
       background: $herospace-dots-active;
 
-      &--inactive {
+      &.slick-disabled {
         background: $herospace-dots-inactive;
       }
     }
@@ -203,9 +214,25 @@
     &__list {
       @include padding(null rem(20));
       @include clearfix;
+      overflow: hidden;
 
       &__item {
+        float: left;
         @include size(100% rem(180));
+
+        &:focus {
+          outline: 0 none;
+        }
+
+        &__link {
+          @include size(100%);
+          display: block;
+          text-decoration: none;
+
+          &:focus {
+            outline: 0 none;
+          }
+        }
       }
     }
 
@@ -262,17 +289,33 @@
       background: $herospace-slider-border;
       box-sizing: border-box;
 
-      text-align: center;
+      ul {
+        @include padding(rem(5) null null);
+        text-align: center;
 
-      &__link {
-        display: inline-block;
-        @include size(rem(7));
-        @include margin(null rem(3));
-        background: $herospace-slider-bg;
-        border-radius: 100%;
+        li {
+          display: inline-block;
 
-        &--active {
-          background: $herospace-slider-dots-active;
+          button {
+            display: block;
+            @include size(rem(7));
+            @include margin(null rem(3));
+            @include padding(0);
+            border: 0 none;
+            background: $herospace-slider-bg;
+            border-radius: 100%;
+            text-indent: rem(-9999);
+
+            &:focus {
+              outline: 0 none;
+            }
+          }
+
+          &.slick-active {
+            button {
+              background: $herospace-slider-dots-active;
+            }
+          }
         }
       }
     }

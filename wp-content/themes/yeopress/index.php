@@ -1,44 +1,51 @@
 <?php get_header() ?>
 <section class="herospace">
   <?php query_posts('category_name=herospace'); ?>
+  <div class="herospace__container">
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-      <div class="herospace__wrapper" style="background-image: url('/aconcagua/wp-content/themes/yeopress/images/herospace.jpg')">
+      <a href="<?php the_permalink(); ?>" class="herospace__wrapper" style="background-image: url('/aconcagua/wp-content/themes/yeopress/images/herospace.jpg')">
         <span class="herospace__category"><?php echo get_post_meta($post->ID, 'category', true); ?></span>
         <div class="herospace__data">
           <span class="herospace__data__category"><?php echo get_post_meta($post->ID, 'category', true); ?></span>
           <h2 class="herospace__data__title"><?php the_title() ?></h2>
-          <p class="herospace__data__description"><?php the_content() ?></p>
+          <p class="herospace__data__description"><?php the_excerpt() ?></p>
           <small class="herospace__data__author">Por <?php echo get_post_meta($post->ID, 'writter', true); ?></small>
         </div>
-      </div>
+      </a>
     <?php endwhile; endif; ?>
+  </div>
 
   <div class="herospace__dots">
     <div class="herospace__dots__actions">
       <div class="herospace__dots__actions__current">01</div>
-      <div class="herospace__dots__actions__total">03</div>
+      <div class="herospace__dots__actions__total"></div>
     </div>
-    <a href="" class="herospace__dots__btn herospace__dots__prev herospace__dots__btn--inactive"></a>
-    <a href="" class="herospace__dots__btn herospace__dots__next"></a>
+    <!-- <a href="" class="herospace__dots__btn herospace__dots__prev"></a>
+    <a href="" class="herospace__dots__btn herospace__dots__next"></a> -->
   </div>
 </section>
 
 <section class="herospace-slider">
   <div class="herospace-slider__mobile">
-    <ul class="herospace-slider__mobile__list">
-      <li class="herospace-slider__mobile__list__item">
-        <div class="herospace-slider__mobile__box">
-          <span class="herospace-slider__mobile__box__category">Explorar</span>
-          <h3 class="herospace-slider__mobile__box__title">Trump, paredón y después</h3>
-          <small class="herospace-slider__mobile__box__author">Por Leonardo Volpe</small>
+    <?php query_posts('category_name=herospace-secondary&posts_per_page=3'); ?>
+    <div class="herospace-slider__mobile__list">
+      <?php while ( have_posts() ) : the_post(); ?>
+        <div class="herospace-slider__mobile__list__item">
+          <a href="<?php the_permalink(); ?>" class="herospace-slider__mobile__list__item__link">
+            <div class="herospace-slider__mobile__box">
+              <span class="herospace-slider__mobile__box__category"><?php echo get_post_meta($post->ID, 'category', true); ?></span>
+              <h3 class="herospace-slider__mobile__box__title"><?php the_title() ?></h3>
+              <small class="herospace-slider__mobile__box__author">Por <?php echo get_post_meta($post->ID, 'writter', true); ?></small>
+            </div>
+          </a>
         </div>
-      </li>
-    </ul>
+      <?php endwhile; ?>
+    </div>
 
     <div class="herospace-slider__mobile__dots">
-      <a href="#" class="herospace-slider__mobile__dots__link"></a>
+      <!-- <a href="#" class="herospace-slider__mobile__dots__link"></a>
       <a href="#" class="herospace-slider__mobile__dots__link herospace-slider__mobile__dots__link--active"></a>
-      <a href="#" class="herospace-slider__mobile__dots__link"></a>
+      <a href="#" class="herospace-slider__mobile__dots__link"></a> -->
     </div>
   </div>
 </section>
@@ -55,7 +62,8 @@
       <?php endwhile; ?>
       <div class="herospace-banner"></div>
     </section>
-<?php } ?>
+  <?php } ?>
+<?php wp_reset_query(); ?>
 
 <section class="change">
   <?php query_posts('category_name=herospace-think'); ?>
@@ -70,6 +78,7 @@
         </div>
       </div>
   <?php endwhile; endif; ?>
+  <?php wp_reset_query(); ?>
   <div class="change__dots">
     <div class="change__dots__actions">
       <div class="change__dots__actions__current">01</div>
@@ -82,22 +91,28 @@
 
 <section class="change-slider">
   <div class="change-slider__mobile">
-    <ul class="change-slider__mobile__list">
-      <li class="change-slider__mobile__list__item">
-        <div class="change-slider__mobile__box">
-          <span class="change-slider__mobile__box__category">Carreras Verdes</span>
-          <big class="change-slider__mobile__box__time">Hace 3 min</big>
-          <div class="change-slider__mobile__box__extra">
-            <p class="change-slider__mobile__box__extra__text">Las "carreras verdes" pican en punta: el sector atraerá inversiones por más de...</p>
-          </div>
+    <?php query_posts('category_name=herospace-think-secondary&posts_per_page=3'); ?>
+    <div class="change-slider__mobile__list">
+      <?php while ( have_posts() ) : the_post(); ?>
+        <div class="change-slider__mobile__list__item">
+          <a href="<?php the_permalink(); ?>" class="change-slider__mobile__list__item__link">
+            <div class="change-slider__mobile__box">
+              <span class="change-slider__mobile__box__category">Carreras Verdes</span>
+              <big class="change-slider__mobile__box__time">Hace 3 min</big>
+              <div class="change-slider__mobile__box__extra">
+                <p class="change-slider__mobile__box__extra__text">Las "carreras verdes" pican en punta: el sector atraerá inversiones por más de...</p>
+              </div>
+            </div>
+          </a>
         </div>
-      </li>
-    </ul>
+      <?php endwhile; ?>
+      <?php wp_reset_query(); ?>
+    </div>
 
     <div class="change-slider__mobile__dots">
-      <a href="#" class="change-slider__mobile__dots__link"></a>
+      <!-- <a href="#" class="change-slider__mobile__dots__link"></a>
       <a href="#" class="change-slider__mobile__dots__link change-slider__mobile__dots__link--active"></a>
-      <a href="#" class="change-slider__mobile__dots__link"></a>
+      <a href="#" class="change-slider__mobile__dots__link"></a> -->
     </div>
   </div>
 </section>

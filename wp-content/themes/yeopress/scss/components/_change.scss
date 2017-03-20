@@ -207,9 +207,25 @@
     &__list {
       @include padding(null rem(20));
       @include clearfix;
+      overflow: hidden;
 
       &__item {
+        float: left;
         @include size(100% rem(180));
+
+        &:focus {
+          outline: 0 none;
+        }
+
+        &__link {
+          @include size(100%);
+          display: block;
+          text-decoration: none;
+
+          &:focus {
+            outline: 0 none;
+          }
+        }
       }
     }
 
@@ -261,17 +277,33 @@
       @include padding(rem(14) null null null);
       box-sizing: border-box;
 
-      text-align: center;
+      ul {
+        @include padding(rem(5) null null);
+        text-align: center;
 
-      &__link {
-        display: inline-block;
-        @include size(rem(7));
-        @include margin(null rem(3));
-        background: $herospace-slider-bg;
-        border-radius: 100%;
+        li {
+          display: inline-block;
 
-        &--active {
-          background: $herospace-slider-dots-active;
+          button {
+            display: block;
+            @include size(rem(7));
+            @include margin(null rem(3));
+            @include padding(0);
+            border: 0 none;
+            background: $herospace-slider-bg;
+            border-radius: 100%;
+            text-indent: rem(-9999);
+
+            &:focus {
+              outline: 0 none;
+            }
+          }
+
+          &.slick-active {
+            button {
+              background: $herospace-slider-dots-active;
+            }
+          }
         }
       }
     }
