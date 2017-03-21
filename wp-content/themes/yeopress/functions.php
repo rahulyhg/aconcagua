@@ -17,8 +17,14 @@ function theme_enqueue_scripts(){
 	wp_enqueue_style('global', get_bloginfo('template_url') . '/css/global.css');
 }
 
+function wpdocs_custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
 remove_filter( 'the_content', 'wpautop' );
 remove_filter( 'the_excerpt', 'wpautop' );
+
 
 //Add Featured Image Support
 add_theme_support('post-thumbnails');
@@ -55,3 +61,20 @@ function register_widgets(){
 
 }//end register_widgets()
 add_action( 'widgets_init', 'register_widgets' );
+
+function dynamic_excerpt($length) { // Variable excerpt length. Length is set in characters
+  global $post;
+  $text = $post->post_excerpt;
+
+  if ( '' == $text ) {
+    $text = get_the_content('');
+    $text = apply_filters('the_content', $text);
+    $text = str_replace(']]>', ']]>', $text);
+  }
+
+  $text = strip_shortcodes($text); // optional, recommended
+  $text = strip_tags($text); // use ' $text = strip_tags($text,'<p><a>'); ' if you want to keep some tags
+  $text = mb_substr($text,0,$length).' ...';
+  echo $text; // Use this is if you want a unformatted text block
+//echo apply_filters('the_excerpt',$text); // Use this if you want to keep line breaks
+}

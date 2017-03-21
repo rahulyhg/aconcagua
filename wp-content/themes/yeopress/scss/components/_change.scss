@@ -1,11 +1,10 @@
 .change {
   @include position(relative, null null null null);
-  @include size(100% auto);
+  @include size(100% rem(530));
   @include margin(null null rem(60));
   background: $change-bg;
 
   @include breakpoint('medium') {
-    height: rem(530);
     margin-bottom: 0;
     background: transparent;
   }
@@ -14,19 +13,32 @@
     @include size(100% rem(700));
   }
 
+  &__container {
+    @include clearfix;
+    overflow: hidden;
+  }
+
   &__wrapper {
+    display: block;
+    float: left;
     @include position(relative, null null null null);
-    @include size(100%);
+    @include size(100% rem(530));
+
+    text-decoration: none;
 
     @include breakpoint('medium') {
-      @include size(calc(100% - 40px) 100%);
+      @include size(calc(100% - 40px) rem(530));
       margin-left: rem(40);
       background: $change-bg;
     }
 
     @include breakpoint('large') {
-      @include size(calc(100% - 80px) 100%);
+      @include size(calc(100% - 80px) rem(700));
       margin-left: rem(80);
+    }
+
+    &:focus {
+      outline: 0 none;
     }
   }
 
@@ -127,7 +139,7 @@
 
     @include breakpoint('large') {
       @include size(rem(200) rem(75));
-      left: rem(-80);
+      left: 0;
       bottom: rem(50);
     }
 
@@ -173,7 +185,7 @@
       @include size(rem(20) rem(10));
       background: $change-dots-active;
 
-      &--inactive {
+      &.slick-disabled {
         background: $change-dots-inactive;
       }
     }
@@ -236,6 +248,8 @@
       border-right: rem(1) solid $herospace-slider-border;
       border-left: rem(1) solid $herospace-slider-border;
       box-sizing: border-box;
+
+      text-decoration: none;
 
       &__category {
         font-family: $mono;

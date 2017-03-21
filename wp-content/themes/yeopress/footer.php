@@ -36,9 +36,9 @@
         <p class="footer__down__copyright">Copyright &copy; <?= date('Y') ?></p>
         <div class="footer__down__social">
           <ul class="footer__down__social__list">
-            <li class="footer__down__social__list__item"><a href="#"></a></li>
-            <li class="footer__down__social__list__item"><a href="#"></a></li>
-            <li class="footer__down__social__list__item"><a href="#"></a></li>
+            <li class="footer__down__social__list__item footer__down__social__list__item--fb"><a href="#"></a></li>
+            <li class="footer__down__social__list__item footer__down__social__list__item--tw"><a href="#"></a></li>
+            <li class="footer__down__social__list__item footer__down__social__list__item--inst"><a href="#"></a></li>
           </ul>
         </div>
       </div>

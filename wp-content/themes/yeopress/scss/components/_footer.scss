@@ -11,8 +11,8 @@
     content: '';
     display: block;
     @include position(absolute, null rem(30) rem(30) null);
-    @include size(rem(30));
-    background: $footer-arrow;
+    @include size(rem(11) rem(14));
+    background: url('../images/footer-arrow-up.png') 0 0 no-repeat;
 
     @include breakpoint('large') {
       right: rem(80);
@@ -169,12 +169,29 @@
 
         &__item {
           float: left;
-          @include padding(null rem(20) null null);
+          @include padding(null rem(15) null null);
 
           a {
             display: block;
             @include size(rem(25));
-            background: white;
+          }
+
+          &--fb {
+            a {
+              background: url('../images/facebook.png') center center no-repeat;
+            }
+          }
+
+          &--tw {
+            a {
+              background: url('../images/twitter.png') center center no-repeat;
+            }
+          }
+
+          &--inst {
+            a {
+              background: url('../images/instagram.png') center center no-repeat;
+            }
           }
         }
       }

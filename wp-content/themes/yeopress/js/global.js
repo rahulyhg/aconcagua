@@ -8,6 +8,7 @@ require.config({
 
 requirejs(['jquery', 'slick'], function( $ ) {
 
+  //Herospace
   if($('.herospace__container').length) {
     $('.herospace__container').slick({
       infinite: false,
@@ -20,16 +21,17 @@ requirejs(['jquery', 'slick'], function( $ ) {
     });
 
     $('.herospace__container').on('afterChange', function(event, slick, currentSlide, nextSlide) {
-      let herospaceCurrent = currentSlide + 1;
+      var herospaceCurrent = currentSlide + 1;
 
       $('.herospace__dots__actions__current').html('0' + herospaceCurrent);
     });
 
-    let totalHerospaceSlides = $('.herospace__container .herospace__wrapper').length;
+    var totalHerospaceSlides = $('.herospace__container .herospace__wrapper').length;
 
     $('.herospace__dots__actions__total').html('0' + totalHerospaceSlides);
   }
 
+  //Herospace Secondary
   if($('.herospace-slider__mobile__list').length) {
     $('.herospace-slider__mobile__list').slick({
       infinite: true,
@@ -41,6 +43,31 @@ requirejs(['jquery', 'slick'], function( $ ) {
     });
   }
 
+  //Change
+  if($('.change__container').length) {
+    $('.change__container').slick({
+      infinite: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      appendArrows: $('.change__dots'),
+      prevArrow: '<a href="" class="change__dots__btn change__dots__prev"></a>',
+      nextArrow: '<a href="" class="change__dots__btn change__dots__next"></a>'
+    });
+
+    $('.change__container').on('afterChange', function(event, slick, currentSlide, nextSlide) {
+      var changeCurrent = currentSlide + 1;
+
+      $('.change__dots__actions__current').html('0' + changeCurrent);
+    });
+
+    var totalChangeSlides = $('.change__container .change__wrapper').length;
+
+
+    $('.change__dots__actions__total').html('0' + totalChangeSlides);
+  }
+
+  //Change Secondary
   if($('.change-slider__mobile__list').length) {
     $('.change-slider__mobile__list').slick({
       infinite: true,
@@ -50,5 +77,35 @@ requirejs(['jquery', 'slick'], function( $ ) {
       arrows: false,
       appendDots: $('.change-slider__mobile__dots')
     });
+  }
+
+  //News
+  if($('.news__wrapper').length) {
+    if($('.news__wrapper .news__content__box').length) {
+      $('.news__dots').css('display', 'block');
+    } else {
+      $('.news__dots').css('display', 'none');
+    }
+
+    $('.news__wrapper').slick({
+      infinite: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      appendArrows: $('.news__dots'),
+      prevArrow: '<a href="" class="news__dots__btn news__dots__prev"></a>',
+      nextArrow: '<a href="" class="news__dots__btn news__dots__next"></a>'
+    });
+
+    $('.news__wrapper').on('afterChange', function(event, slick, currentSlide, nextSlide) {
+      var newsCurrent = currentSlide + 1;
+
+      $('.news__dots__actions__current').html('0' + newsCurrent);
+    });
+
+    var totalNewsSlides = $('.news__wrapper .news__content__box').length;
+
+
+    $('.news__dots__actions__total').html('0' + totalNewsSlides);
   }
 });

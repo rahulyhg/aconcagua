@@ -67,25 +67,26 @@
 
 <section class="change">
   <?php query_posts('category_name=herospace-think'); ?>
-    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-      <div class="change__wrapper">
-        <span class="change__category"><?php echo get_post_meta($post->ID, 'category', true); ?></span>
-        <div class="change__data">
-          <span class="change__data__category"><?php echo get_post_meta($post->ID, 'category', true); ?></span>
-          <h2 class="change__data__title"><?php the_title() ?></h2>
-          <p class="change__data__description"><?php the_excerpt() ?></p>
-          <small class="change__data__author">Por <?php echo get_post_meta($post->ID, 'writter', true); ?></small>
-        </div>
-      </div>
-  <?php endwhile; endif; ?>
+    <div class="change__container">
+      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+        <a href="<?php the_permalink(); ?>" class="change__wrapper">
+          <span class="change__category"><?php echo get_post_meta($post->ID, 'category', true); ?></span>
+          <div class="change__data">
+            <span class="change__data__category"><?php echo get_post_meta($post->ID, 'category', true); ?></span>
+            <h2 class="change__data__title"><?php the_title() ?></h2>
+            <p class="change__data__description"><?php the_excerpt() ?></p>
+            <small class="change__data__author">Por <?php echo get_post_meta($post->ID, 'writter', true); ?></small>
+          </div>
+        </a>
+      <?php endwhile; endif; ?>
+    </div>
   <?php wp_reset_query(); ?>
+
   <div class="change__dots">
     <div class="change__dots__actions">
       <div class="change__dots__actions__current">01</div>
-      <div class="change__dots__actions__total">03</div>
+      <div class="change__dots__actions__total"></div>
     </div>
-    <a href="" class="change__dots__btn change__dots__prev herospace__dots__btn--inactive"></a>
-    <a href="" class="change__dots__btn change__dots__next"></a>
   </div>
 </section>
 
@@ -97,10 +98,10 @@
         <div class="change-slider__mobile__list__item">
           <a href="<?php the_permalink(); ?>" class="change-slider__mobile__list__item__link">
             <div class="change-slider__mobile__box">
-              <span class="change-slider__mobile__box__category">Carreras Verdes</span>
+              <span class="change-slider__mobile__box__category"><?php the_title() ?></span>
               <big class="change-slider__mobile__box__time">Hace 3 min</big>
               <div class="change-slider__mobile__box__extra">
-                <p class="change-slider__mobile__box__extra__text">Las "carreras verdes" pican en punta: el sector atraerá inversiones por más de...</p>
+                <p class="change-slider__mobile__box__extra__text"><?php the_excerpt(); ?></p>
               </div>
             </div>
           </a>
@@ -118,34 +119,17 @@
 </section>
 
 <section class="change-articles">
-  <div class="change-slider__mobile__box">
-    <span class="change-slider__mobile__box__category">Carreras Verdes</span>
-    <big class="change-slider__mobile__box__time">Hace 3 min</big>
-    <div class="change-slider__mobile__box__extra">
-      <p class="change-slider__mobile__box__extra__text">Las "carreras verdes" pican en punta: el sector atraerá inversiones por más de...</p>
-    </div>
-  </div>
-  <div class="change-slider__mobile__box">
-    <span class="change-slider__mobile__box__category">Carreras Verdes</span>
-    <big class="change-slider__mobile__box__time">Hace 3 min</big>
-    <div class="change-slider__mobile__box__extra">
-      <p class="change-slider__mobile__box__extra__text">Las "carreras verdes" pican en punta: el sector atraerá inversiones por más de...</p>
-    </div>
-  </div>
-  <div class="change-slider__mobile__box">
-    <span class="change-slider__mobile__box__category">Carreras Verdes</span>
-    <big class="change-slider__mobile__box__time">Hace 3 min</big>
-    <div class="change-slider__mobile__box__extra">
-      <p class="change-slider__mobile__box__extra__text">Las "carreras verdes" pican en punta: el sector atraerá inversiones por más de...</p>
-    </div>
-  </div>
-  <div class="change-slider__mobile__box">
-    <span class="change-slider__mobile__box__category">Carreras Verdes</span>
-    <big class="change-slider__mobile__box__time">Hace 3 min</big>
-    <div class="change-slider__mobile__box__extra">
-      <p class="change-slider__mobile__box__extra__text">Las "carreras verdes" pican en punta: el sector atraerá inversiones por más de...</p>
-    </div>
-  </div>
+  <?php query_posts('category_name=herospace-think-secondary&posts_per_page=3'); ?>
+  <?php while ( have_posts() ) : the_post(); ?>
+    <a href="<?php the_permalink(); ?>" class="change-slider__mobile__box">
+      <span class="change-slider__mobile__box__category"><?php the_title(); ?></span>
+      <big class="change-slider__mobile__box__time">Hace 3 min</big>
+      <div class="change-slider__mobile__box__extra">
+        <p class="change-slider__mobile__box__extra__text"><?php dynamic_excerpt('100'); ?></p>
+      </div>
+    </a>
+  <?php endwhile; ?>
+  <?php wp_reset_query(); ?>
 </section>
 
 <section class="camping">
@@ -160,8 +144,9 @@
       <p class="camping__mobile__wrapper__text">Se parte de nuestra comunidad y participá de foros actividades únicas!</p>
     </div>
     <div class="camping__mobile__email">
-      <input class="camping__mobile__email__text" type="text">
-      <button class="camping__mobile__email__submit"></submit>
+      <?php mymail_form( $id = 1 ) ?>
+      <!-- <input class="camping__mobile__email__text" type="text">
+      <button class="camping__mobile__email__submit"></submit> -->
     </div>
   </div>
 
@@ -185,22 +170,28 @@
 
 <section class="news">
   <div class="news__content">
-    <div class="news__content__box">
-      <div class="news__content__box__image" style="background-image: url('/aconcagua/wp-content/themes/yeopress/images/news.jpg')"></div>
-      <div class="news__content__box__data">
-        <h3 class="news__content__box__data__title">El rey regresa a su selva</h3>
-        <p class="news__content__box__data__description">Un proyecto ecologista busca reintroducir al mítico yaguareté en los Esteros del Iberá para devolver el equilibrio al ecosistema del noroeste del del país.</p>
-        <span class="news__content__box__data__author">Por Guillermo Alduncin</span>
-      </div>
+    <?php query_posts('category_name=news'); ?>
+    <div class="news__wrapper">
+      <?php while ( have_posts() ) : the_post(); ?>
+        <div class="news__content__box">
+          <div class="news__content__box__image" style="background-image: url('/aconcagua/wp-content/themes/yeopress/images/news.jpg')"></div>
+          <div class="news__content__box__data">
+            <h3 class="news__content__box__data__title"><?php the_title(); ?></h3>
+            <p class="news__content__box__data__description"><?php the_excerpt(); ?></p>
+            <span class="news__content__box__data__author">Por <?php echo get_post_meta($post->ID, 'writter', true); ?></span>
+          </div>
+        </div>
+      <?php endwhile; ?>
     </div>
+    <?php wp_reset_query(); ?>
 
     <div class="news__dots">
       <div class="news__dots__actions">
         <div class="news__dots__actions__current">01</div>
-        <div class="news__dots__actions__total">03</div>
+        <div class="news__dots__actions__total"></div>
       </div>
-      <a href="" class="news__dots__btn news__dots__prev herospace__dots__btn--inactive"></a>
-      <a href="" class="news__dots__btn news__dots__next"></a>
+      <!-- <a href="" class="news__dots__btn news__dots__prev herospace__dots__btn--inactive"></a>
+      <a href="" class="news__dots__btn news__dots__next"></a> -->
     </div>
   </div>
 </section>
@@ -217,8 +208,9 @@
       <p class="domingo__mobile__wrapper__text">Suscribite a nuestro newsletter y recibí noticias sustentables pensadas para vos</p>
     </div>
     <div class="domingo__mobile__email">
-      <input class="domingo__mobile__email__text" type="text">
-      <button class="domingo__mobile__email__submit"></submit>
+      <?php mymail_form( $id = 2 ) ?>
+      <!-- <input class="domingo__mobile__email__text" type="text">
+      <button class="domingo__mobile__email__submit"></submit> -->
     </div>
   </div>
 
@@ -230,6 +222,7 @@
     <div class="domingo__desktop__data">
       <p class="domingo__desktop__data__text">Se parte de nuestra comunidad y participa de foros actividades únicas!</p>
       <div class="domingo__desktop__data__input">
+        <?php mymail_form( $id = 2 ) ?>
       </div>
     </div>
   </div>

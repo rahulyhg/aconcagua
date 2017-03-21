@@ -21,6 +21,10 @@
 	Base
 /* ========================================================================== */
 
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   background: $color-body;
 }
