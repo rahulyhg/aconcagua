@@ -30,7 +30,8 @@
     display: block;
     @include position(absolute, rem(10) rem(10) null null);
     @include size(rem(30));
-    background: $header-lg;
+    background: url($images_dir + 'hamb.png') center center no-repeat;
+    background-size: contain;
 
     @include breakpoint('medium') {
       display: none;

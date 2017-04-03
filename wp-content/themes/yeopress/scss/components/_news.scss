@@ -93,13 +93,21 @@
         }
 
         &__author {
-          @include position(absolute, null null rem(30) rem(30));
+          @include position(absolute, null null rem(30) rem(55));
           font-family: $mono;
           font-size: rem(11);
           color: white;
 
           @include breakpoint('large') {
-            @include position(absolute, null null rem(50) rem(50));
+            @include position(absolute, null null rem(50) rem(75));
+          }
+
+          &:before {
+            @include position(absolute, 0 null null rem(-25));
+            content: '';
+            @include size(rem(18) rem(15));
+            background: url($images_dir + 'news-icon.png') center center no-repeat;
+            background-size: rem(18);
           }
         }
       }
@@ -165,10 +173,12 @@
     &__btn {
       display: block;
       @include size(rem(20) rem(10));
-      background: $change-dots-active;
+      background: url($images_dir + 'submit.png') center center no-repeat;
+      background-size: contain;
 
-      &--inactive {
-        background: $change-dots-inactive;
+      &.slick-disabled {
+        opacity: 0.5;
+        cursor: default;
       }
     }
 
@@ -183,6 +193,7 @@
 
     &__prev {
       @include position(absolute, rem(15) rem(60) null null);
+      @include transform(rotate(-180deg));
 
       @include breakpoint('large') {
         top: rem(20);

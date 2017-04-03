@@ -13,6 +13,7 @@
     @include position(absolute, null rem(30) rem(30) null);
     @include size(rem(11) rem(14));
     background: url('../images/footer-arrow-up.png') 0 0 no-repeat;
+    background-size: contain;
 
     @include breakpoint('large') {
       right: rem(80);
@@ -34,6 +35,10 @@
     }
 
     @include breakpoint('large') {
+      @include size(rem(390) auto);
+    }
+
+    @include breakpoint('extra-large') {
       @include size(rem(420) auto);
     }
 
@@ -58,6 +63,66 @@
 
       @include breakpoint('large') {
         height: rem(40);
+      }
+
+      .mymail-form-info {
+        display: none;
+      }
+
+      .mymail-form-fields {
+        @include clearfix;
+
+        .mymail-email-wrapper {
+          float: left;
+          @include size(calc(100% - 56px) rem(36));
+          @include padding(null rem(20));
+          box-sizing: border-box;
+
+          input {
+            @include size(100% rem(36));
+            @include padding(null rem(15));
+            border: 0 none;
+            background: $footer-bg;
+
+            font-family: $mono;
+            font-size: rem(14);
+            line-height: rem(36);
+            font-weight: 100;
+            color: white;
+
+            &:focus {
+              outline: 0 none;
+            }
+
+            &::-webkit-input-placeholder {
+              color: white;
+            }
+            &:-moz-placeholder {
+              color: white;
+            }
+            &::-moz-placeholder {
+              color: white;
+            }
+            &:-ms-input-placeholder {
+              color: white;
+            }
+          }
+        }
+
+        .mymail-submit-wrapper {
+          float: left;
+          @include size(rem(36));
+          @include margin(0);
+
+          input {
+            @include size(rem(36));
+            border: 0 none;
+            background: url($images_dir + 'submit.png') center center no-repeat;
+            background-size: rem(18);
+
+            text-indent: rem(-9999);
+          }
+        }
       }
     }
   }
@@ -145,14 +210,30 @@
     @include clearfix;
 
     &__copyright {
+      @include position(relative, null null null null);
+      @include padding(null null null rem(30));
+
       font-family: $arial;
       font-size: rem(12);
       color: rgba(255, 255, 255, 0.3);
 
       @include breakpoint('medium') {
-        @include position(relative, rem(12) null null null);
+        @include position(relative, rem(3) null null null);
         float: left;
         padding-right: rem(20);
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        @include position(absolute, rem(-2) null null 0);
+        @include size(rem(20));
+        background: url($images_dir + 'ft-icon.png') center center no-repeat;
+        background-size: rem(16);
+
+        @include breakpoint('medium') {
+          top: rem(-4);
+        }
       }
     }
 
@@ -173,26 +254,241 @@
 
           a {
             display: block;
-            @include size(rem(25));
+            @include size(rem(20));
           }
 
           &--fb {
             a {
-              background: url('../images/facebook.png') center center no-repeat;
+              background: url($images_dir + 'facebook.png') center center no-repeat;
+              background-size: contain;
             }
           }
 
           &--tw {
             a {
-              background: url('../images/twitter.png') center center no-repeat;
+              background: url($images_dir + 'twitter.png') center center no-repeat;
+              background-size: contain;
             }
           }
 
           &--inst {
             a {
-              background: url('../images/instagram.png') center center no-repeat;
+              background: url($images_dir + 'instagram.png') center center no-repeat;
+              background-size: contain;
             }
           }
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    display: none;
+    @include position(relative, null null null null);
+    @include padding(rem(40) null rem(60));
+
+    // @include breakpoint('extra-large') {
+    //   padding-bottom: 0;
+    // }
+
+    &__close {
+      @include position(absolute, 0 0 null null);
+      display: block;
+      @include size(rem(25));
+      background: url($images_dir + 'footer-close.png') center center no-repeat;
+      background-size: rem(12);
+    }
+
+    &__wrapper {
+      @include breakpoint('medium') {
+        @include clearfix;
+      }
+
+      &__left {
+        @include breakpoint('medium') {
+          float: left;
+          width: 50%;
+        }
+      }
+
+      &__right {
+        display: none;
+
+        @include breakpoint('medium') {
+          float: left;
+          width: 50%;
+        }
+
+        @include breakpoint('large') {
+          @include clearfix;
+          padding-left: rem(100);
+          box-sizing: border-box;
+        }
+
+        @include breakpoint('extra-large') {
+          padding-left: rem(20);
+        }
+
+        &--who {
+          display: block;
+
+          @include breakpoint('extra-large') {
+            padding-bottom: rem(40);
+          }
+
+          .footer__bottom__wrapper__publicity {
+            display: none;
+          }
+
+          .footer__bottom__wrapper__contact {
+            display: none;
+          }
+        }
+
+        &--publicity {
+          display: block;
+
+          .footer__bottom__wrapper__publicity {
+            display: block;
+          }
+
+          .footer__bottom__wrapper__contact {
+            display: none;
+          }
+        }
+
+        &--contact {
+          display: block;
+
+          .footer__bottom__wrapper__contact {
+            display: block;
+          }
+
+          .footer__bottom__wrapper__publicity {
+            display: none;
+          }
+        }
+      }
+
+      &__contact-publicity {
+        @include padding(rem(20) null rem(60));
+
+        @include breakpoint('large') {
+          float: left;
+          @include padding(0 rem(70) null null);
+        }
+
+        @include breakpoint('extra-large') {
+          display: block;
+          padding-right: rem(90);
+        }
+
+        &__description {
+          @include padding(null null rem(30));
+
+          font-family: $platin;
+          font-size: rem(15);
+          font-style: italic;
+          line-height: rem(20);
+          color: rgba(255, 255, 255, 0.3);
+
+          @include breakpoint('extra-large') {
+            @include padding(null null rem(60));
+          }
+        }
+
+        &__lg {
+          @include size(rem(113) rem(15));
+          background: url($images_dir + 'footer-aconcagua.png') 0 0 no-repeat;
+        }
+      }
+
+      &__download {
+        @include breakpoint('large') {
+          float: left;
+        }
+
+        &__description {
+          font-family: $mono-regular;
+          font-size: rem(15);
+          line-height: rem(20);
+          color: white;
+
+          @include breakpoint('large') {
+            font-size: rem(13);
+            line-height: rem(18);
+          }
+        }
+
+        &__link {
+          @include padding(rem(30) null null);
+
+          a {
+            display: inline-block;
+            background: #59c1c0;
+            @include padding(rem(15) rem(35));
+
+            font-family: $mono;
+            font-size: rem(14);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+
+            @include breakpoint('extra-large') {
+              background: #59c1c0 url($images_dir + 'footer-download.png') rem(290) center no-repeat;
+              @include size(rem(260) auto);
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+
+    &--show {
+      display: block;
+    }
+  }
+
+  &__who {
+    @include breakpoint('large') {
+      @include clearfix;
+    }
+
+    &__box {
+      @include padding(null null rem(30));
+
+      @include breakpoint('large') {
+        float: left;
+        width: 33.33%;
+        @include padding(null null 0);
+      }
+
+      &__title {
+        font-family: $mono;
+        font-size: rem(12);
+        color: #59c1c0;
+      }
+
+      &__rol {
+        @include padding(null null rem(10));
+
+        font-family: $mono;
+        font-size: rem(12);
+        color: white;
+
+        @include breakpoint('large') {
+          @include padding(null null rem(30));
+        }
+      }
+
+      &__desc {
+        font-family: $mono-regular;
+        font-size: rem(12);
+        color: rgba(255, 255, 255, 0.3);
+
+        a {
+          color: rgba(255, 255, 255, 0.3);
+          text-decoration: none;
         }
       }
     }

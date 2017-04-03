@@ -113,9 +113,23 @@
     }
 
     &__author {
+      @include position(relative, null null null null);
+      display: block;
+      @include padding(null null null rem(25));
+
       font-family: $mono;
       font-size: rem(11);
       color: $herospace-text;
+
+      &:before {
+        @include position(absolute, rem(3) null null 0);
+        content: '';
+        display: block;
+        @include size(rem(13) rem(11));
+        background: url($images_dir + 'article-arrow.png') 0 0 no-repeat;
+        background-size: contain;
+        @include filter(brightness(0) invert(1));
+      }
     }
   }
 
@@ -177,10 +191,11 @@
     &__btn {
       display: block;
       @include size(rem(20) rem(10));
-      background: $herospace-dots-active;
+      background: url($images_dir + 'submit.png') center center no-repeat;
+      background-size: contain;
 
       &.slick-disabled {
-        background: $herospace-dots-inactive;
+        opacity: 0.5;
         cursor: default;
       }
     }
@@ -196,6 +211,7 @@
 
     &__prev {
       @include position(absolute, rem(15) rem(60) null null);
+      @include transform(rotate(-180deg));
 
       @include breakpoint('large') {
         top: rem(20);
@@ -249,8 +265,9 @@
         content: '';
         display: block;
         @include position(absolute, null rem(30) rem(30) null);
-        @include size(rem(20) rem(10));
-        background: $herospace-slider-text-color;
+        @include size(rem(13) rem(11));
+        background: url($images_dir + 'article-arrow.png') 0 0 no-repeat;
+        background-size: contain;
       }
 
       &__category {

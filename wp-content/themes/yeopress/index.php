@@ -20,8 +20,6 @@
       <div class="herospace__dots__actions__current">01</div>
       <div class="herospace__dots__actions__total"></div>
     </div>
-    <!-- <a href="" class="herospace__dots__btn herospace__dots__prev"></a>
-    <a href="" class="herospace__dots__btn herospace__dots__next"></a> -->
   </div>
 </section>
 
@@ -42,11 +40,7 @@
       <?php endwhile; ?>
     </div>
 
-    <div class="herospace-slider__mobile__dots">
-      <!-- <a href="#" class="herospace-slider__mobile__dots__link"></a>
-      <a href="#" class="herospace-slider__mobile__dots__link herospace-slider__mobile__dots__link--active"></a>
-      <a href="#" class="herospace-slider__mobile__dots__link"></a> -->
-    </div>
+    <div class="herospace-slider__mobile__dots"></div>
   </div>
 </section>
 
@@ -60,7 +54,9 @@
           <small class="herospace-slider__mobile__box__author">Por <?php echo get_post_meta($post->ID, 'writter', true); ?></small>
         </a>
       <?php endwhile; ?>
-      <div class="herospace-banner"></div>
+      <div class="herospace-banner">
+        <?php wp_banner_manager(3);?>
+      </div>
     </section>
   <?php } ?>
 <?php wp_reset_query(); ?>
@@ -110,11 +106,7 @@
       <?php wp_reset_query(); ?>
     </div>
 
-    <div class="change-slider__mobile__dots">
-      <!-- <a href="#" class="change-slider__mobile__dots__link"></a>
-      <a href="#" class="change-slider__mobile__dots__link change-slider__mobile__dots__link--active"></a>
-      <a href="#" class="change-slider__mobile__dots__link"></a> -->
-    </div>
+    <div class="change-slider__mobile__dots"></div>
   </div>
 </section>
 
@@ -145,8 +137,6 @@
     </div>
     <div class="camping__mobile__email">
       <?php mymail_form( $id = 1 ) ?>
-      <!-- <input class="camping__mobile__email__text" type="text">
-      <button class="camping__mobile__email__submit"></submit> -->
     </div>
   </div>
 
@@ -190,8 +180,6 @@
         <div class="news__dots__actions__current">01</div>
         <div class="news__dots__actions__total"></div>
       </div>
-      <!-- <a href="" class="news__dots__btn news__dots__prev herospace__dots__btn--inactive"></a>
-      <a href="" class="news__dots__btn news__dots__next"></a> -->
     </div>
   </div>
 </section>
@@ -209,8 +197,6 @@
     </div>
     <div class="domingo__mobile__email">
       <?php mymail_form( $id = 2 ) ?>
-      <!-- <input class="domingo__mobile__email__text" type="text">
-      <button class="domingo__mobile__email__submit"></submit> -->
     </div>
   </div>
 
