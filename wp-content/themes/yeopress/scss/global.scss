@@ -15,7 +15,8 @@
         'components/list',
         'components/banners';
 
-@import 'pages/category';
+@import 'pages/category',
+        'pages/article';
 
 /* ==========================================================================
 	Base
@@ -27,6 +28,10 @@ html, body {
 
 body {
   background: $color-body;
+
+  &.single {
+    background: white;
+  }
 }
 // html {
 // 	height: 100%;

@@ -1,13 +1,13 @@
 .category-page {
-  @include padding(rem(130) null rem(30));
+  @include padding(rem(30) null rem(30));
   background: white;
 
   @include breakpoint('medium') {
-    @include padding(rem(230) null rem(50));
+    @include padding(rem(30) null rem(50));
   }
 
   @include breakpoint('large') {
-    padding-top: rem(280);
+    padding-top: rem(80);
   }
 
   &__title {

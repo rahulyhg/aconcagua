@@ -22,9 +22,9 @@ function wpdocs_custom_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
-remove_filter( 'the_content', 'wpautop' );
+//remove_filter( 'the_content', 'wpautop' );
 remove_filter( 'the_excerpt', 'wpautop' );
-
+remove_filter('term_description','wpautop');
 
 //Add Featured Image Support
 add_theme_support('post-thumbnails');

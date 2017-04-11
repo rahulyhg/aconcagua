@@ -11,6 +11,20 @@
     @include size(100% rem(700));
   }
 
+  &--full {
+    .herospace__wrapper {
+      @include breakpoint('medium') {
+        @include size(100% rem(530));
+        margin-left: 0;
+      }
+
+      @include breakpoint('large') {
+        @include size(100% rem(700));
+        margin-left: 0;
+      }
+    }
+  }
+
   &__container {
     @include clearfix;
     overflow: hidden;
