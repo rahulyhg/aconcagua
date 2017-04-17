@@ -1,7 +1,7 @@
 .header {
   position: fixed;
   z-index: 100;
-  background: $header-bg;
+  background: rgba(0, 0, 0, 0.2);
   @include size(100% rem(50));
 
   @include breakpoint('large') {
@@ -18,11 +18,13 @@
     @include breakpoint('medium') {
       @include size(rem(170));
       background-position: rem(20) rem(20);
+      background-size: rem(80);
     }
 
     @include breakpoint('large') {
       @include size(rem(200));
       background-position: rem(35) rem(35);
+      background-size: rem(80);
     }
   }
 
@@ -76,10 +78,11 @@
           @include padding(null rem(30));
 
           font-family: $mono;
-          font-size: rem(12);
+          font-size: rem(14);
           line-height: rem(40);
           text-decoration: none;
-          color: #2e2e2e;
+          //color: #2e2e2e;
+          color: white;
         }
       }
     }

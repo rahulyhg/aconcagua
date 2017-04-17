@@ -356,6 +356,7 @@
     float: left;
     @include size(30% 25vw);
 
+
     &:nth-child(3) {
       display: none;
 
@@ -363,9 +364,10 @@
         display: block;
       }
     }
+
     @include breakpoint('large') {
       @include size(22% rem(261));
-      @include padding(rem(20));
+      @include padding(rem(33));
     }
   }
 }

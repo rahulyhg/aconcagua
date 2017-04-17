@@ -200,7 +200,10 @@
         color: #222325;
 
         @include breakpoint('large') {
-          @include padding(null rem(15) rem(25) rem(160));
+          @include padding(null rem(33) rem(33) rem(160));
+
+          font-size: rem(24);
+          line-height: rem(26);
         }
       }
 
@@ -227,7 +230,7 @@
 
             input {
               @include size(100% rem(36));
-              @include padding(null rem(15));
+              @include padding(null rem(33));
               border: 0 none;
               background: #59c1c0;
 
@@ -263,6 +266,7 @@
             float: left;
             @include size(rem(36));
             @include margin(0);
+            @include position(relative, null rem(26) null null);
 
             input {
               @include size(rem(36));

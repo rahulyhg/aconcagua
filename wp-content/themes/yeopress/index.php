@@ -129,11 +129,11 @@
     <div class="camping__mobile__header">
       <div class="camping__mobile__header__content">
         <h3 class="camping__mobile__header__title">Camping</h3>
-        <p class="camping__mobile__header__description">Periodismo positivo, contenidos inspiradores, información para vivir mejor. En tu día de descanso, lo mejor de Aconcagua en la palma de tu mano. </p>
+        <p class="camping__mobile__header__description">Hay mucho por descubrir y queremos que<br>seas parte!. Sumáte a la nuestra comunidad<br>y acompañanos en cada descubrimiento.</p>
       </div>
     </div>
     <div class="camping__mobile__wrapper">
-      <p class="camping__mobile__wrapper__text">Se parte de nuestra comunidad y participá de foros actividades únicas!</p>
+      <p class="camping__mobile__wrapper__text">Se parte de nuestra<br> comunidad y participá de<br> foros actividades únicas!</p>
     </div>
     <div class="camping__mobile__email">
       <?php mymail_form( $id = 1 ) ?>
@@ -143,10 +143,10 @@
   <div class="camping__desktop">
     <div class="camping__desktop__content">
       <h3 class="camping__desktop__content__title">Camping</h3>
-      <p class="camping__desktop__content__description">Periodismo positivo, contenidos inspiradores, información para vivir mejor. En tu día de descanso, lo mejor de Aconcagua en la palma de tu mano. </p>
+      <p class="camping__desktop__content__description">Hay mucho por descubrir y queremos que<br>seas parte!. Sumáte a la nuestra comunidad<br>y acompañanos en cada descubrimiento.</p>
     </div>
     <div class="camping__desktop__data">
-      <p class="camping__desktop__data__text">Se parte de nuestra comunidad y participa de foros actividades únicas!</p>
+      <p class="camping__desktop__data__text">Se parte de nuestra<br> comunidad y participá de<br> foros actividades únicas!</p>
       <div class="camping__desktop__data__input">
         <?php mymail_form( $id = 1 ) ?>
       </div>
@@ -189,11 +189,11 @@
     <div class="domingo__mobile__header">
       <div class="domingo__mobile__header__content">
         <h3 class="domingo__mobile__header__title">Domingo</h3>
-        <p class="domingo__mobile__header__description">Periodismo positivo, contenidos inspiradores, información para vivir mejor. En tu día de descanso, lo mejor de Aconcagua en la palma de tu mano.</p>
+        <p class="domingo__mobile__header__description">Periodismo positivo, contenidos inspiradores,<br> información para vivir mejor. En tu día de descanso,<br> lo mejor de Aconcagua en la palma de tu mano.</p>
       </div>
     </div>
     <div class="domingo__mobile__wrapper">
-      <p class="domingo__mobile__wrapper__text">Suscribite a nuestro newsletter y recibí noticias sustentables pensadas para vos</p>
+      <p class="domingo__mobile__wrapper__text">Suscribite a nuestro<br> newsletter y recibí noticias<br> sustentables pensadas para vos</p>
     </div>
     <div class="domingo__mobile__email">
       <?php mymail_form( $id = 2 ) ?>
@@ -203,10 +203,10 @@
   <div class="domingo__desktop">
     <div class="domingo__desktop__content">
       <h3 class="domingo__desktop__content__title">Domingo</h3>
-      <p class="domingo__desktop__content__description">Periodismo positivo, contenidos inspiradores, información para vivir mejor. En tu día de descanso, lo mejor de Aconcagua.</p>
+      <p class="domingo__desktop__content__description">Periodismo positivo, contenidos inspiradores,<br> información para vivir mejor. En tu día de descanso,<br> lo mejor de Aconcagua en la palma de tu mano.</p>
     </div>
     <div class="domingo__desktop__data">
-      <p class="domingo__desktop__data__text">Se parte de nuestra comunidad y participa de foros actividades únicas!</p>
+      <p class="domingo__desktop__data__text">Suscribite a nuestro<br> newsletter y recibí noticias<br> sustentables pensadas para vos</p>
       <div class="domingo__desktop__data__input">
         <?php mymail_form( $id = 2 ) ?>
       </div>

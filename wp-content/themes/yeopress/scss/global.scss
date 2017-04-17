@@ -32,6 +32,46 @@ body {
   &.single {
     background: white;
   }
+
+  &.category {
+    .header {
+      &__nav__list__item a {
+        color: #1a1a1a;
+      }
+    }
+
+    .herospace {
+      &__wrapper {
+        background: white;
+        background-image: none!important;
+      }
+
+      &__data__title {
+        color: #1a1a1a;
+      }
+
+      &__data__description {
+        color: #1a1a1a;
+      }
+
+      &--small {
+        .article__data__author {
+          color: #1a1a1a;
+        }
+      }
+    }
+
+    .article__data__content {
+      border-right: 0.0625rem solid #f6f6f6;
+      border-left: 0.0625rem solid #f6f6f6;
+    }
+  }
+}
+
+.main {
+  @include breakpoint('large') {
+    padding-top: rem(80);
+  }
 }
 // html {
 // 	height: 100%;

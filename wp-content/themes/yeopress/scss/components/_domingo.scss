@@ -1,4 +1,11 @@
 .domingo {
+
+  &--grey {
+    .domingo__desktop__content {
+      background-color: #f6f6f6;
+    }
+  }
+
   &__mobile {
     @include breakpoint('medium') {
       display: none;
@@ -152,7 +159,7 @@
       box-sizing: border-box;
 
       @include breakpoint('medium') {
-        background: white url($images_dir + 'doming-desktop.jpg') 0 0 no-repeat;
+        background: white url($images_dir + 'domingo-desktop.png') 0 0 no-repeat;
         background-size: auto rem(280);
       }
 
@@ -202,7 +209,7 @@
         color: #222325;
 
         @include breakpoint('large') {
-          @include padding(null rem(160) rem(25) rem(15));
+          @include padding(null rem(160) rem(28) rem(33));
         }
       }
 
@@ -229,7 +236,7 @@
 
             input {
               @include size(100% rem(36));
-              @include padding(null rem(15));
+              @include padding(null rem(33));
               border: 0 none;
               background: #59c1c0;
 
@@ -262,6 +269,7 @@
             float: left;
             @include size(rem(36));
             @include margin(0);
+            @include position(relative, null rem(23) null null);
 
             input {
               @include size(rem(36));
