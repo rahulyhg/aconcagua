@@ -23,13 +23,15 @@
     float: left;
     @include position(relative, null null null null);
     @include size(100% rem(530));
-
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
     text-decoration: none;
 
     @include breakpoint('medium') {
       @include size(calc(100% - 40px) rem(530));
       margin-left: rem(40);
-      background: $change-bg;
+      //background: $change-bg;
     }
 
     @include breakpoint('large') {
@@ -40,6 +42,57 @@
     &:focus {
       outline: 0 none;
     }
+
+    &:hover {
+      @include breakpoint('large') {
+        background: white;
+        background-image: none!important;
+        @include transition(all 0.3s ease-in-out);
+      }
+
+      .change__data {
+        &:before {
+          @include breakpoint('large') {
+            background: rgba(0, 0, 0, 0.2);
+            @include transition(background 0.3s ease-in-out);
+          }
+        }
+      }
+      .change__data__category {
+        @include breakpoint('large') {
+          color: $change-text-title;
+          @include transition(color 0.3s ease-in-out);
+        }
+      }
+
+      .change__data__title {
+        @include breakpoint('large') {
+          color: $change-text-title;
+          @include transition(color 0.3s ease-in-out);
+        }
+      }
+
+      .change__data__description {
+        @include breakpoint('large') {
+          color: $change-text-desc;
+          @include transition(color 0.3s ease-in-out);
+        }
+      }
+
+      .change__data__author {
+        @include breakpoint('large') {
+          color: $change-text-desc;
+          @include transition(color 0.3s ease-in-out);
+        }
+
+        &:before {
+          @include breakpoint('large') {
+            @include filter(brightness(1) invert(0));
+            @include transition(all 0.3s ease-in-out);
+          }
+        }
+      }
+    }
   }
 
   &__category {
@@ -48,10 +101,14 @@
 
     font-family: $mono;
     font-size: rem(13);
-    color: $change-text-title;
+    color: $herospace-text;
 
     @include breakpoint('medium') {
       display: none;
+    }
+
+    @include breakpoint('large') {
+      font-size: rem(20);
     }
   }
 
@@ -71,13 +128,25 @@
       @include padding(0);
     }
 
+    &:before {
+      display: none;
+      content: '';
+      @include position(absolute, rem(63) null null rem(-280));
+      @include size(rem(50) rem(1));
+      background: rgba(255, 255, 255, 0.2);
+
+      @include breakpoint('large') {
+        display: block;
+      }
+    }
+
     &__category {
       display: none;
       @include padding(null null rem(25));
 
       font-family: $mono;
       font-size: rem(13);
-      color: $change-text-title;
+      color: $herospace-text;
 
       @include breakpoint('medium') {
         display: block;
@@ -86,7 +155,7 @@
       @include breakpoint('large') {
         @include padding(null null rem(30));
 
-        font-size: rem(16);
+        font-size: rem(20);
       }
     }
 
@@ -94,7 +163,7 @@
       font-family: $platin-semibold;
       font-size: rem(24);
       line-height: rem(26);
-      color: $change-text-title;
+      color: $herospace-text;
 
       @include breakpoint('small-landscape') {
         font-size: rem(29);
@@ -102,8 +171,8 @@
       }
 
       @include breakpoint('large') {
-        font-size: rem(54);
-        line-height: rem(58);
+        font-size: rem(70);
+        line-height: rem(78);
       }
     }
 
@@ -113,7 +182,7 @@
       font-family: $platin;
       font-size: rem(16);
       line-height: rem(21);
-      color: $change-text-desc;
+      color: $herospace-text;
     }
 
     &__author {
@@ -122,7 +191,7 @@
       @include padding(null null null rem(25));
       font-family: $mono;
       font-size: rem(11);;
-      color: $change-text-desc;
+      color: $herospace-text;
 
       &:before {
         @include position(absolute, rem(2) null null 0);
@@ -131,6 +200,7 @@
         @include size(rem(13) rem(11));
         background: url($images_dir + 'article-arrow.png') 0 0 no-repeat;
         background-size: contain;
+        @include filter(brightness(0) invert(1));
       }
     }
   }

@@ -72,6 +72,10 @@
       @include margin(null rem(30));
       background: $domingo-wrapper-email;
 
+      .mymail-form-info.success {
+        background: #59c1c0;
+      }
+
       .mymail-form-info {
         display: none;
       }
@@ -219,6 +223,10 @@
 
         .mymail-form-info {
           display: none;
+        }
+
+        .mymail-form-info.success {
+          background: #59c1c0;
         }
 
         .mymail-form-fields {

@@ -17,6 +17,19 @@ function theme_enqueue_scripts(){
 	wp_enqueue_style('global', get_bloginfo('template_url') . '/css/global.css');
 }
 
+// function bamboo_request($query_string )
+// {
+//     if( isset( $query_string['page'] ) ) {
+//         if( '' != $query_string['page'] ) {
+//             if( isset( $query_string['name'] ) ) {
+//                 unset( $query_string['name'] );
+//             }
+//         }
+//     }
+//     return $query_string;
+// }
+// add_filter('request', 'bamboo_request');
+
 function wpdocs_custom_excerpt_length( $length ) {
     return 20;
 }

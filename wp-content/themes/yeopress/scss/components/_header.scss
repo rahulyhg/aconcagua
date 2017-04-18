@@ -46,6 +46,28 @@
     }
   }
 
+  &__share {
+    display: none;
+    @include clearfix();
+
+    // @include breakpoint('large') {
+    //   display: block;
+    // }
+
+    &__list {
+      float: left;
+      @include clearfix();
+
+      &__item {
+        float: left;
+      }
+    }
+
+    &__link {
+      float: left;
+    }
+  }
+
   &__nav {
     display: none;
     float: right;

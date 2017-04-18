@@ -3,13 +3,13 @@
   <?php query_posts('category_name=herospace'); ?>
   <div class="herospace__container">
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-      <a href="<?php the_permalink(); ?>" class="herospace__wrapper" style="background-image: url('/aconcagua/wp-content/themes/yeopress/images/herospace.jpg')">
+      <a href="<?php the_permalink(); ?>" class="herospace__wrapper herospace__wrapper--hover" style="background-image: url('<?php the_post_thumbnail_url('full'); ?>')">
         <span class="herospace__category"><?php echo get_post_meta($post->ID, 'category', true); ?></span>
         <div class="herospace__data">
           <span class="herospace__data__category"><?php echo get_post_meta($post->ID, 'category', true); ?></span>
           <h2 class="herospace__data__title"><?php the_title() ?></h2>
-          <p class="herospace__data__description"><?php the_excerpt() ?></p>
-          <small class="herospace__data__author">Por <?php echo get_post_meta($post->ID, 'writter', true); ?></small>
+          <p class="herospace__data__description"><?php dynamic_excerpt('250') ?></p>
+          <small class="herospace__data__author">Por <?php the_author(); ?></small>
         </div>
       </a>
     <?php endwhile; endif; ?>
@@ -33,7 +33,7 @@
             <div class="herospace-slider__mobile__box">
               <span class="herospace-slider__mobile__box__category"><?php echo get_post_meta($post->ID, 'category', true); ?></span>
               <h3 class="herospace-slider__mobile__box__title"><?php the_title() ?></h3>
-              <small class="herospace-slider__mobile__box__author">Por <?php echo get_post_meta($post->ID, 'writter', true); ?></small>
+              <small class="herospace-slider__mobile__box__author">Por <?php the_author(); ?></small>
             </div>
           </a>
         </div>
@@ -51,7 +51,7 @@
         <a href="<?php the_permalink(); ?>" class="herospace-slider__mobile__box">
           <span class="herospace-slider__mobile__box__category"><?php echo get_post_meta($post->ID, 'category', true); ?></span>
           <h3 class="herospace-slider__mobile__box__title"><?php the_title() ?></h3>
-          <small class="herospace-slider__mobile__box__author">Por <?php echo get_post_meta($post->ID, 'writter', true); ?></small>
+          <small class="herospace-slider__mobile__box__author">Por <?php the_author(); ?></small>
         </a>
       <?php endwhile; ?>
       <div class="herospace-banner">
@@ -65,13 +65,13 @@
   <?php query_posts('category_name=herospace-think'); ?>
     <div class="change__container">
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-        <a href="<?php the_permalink(); ?>" class="change__wrapper">
+        <a href="<?php the_permalink(); ?>" class="change__wrapper" style="background-image: url('<?php the_post_thumbnail_url('full'); ?>')">
           <span class="change__category"><?php echo get_post_meta($post->ID, 'category', true); ?></span>
           <div class="change__data">
             <span class="change__data__category"><?php echo get_post_meta($post->ID, 'category', true); ?></span>
             <h2 class="change__data__title"><?php the_title() ?></h2>
-            <p class="change__data__description"><?php the_excerpt() ?></p>
-            <small class="change__data__author">Por <?php echo get_post_meta($post->ID, 'writter', true); ?></small>
+            <p class="change__data__description"><?php dynamic_excerpt('250') ?></p>
+            <small class="change__data__author">Por <?php the_author(); ?></small>
           </div>
         </a>
       <?php endwhile; endif; ?>
@@ -129,7 +129,7 @@
     <div class="camping__mobile__header">
       <div class="camping__mobile__header__content">
         <h3 class="camping__mobile__header__title">Camping</h3>
-        <p class="camping__mobile__header__description">Hay mucho por descubrir y queremos que<br>seas parte!. Sumáte a la nuestra comunidad<br>y acompañanos en cada descubrimiento.</p>
+        <p class="camping__mobile__header__description">Hay mucho por descubrir y queremos que seas parte!. Sumáte a la nuestra comunidad y acompañanos en cada descubrimiento.</p>
       </div>
     </div>
     <div class="camping__mobile__wrapper">
@@ -189,7 +189,7 @@
     <div class="domingo__mobile__header">
       <div class="domingo__mobile__header__content">
         <h3 class="domingo__mobile__header__title">Domingo</h3>
-        <p class="domingo__mobile__header__description">Periodismo positivo, contenidos inspiradores,<br> información para vivir mejor. En tu día de descanso,<br> lo mejor de Aconcagua en la palma de tu mano.</p>
+        <p class="domingo__mobile__header__description">Periodismo positivo, contenidos inspiradores, información para vivir mejor. En tu día de descanso, lo mejor de Aconcagua en la palma de tu mano.</p>
       </div>
     </div>
     <div class="domingo__mobile__wrapper">

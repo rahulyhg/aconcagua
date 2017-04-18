@@ -1,7 +1,7 @@
-<?php if (!empty($_SERVER['SCRIPT_FILENAME']) and 'comments.php' == basename($_SERVER['SCRIPT_FILENAME'])) die ('Please do not load this page directly. Thanks!'); ?>
+<!-- <?php if (!empty($_SERVER['SCRIPT_FILENAME']) and 'comments.php' == basename($_SERVER['SCRIPT_FILENAME'])) die ('Please do not load this page directly. Thanks!'); ?>
 <?php if (post_password_required()): ?>
 	This post is password protected. Enter the password to view comments.
-<?php endif; ?>
+<?php endif; ?> -->
 
 <?php if (have_comments()): ?>
 	<h2 id="comments-header"><?php comments_number('No Responses', 'One Response', '% Responses' );?></h2>
@@ -53,7 +53,6 @@
 			<div class="input-wrap textarea<?= ($req) ? ' required' : ''?>">
 				<label for="input-comment">Message</label>
 				<textarea name="comment" id="input-comment"></textarea>
-				<p class="caption">You can use these tags: <code><?= allowed_tags() ?></code></p>
 			</div>
 			<div class="input-wrap submit">
 				<input class="button" type="submit" value="Submit Comment" />

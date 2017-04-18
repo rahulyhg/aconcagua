@@ -13,7 +13,8 @@
         'components/domingo',
         'components/article',
         'components/list',
-        'components/banners';
+        'components/banners',
+        'components/pagination';
 
 @import 'pages/category',
         'pages/article';
@@ -31,6 +32,12 @@ body {
 
   &.single {
     background: white;
+
+    .header {
+      &__nav__list__item a {
+        color: #1a1a1a;
+      }
+    }
   }
 
   &.category {

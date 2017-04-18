@@ -5,7 +5,14 @@
           <div class="herospace__data">
             <h2 class="herospace__data__title"><?php single_cat_title(); ?></h2>
             <p class="herospace__data__description"><?php echo category_description(); ?></p>
-            <span class="article__data__author">123 resultados</span>
+            <span class="article__data__author">
+            <?php
+              $thisCat = get_category(get_query_var('cat'),false);
+              $total_posts = $thisCat->count;
+              echo $total_posts;
+            ?>
+            resultados
+            </span>
           </div>
         </div>
     </section>
@@ -40,5 +47,4 @@
 		<h1>Nothing found</h1>
 	<?php endif; ?> -->
 </div>
-<?php //get_sidebar(); ?>
 <?php get_footer(); ?>

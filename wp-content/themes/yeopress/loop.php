@@ -20,12 +20,25 @@
               <span class="article__data__author">Por <?php echo get_post_meta($post->ID, 'writter', true); ?></span>
             </div>
           </div>
-  			</a>
+        </a>
       </li>
-		<?php endwhile; ?>
+    <?php endwhile; ?>
     </ul>
+
+    <?php
+    the_posts_pagination( array(
+      'screen_reader_text' => ' ',
+      'mid_size'  => 10,
+      'prev_text' => __( 'Anterior', 'textdomain' ),
+      'next_text' => __( 'Siguiente', 'textdomain' ),
+    ));
+     ?>
+
+     <!-- <div class="related-posts">
+       <?php related_posts(); ?>
+     </div> -->
 	<?php else: ?>
-		<p>Nothing matches your query.</p>
+		<!-- <p>Nothing matches your query.</p> -->
 	<?php  endif; ?>
   </div>
 
@@ -64,13 +77,13 @@
   </section>
   <?php else: ?>
 
-    <section class="herospace herospace--full">
-        <div class="herospace__wrapper" style="background-image: url('/aconcagua/wp-content/themes/yeopress/images/herospace.jpg')">
+    <section class="herospace herospace--full herospace--static">
+        <div class="herospace__wrapper" style="background-image: url('<?php the_post_thumbnail_url('full'); ?>')">
           <span class="herospace__category"><?php echo get_post_meta($post->ID, 'category', true); ?></span>
           <div class="herospace__data">
             <span class="herospace__data__category"><?php echo get_post_meta($post->ID, 'category', true); ?></span>
             <h2 class="herospace__data__title"><?php the_title(); ?></h2>
-            <p class="herospace__data__description"><?php the_excerpt(); ?></p>
+            <p class="herospace__data__description"><?php dynamic_excerpt('250') ?></p>
           </div>
         </div>
     </section>
@@ -102,11 +115,46 @@
       </div>
       <div class="article__center">
         <?php the_content(); ?>
+
+        <?php comments_template(); ?>
       </div>
       <div class="article__right">
         <?php if ( function_exists( 'tptn_show_pop_posts' ) ) { tptn_show_pop_posts(); } ?>
       </div>
     </section>
 
+    <section class="domingo domingo--grey">
+      <div class="domingo__mobile">
+        <div class="domingo__mobile__header">
+          <div class="domingo__mobile__header__content">
+            <h3 class="domingo__mobile__header__title">Domingo</h3>
+            <p class="domingo__mobile__header__description">Periodismo positivo, contenidos inspiradores,<br> información para vivir mejor. En tu día de descanso,<br> lo mejor de Aconcagua en la palma de tu mano.</p>
+          </div>
+        </div>
+        <div class="domingo__mobile__wrapper">
+          <p class="domingo__mobile__wrapper__text">Suscribite a nuestro<br> newsletter y recibí noticias<br> sustentables pensadas para vos</p>
+        </div>
+        <div class="domingo__mobile__email">
+          <?php mymail_form( $id = 2 ) ?>
+        </div>
+      </div>
+
+      <div class="domingo__desktop">
+        <div class="domingo__desktop__content">
+          <h3 class="domingo__desktop__content__title">Domingo</h3>
+          <p class="domingo__desktop__content__description">Periodismo positivo, contenidos inspiradores,<br> información para vivir mejor. En tu día de descanso,<br> lo mejor de Aconcagua en la palma de tu mano.</p>
+        </div>
+        <div class="domingo__desktop__data">
+          <p class="domingo__desktop__data__text">Suscribite a nuestro<br> newsletter y recibí noticias<br> sustentables pensadas para vos</p>
+          <div class="domingo__desktop__data__input">
+            <?php mymail_form( $id = 2 ) ?>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="banner banner--bottom">
+      <?php wp_banner_manager(2);?>
+    </section>
   <?php  endif; ?>
 <?php  endif; ?>

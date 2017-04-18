@@ -44,7 +44,7 @@
         &__twitter {
           font-family: $mono;
           font-size: rem(12);
-          color: #f65a5b;
+          color: #59c1c0;
         }
 
         &__email {
@@ -107,7 +107,7 @@
       &__link {
         float: right;
         @include size(rem(66));
-        background: #f65a5b;
+        background: #59c1c0;
       }
     }
   }
@@ -197,7 +197,7 @@
           @include transition(all 0.3s ease-in-out);
 
           &:hover {
-            background: #f65a5b;
+            background: #59c1c0;
 
             .tptn_link {
               .tptn_title {
@@ -206,7 +206,7 @@
             }
 
             .crp_author {
-              color: #f65a5b;
+              color: #59c1c0;
 
               a {
                 color: white;

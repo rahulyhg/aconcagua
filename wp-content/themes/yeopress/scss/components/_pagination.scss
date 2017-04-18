@@ -1,0 +1,96 @@
+.pagination {
+  @include padding(rem(30));
+
+  @include breakpoint('large') {
+    @include padding(rem(50) rem(130));
+  }
+
+  .screen-reader-text {
+    display: none;
+  }
+
+  .nav-links {
+    @include position(relative, null null null null);
+    text-align: center;
+
+    .page-numbers {
+      @include padding(null rem(12));
+      text-decoration: none;
+
+      font-family: $roboto;
+      font-size: rem(14);
+      color: rgba(51, 51, 51, 0.3);
+
+      &:focus {
+        outline: 0 none;
+      }
+
+      &.current {
+        color: $change-text-title;
+
+        &:hover {
+          @include breakpoint('large') {
+            color: $change-text-title;
+          }
+        }
+      }
+
+      &:hover {
+        @include breakpoint('large') {
+          color: rgba(51, 51, 51, 1);
+          @include transition(color 0.3s ease-in);
+        }
+      }
+    }
+
+    .next {
+      @include position(absolute, 0 0 null null);
+      @include padding(0);
+
+      color: #333;
+
+      &:before {
+        @include position(absolute, rem(3) null null rem(-30));
+        content: '';
+        display: block;
+        @include size(rem(13) rem(11));
+        background: url($images_dir + 'article-arrow.png') 0 0 no-repeat;
+        background-size: contain;
+        @include transition(all 0.3s ease-in);
+      }
+
+      &:hover {
+        &:before {
+          @include breakpoint('large') {
+            left: rem(-20);
+          }
+        }
+      }
+    }
+
+    .before {
+      @include position(absolute, 0 0 null null);
+      @include padding(0);
+
+      color: #333;
+
+      &:before {
+        @include position(absolute, rem(3) rem(-30) null null);
+        content: '';
+        display: block;
+        @include size(rem(13) rem(11));
+        background: url($images_dir + 'article-arrow.png') 0 0 no-repeat;
+        background-size: contain;
+        @include transition(all 0.3s ease-in);
+      }
+
+      &:hover {
+        &:before {
+          @include breakpoint('large') {
+            right: rem(-20);
+          }
+        }
+      }
+    }
+  }
+}

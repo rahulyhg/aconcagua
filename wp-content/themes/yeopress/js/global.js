@@ -29,6 +29,10 @@ requirejs(['jquery', 'slick'], function( $ ) {
     var totalHerospaceSlides = $('.herospace__container .herospace__wrapper').length;
 
     $('.herospace__dots__actions__total').html('0' + totalHerospaceSlides);
+
+    if(totalHerospaceSlides == 1) {
+      $('.herospace__dots').hide();
+    }
   }
 
   //Herospace Secondary

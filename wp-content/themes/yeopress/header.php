@@ -16,6 +16,15 @@
       <header class="header">
         <a class="header__lg" href="<?php bloginfo('url') ?>" title="<?php bloginfo('name') ?> - <?php bloginfo('description') ?>"></a>
         <div class="header__wrapper">
+          <div class="header__share">
+            <ul class="header__share__list">
+              <li class="header__share__list__item header__share__list__item--fb"><a href="#" class=""></a></li>
+              <li class="header__share__list__item header__share__list__item--fb"><a href="#" class=""></a></li>
+            </ul>
+            <div class="header__share__link">
+              <a href="#" class="header__share__link__icon"></a>
+            </div>
+          </div>
           <nav class="header__nav">
             <ul class="header__nav__list">
               <li class="header__nav__list__item"><a href="/aconcagua/hacer">Hacer</a></li>
