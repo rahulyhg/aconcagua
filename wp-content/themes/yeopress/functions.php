@@ -1,4 +1,21 @@
 <?php
+  function format_comment() {  ?>
+    <li class="comments-list__wrapper__item">
+      <div class="comments-list__wrapper__image">
+        <?php echo get_avatar( $comment, 32 ); ?>
+      </div>
+      <div class="comments-list__wrapper__data">
+        <div class="comments-list__wrapper__data__top">
+          <span><?php printf(__('%s'), get_comment_author_link()) ?> . <?php comment_time('H:i'); ?>hs</span>
+        </div>
+        <div class="comments-list__wrapper__data__bottom">
+          <?php comment_text(); ?>
+        </div>
+      </div>
+    </li>
+ <?php } ?>
+ 
+<?php
 add_action('wp_enqueue_scripts', 'theme_enqueue_scripts');
 function theme_enqueue_scripts(){
 

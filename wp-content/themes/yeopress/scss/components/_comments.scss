@@ -1,0 +1,136 @@
+.comment-form-container {
+  @include padding(rem(33));
+  background: #f6f6f6;
+}
+
+.input-wrap {
+  @include padding(null null rem(10));
+
+  input[type="text"] {
+    @include size(100% rem(40));
+    @include padding(null rem(33));
+    border: 0 none;
+    background: white;
+    box-sizing: border-box;
+
+    font-family: $mono;
+    font-size: rem(11);
+    color: #2f2f2f;
+
+    &:focus {
+      outline: 0 none;
+    }
+  }
+
+  textarea {
+    @include size(100% rem(136));
+    @include padding(rem(33));
+    border: 0 none;
+    background: white;
+    box-sizing: border-box;
+    resize: none;
+
+    font-family: $mono;
+    font-size: rem(11);
+    color: #2f2f2f;
+
+    &:focus {
+      outline: 0 none;
+    }
+  }
+
+  input[type="submit"] {
+    @include padding(rem(10) rem(20));
+    background: #2f2f2f;
+    border: 0 none;
+    cursor: pointer;
+    @include transition(background 0.3s ease-in);
+
+    font-family: $mono;
+    font-size: rem(13);
+    color: white;
+
+    &:focus {
+      outline: 0 none;
+    }
+
+    &:hover {
+      @include breakpoint('large') {
+        background: #59c1c0;
+      }
+    }
+  }
+}
+
+.comments-list {
+  @include padding(null rem(33) rem(33));
+  background: #f6f6f6;
+
+  &__wrapper {
+    &__item {
+      @include clearfix();
+      @include padding(rem(20) null);
+      border-top: rem(1) solid #c2c2c2;
+    }
+
+    &__image {
+      float: left;
+      @include size(rem(70) auto);
+
+      img {
+        @include size(rem(32));
+        border-radius: 100%;
+        overflow: hidden;
+      }
+    }
+
+    &__data {
+      float: left;
+      @include size(calc(100% - 70px) auto);
+
+      &__top {
+        @include padding(null null rem(10));
+
+        span {
+          font-family: $mono;
+          font-size: rem(11);
+          color: #2f2f2f;
+
+          a {
+            font-family: $mono;
+            font-size: rem(11);
+            color: #2f2f2f;
+            text-decoration: none;
+          }
+        }
+      }
+
+      &__bottom {
+        p {
+          max-width: 90%!important;
+          @include padding(0!important);
+
+          font-family: $platin!important;
+          font-size: rem(14)!important;
+          line-height: rem(20)!important;
+          color: #646464!important;
+        }
+      }
+    }
+  }
+}
+
+.comments-feed {
+  @include padding(rem(33) null null);
+
+  a {
+    @include padding(null null null rem(25));
+    background: url($images_dir + 'feed.png') 0 rem(2) no-repeat;
+    background-size: rem(15);
+
+    font-family: $mono;
+    font-size: rem(10);
+    color: #2f2f2f;
+    text-decoration: none;
+  }
+}
