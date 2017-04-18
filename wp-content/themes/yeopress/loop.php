@@ -4,26 +4,26 @@
 	</article>
 <?php else: ?>
   <?php if (is_category()): ?>
-  <div class="list">
-	<?php if (have_posts()): ?>
-    <ul class="list__content">
-		<?php while (have_posts()) : the_post() ?>
-      <li class="list__content__item">
-  			<a href="<?php the_permalink() ?>" title="<?php the_title_attribute() ?>" id="article-<?php the_ID() ?>" class="article article--loop">
-          <div class="article__image" style="background-image: url('<?php the_post_thumbnail_url() ?>')">
-          </div>
-  				<div class="article__data">
-            <div class="article__data__content">
-              <h3 class="article__data__category">Full story</h3>
-              <h3 class="article__data__title"><?php the_title(); ?></h3>
-              <p class="article__data__description"><?php dynamic_excerpt('100'); ?></p>
-              <span class="article__data__author">Por <?php echo get_post_meta($post->ID, 'writter', true); ?></span>
+    <div class="list">
+  	<?php if (have_posts()): ?>
+      <ul class="list__content">
+  		<?php while (have_posts()) : the_post() ?>
+        <li class="list__content__item">
+    			<a href="<?php the_permalink() ?>" title="<?php the_title_attribute() ?>" id="article-<?php the_ID() ?>" class="article article--loop">
+            <div class="article__image" style="background-image: url('<?php the_post_thumbnail_url() ?>')">
             </div>
-          </div>
-        </a>
-      </li>
-    <?php endwhile; ?>
-    </ul>
+    				<div class="article__data">
+              <div class="article__data__content">
+                <h3 class="article__data__category">Full story</h3>
+                <h3 class="article__data__title"><?php the_title(); ?></h3>
+                <p class="article__data__description"><?php dynamic_excerpt('100'); ?></p>
+                <span class="article__data__author">Por <?php echo get_post_meta($post->ID, 'writter', true); ?></span>
+              </div>
+            </div>
+          </a>
+        </li>
+      <?php endwhile; ?>
+      </ul>
 
     <?php
     the_posts_pagination( array(
@@ -41,6 +41,7 @@
 		<!-- <p>Nothing matches your query.</p> -->
 	<?php  endif; ?>
   </div>
+
 
   <section class="banner banner--bottom">
     <?php wp_banner_manager(2);?>

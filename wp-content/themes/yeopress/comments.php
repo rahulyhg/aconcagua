@@ -15,7 +15,7 @@
 		<?php else: ?>
 		<form action="<?= get_option('siteurl') ?>/wp-comments-post.php" method="post" class="comment-form">
 			<?php if (is_user_logged_in()): ?>
-				<p>Logged in as <a href="<?= get_option('siteurl') ?>/wp-admin/profile.php"><?= $user_identity ?></a>. <a href="<?= wp_logout_url(get_permalink()) ?>" title="Log out of this account">Log out &raquo;</a></p>
+				<!-- <p>Estas <a href="<?= get_option('siteurl') ?>/wp-admin/profile.php"><?= $user_identity ?></a>. <a href="<?= wp_logout_url(get_permalink()) ?>" title="Log out of this account">Log out &raquo;</a></p> -->
 			<?php else : ?>
 				<div class="input-wrap text<?= ($req) ? ' required' : ''?>">
 					<input type="text" name="author" id="input-author" placeholder="Autor" value="<?= esc_attr($comment_author) ?>"<?= ($req) ? ' aria-required="true"' : '' ?> />

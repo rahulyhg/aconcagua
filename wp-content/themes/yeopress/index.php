@@ -217,8 +217,4 @@
 <section class="banner banner--bottom">
   <?php wp_banner_manager(2);?>
 </section>
-<!-- <div id="page-content">
-	<?php get_template_part('loop', 'index') ?>
-</div> -->
-<!-- <?php get_sidebar() ?> -->
 <?php get_footer() ?>
