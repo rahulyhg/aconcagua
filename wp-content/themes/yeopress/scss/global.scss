@@ -15,6 +15,7 @@
         'components/list',
         'components/banners',
         'components/pagination',
+        'components/related-post',
         'components/comments';
 
 @import 'pages/category',
@@ -72,6 +73,46 @@ body {
     .article__data__content {
       border-right: 0.0625rem solid #f6f6f6;
       border-left: 0.0625rem solid #f6f6f6;
+    }
+  }
+
+  &.category-hacer {
+    .header__nav__list__item {
+      &:nth-child(1) {
+        a {
+          color: #59c1c0;
+        }
+      }
+    }
+  }
+
+  &.category-pensar {
+    .header__nav__list__item {
+      &:nth-child(2) {
+        a {
+          color: #59c1c0;
+        }
+      }
+    }
+  }
+
+  &.category-explorar {
+    .header__nav__list__item {
+      &:nth-child(3) {
+        a {
+          color: #59c1c0;
+        }
+      }
+    }
+  }
+
+  &.category-cambiar {
+    .header__nav__list__item {
+      &:nth-child(4) {
+        a {
+          color: #59c1c0;
+        }
+      }
     }
   }
 }

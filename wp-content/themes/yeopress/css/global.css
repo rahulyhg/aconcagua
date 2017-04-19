@@ -2971,6 +2971,108 @@ img {
   }
 }
 
+.related-posts {
+  display: none;
+  padding: 2.0625rem;
+}
+@media (min-width: 1024px) {
+  .related-posts {
+    display: block;
+    padding: 5rem;
+  }
+}
+.related-posts__title h3 {
+  padding-top: 0;
+  padding-bottom: 1.875rem;
+  font-family: "SpaceMono-Bold";
+  font-size: 1.875rem;
+  color: #2c2c2c;
+}
+.related-posts__title h3:before {
+  position: relative;
+  top: -0.5rem;
+  left: -0.25rem;
+  content: '4';
+  font-family: "PlantinStd-Semibold";
+  font-size: 1.125rem;
+  color: #2c2c2c;
+}
+.related-posts__title h3:after {
+  position: relative;
+  top: -0.5rem;
+  right: -0.625rem;
+  content: 'Similares';
+  font-family: "PlantinStd";
+  font-size: 1rem;
+  font-weight: 100;
+  font-style: italic;
+  color: #2c2c2c;
+}
+.related-posts__list::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+@media (min-width: 1024px) {
+  .related-posts__list__item {
+    float: left;
+    height: auto;
+    width: 25%;
+  }
+}
+.related-posts__list__item a {
+  text-decoration: none;
+}
+.related-posts__list__item__image {
+  height: 12.5rem;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.related-posts__list__item__content {
+  padding-right: 2.0625rem;
+  padding-bottom: 2.0625rem;
+  padding-left: 2.0625rem;
+  border-right: 0.0625rem solid #f6f6f6;
+  border-left: 0.0625rem solid #f6f6f6;
+}
+.related-posts__list__item__data {
+  padding-top: 2.0625rem;
+}
+.related-posts__list__item__data__title {
+  font-family: "PlantinStd-Semibold";
+  font-size: 1.125rem;
+  color: #0d0d0d;
+}
+.related-posts__list__item__data__description {
+  padding-top: 1.25rem;
+  padding-bottom: 0.9375rem;
+  font-family: "PlantinStd";
+  font-size: 1rem;
+  font-style: italic;
+  color: #0d0d0d;
+}
+.related-posts__list__item__data__author {
+  position: relative;
+  display: block;
+  font-family: "SpaceMono-Bold";
+  font-size: 0.6875rem;
+  line-height: 0.6875rem;
+  color: #0d0d0d;
+}
+.related-posts__list__item__data__author:before {
+  position: absolute;
+  top: 0.1875rem;
+  right: 0;
+  content: '';
+  display: block;
+  height: 0.6875rem;
+  width: 0.8125rem;
+  background: url("/aconcagua/wp-content/themes/yeopress/images/article-arrow.png") 0 0 no-repeat;
+  background-size: contain;
+}
+
 .comment-form-container {
   padding: 2.0625rem;
   background: #f6f6f6;
@@ -3276,6 +3378,76 @@ img {
   line-height: 1.5625rem;
   color: #1a1a1a;
 }
+.article__center p strong {
+  font-family: "PlantinStd-Semibold";
+}
+.article__center p a {
+  color: #59c1c0;
+}
+.article__center blockquote {
+  margin: 0;
+  padding-top: 1.5625rem;
+  padding-bottom: 1.5625rem;
+  padding-left: 2.0625rem;
+}
+@media (min-width: 1024px) {
+  .article__center blockquote {
+    padding-top: 1.5625rem;
+    padding-bottom: 1.5625rem;
+    padding-left: 4.125rem;
+  }
+}
+.article__center blockquote p {
+  position: relative;
+  font-family: "PlantinStd";
+  font-size: 1.5625rem;
+  line-height: 1.6875rem;
+  color: #59c1c0;
+}
+@media (min-width: 1024px) {
+  .article__center blockquote p {
+    max-width: 60%;
+  }
+}
+.article__center blockquote p:before {
+  content: '“';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -2.0625rem;
+  font-family: "PlantinStd";
+  font-size: 3.875rem;
+  line-height: 3.875rem;
+  color: #59c1c0;
+}
+@media (min-width: 1024px) {
+  .article__center blockquote p:before {
+    left: -4.125rem;
+  }
+}
+.article__center .wp-caption {
+  position: relative;
+  width: 100% !important;
+  margin-bottom: 1.5625rem;
+}
+.article__center .wp-caption img {
+  width: 100% !important;
+  height: auto !important;
+}
+.article__center .wp-caption .wp-caption-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: auto;
+  width: 100%;
+  padding: 1.5rem 1.25rem 1.25rem;
+  background: rgba(26, 26, 26, 0.8);
+  box-sizing: border-box;
+  font-family: "PlantinStd";
+  font-size: 0.8125rem;
+  line-height: 0.8125rem;
+  color: white;
+}
 .article__right {
   padding-top: 1.875rem;
 }
@@ -3414,6 +3586,18 @@ body.category .herospace--small .article__data__author {
 body.category .article__data__content {
   border-right: 0.0625rem solid #f6f6f6;
   border-left: 0.0625rem solid #f6f6f6;
+}
+body.category-hacer .header__nav__list__item:nth-child(1) a {
+  color: #59c1c0;
+}
+body.category-pensar .header__nav__list__item:nth-child(2) a {
+  color: #59c1c0;
+}
+body.category-explorar .header__nav__list__item:nth-child(3) a {
+  color: #59c1c0;
+}
+body.category-cambiar .header__nav__list__item:nth-child(4) a {
+  color: #59c1c0;
 }
 
 @media (min-width: 1024px) {

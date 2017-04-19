@@ -1,0 +1,105 @@
+.related-posts {
+  display: none;
+  @include padding(rem(33));
+
+  @include breakpoint('large') {
+    display: block;
+    @include padding(rem(80) rem(80));
+  }
+
+  &__title {
+    h3 {
+      @include padding(0 null rem(30));
+
+      font-family: $mono;
+      font-size: rem(30);
+      color: #2c2c2c;
+
+      &:before {
+        @include position(relative, rem(-8) null null rem(-4));
+
+        content: '4';
+        font-family: $platin-semibold;
+        font-size: rem(18);
+        color: #2c2c2c;
+      }
+
+      &:after {
+        @include position(relative, rem(-8) rem(-10) null null);
+
+        content: 'Similares';
+        font-family: $platin;
+        font-size: rem(16);
+        font-weight: 100;
+        font-style: italic;
+        color: #2c2c2c;
+      }
+    }
+  }
+
+  &__list {
+    @include clearfix;
+
+    &__item {
+      @include breakpoint('large') {
+        float: left;
+        @include size(25% auto);
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      &__image {
+        @include size(100% rem(200));
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      &__content {
+        @include padding(null rem(33) rem(33));
+        border-right: rem(1) solid #f6f6f6;
+        border-left: rem(1) solid #f6f6f6;
+      }
+
+      &__data {
+        @include padding(rem(33) null null null);
+
+        &__title {
+          font-family: $platin-semibold;
+          font-size: rem(18);
+          color: #0d0d0d;
+        }
+
+        &__description {
+          @include padding(rem(20) null rem(15));
+
+          font-family: $platin;
+          font-size: rem(16);
+          font-style: italic;
+          color: #0d0d0d;
+        }
+
+        &__author {
+          @include position(relative, null null null null);
+          display: block;
+
+          font-family: $mono;
+          font-size: rem(11);
+          line-height: rem(11);
+          color: #0d0d0d;
+
+          &:before {
+            @include position(absolute, rem(3) 0 null null);
+            content: '';
+            display: block;
+            @include size(rem(13) rem(11));
+            background: url($images_dir + 'article-arrow.png') 0 0 no-repeat;
+            background-size: contain;
+          }
+        }
+      }
+    }
+  }
+}

@@ -142,6 +142,75 @@
       font-size: rem(15);
       line-height: rem(25);
       color: #1a1a1a;
+
+      strong {
+        font-family: $platin-semibold;
+      }
+
+      a {
+        color: #59c1c0;
+      }
+    }
+
+    blockquote {
+      @include margin(0);
+      @include padding(rem(25) null rem(25) rem(33));
+
+      @include breakpoint('large') {
+        @include padding(rem(25) null rem(25) rem(66));
+      }
+
+      p {
+        @include position(relative, null null null null);
+
+        font-family: $platin;
+        font-size: rem(25);
+        line-height: rem(27);
+        color: #59c1c0;
+
+        @include breakpoint('large') {
+          max-width: 60%;
+        }
+
+        &:before {
+          content: '“';
+          display: block;
+          @include position(absolute, 0 null null rem(-33));
+
+          font-family: $platin;
+          font-size: rem(62);
+          line-height: rem(62);
+          color: #59c1c0;
+
+          @include breakpoint('large') {
+            left: rem(-66);
+          }
+        }
+      }
+    }
+
+    .wp-caption {
+      @include position(relative, null null null null);
+      width: 100%!important;
+      @include margin(null null rem(25));
+
+      img {
+        width: 100%!important;
+        height: auto!important;
+      }
+
+      .wp-caption-text {
+        @include position(absolute, null null 0 0);
+        @include size(100% auto);
+        @include padding(rem(24) rem(20) rem(20));
+        background: rgba(26, 26, 26, 0.8);
+        box-sizing: border-box;
+
+        font-family: $platin;
+        font-size: rem(13);
+        line-height: rem(13);
+        color: white;
+      }
     }
   }
 

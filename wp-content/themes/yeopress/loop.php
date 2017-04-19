@@ -17,7 +17,7 @@
                 <h3 class="article__data__category">Full story</h3>
                 <h3 class="article__data__title"><?php the_title(); ?></h3>
                 <p class="article__data__description"><?php dynamic_excerpt('100'); ?></p>
-                <span class="article__data__author">Por <?php echo get_post_meta($post->ID, 'writter', true); ?></span>
+                <span class="article__data__author">Por <?php the_author(); ?></span>
               </div>
             </div>
           </a>
@@ -33,10 +33,6 @@
       'next_text' => __( 'Siguiente', 'textdomain' ),
     ));
      ?>
-
-     <!-- <div class="related-posts">
-       <?php related_posts(); ?>
-     </div> -->
 	<?php else: ?>
 		<!-- <p>Nothing matches your query.</p> -->
 	<?php  endif; ?>
@@ -122,6 +118,46 @@
       <div class="article__right">
         <?php if ( function_exists( 'tptn_show_pop_posts' ) ) { tptn_show_pop_posts(); } ?>
       </div>
+    </section>
+
+    <section class="related-posts">
+      <?php $orig_post = $post;
+      global $post;
+      $categories = get_the_category($post->ID);
+      if ($categories) {
+      $category_ids = array();
+      foreach($categories as $individual_category) $category_ids[] = $individual_category->term_id;
+      $args=array(
+      'category__in' => $category_ids,
+      'post__not_in' => array($post->ID),
+      'posts_per_page'=> 2, // Number of related posts that will be shown.
+      'caller_get_posts'=>1
+      );
+      $my_query = new wp_query( $args );
+      if( $my_query->have_posts() ) {
+      echo '<div class="related-posts__title"><h3>Notas</h3></div><div><ul class="related-posts__list">';
+      while( $my_query->have_posts() ) {
+      $my_query->the_post();?>
+        <li class="related-posts__list__item">
+          <a href="<? the_permalink()?>" rel="bookmark" title="<?php the_title(); ?>">
+            <div class="related-posts__list__item__image" style="background-image: url('<?php the_post_thumbnail_url(); ?>')"></div>
+            <div class="related-posts__list__item__data">
+              <div class="related-posts__list__item__content">
+                <h3 class="related-posts__list__item__data__title"><?php the_title(); ?></h3>
+                <p class="related-posts__list__item__data__description"><?php dynamic_excerpt('100') ?></p>
+                <span class="related-posts__list__item__data__author">Por <?php the_author(); ?></span>
+              </div>
+            </div>
+          </a>
+        </li>
+      <?php } ?>
+      <?php echo '</ul></div>'; ?>
+      <?php } ?>
+      <?php } ?>
+      <?php
+        $post = $orig_post;
+        wp_reset_query();
+      ?>
     </section>
 
     <section class="domingo domingo--grey">
