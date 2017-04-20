@@ -77,6 +77,12 @@
       }
 
       .mymail-form-info {
+        &.error {
+          display: none!important;
+        }
+      }
+
+      .mymail-form-info {
         display: none;
       }
 
@@ -219,6 +225,12 @@
         @include breakpoint('large') {
           @include size(75% rem(36));
           @include margin(null null null 25%);
+        }
+
+        .mymail-form-info {
+          &.error {
+            display: none!important;
+          }
         }
 
         .mymail-form-info {

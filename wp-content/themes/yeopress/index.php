@@ -4,9 +4,25 @@
   <div class="herospace__container">
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
       <a href="<?php the_permalink(); ?>" class="herospace__wrapper herospace__wrapper--hover" style="background-image: url('<?php the_post_thumbnail_url('full'); ?>')">
-        <span class="herospace__category"><?php echo get_post_meta($post->ID, 'category', true); ?></span>
+        <span class="herospace__category">
+          <?php
+            $cat = new WPSEO_Primary_Term('category', get_the_ID());
+            $cat = $cat->get_primary_term();
+            $catName = get_cat_name($cat);
+            $catLink = get_category_link($cat);
+            echo $catName;
+          ?>
+        </span>
         <div class="herospace__data">
-          <span class="herospace__data__category"><?php echo get_post_meta($post->ID, 'category', true); ?></span>
+          <span class="herospace__data__category">
+            <?php
+              $cat = new WPSEO_Primary_Term('category', get_the_ID());
+              $cat = $cat->get_primary_term();
+              $catName = get_cat_name($cat);
+              $catLink = get_category_link($cat);
+              echo $catName;
+            ?>
+          </span>
           <h2 class="herospace__data__title"><?php the_title() ?></h2>
           <p class="herospace__data__description"><?php dynamic_excerpt('250') ?></p>
           <small class="herospace__data__author">Por <?php the_author(); ?></small>
@@ -31,7 +47,15 @@
         <div class="herospace-slider__mobile__list__item">
           <a href="<?php the_permalink(); ?>" class="herospace-slider__mobile__list__item__link">
             <div class="herospace-slider__mobile__box">
-              <span class="herospace-slider__mobile__box__category"><?php echo get_post_meta($post->ID, 'category', true); ?></span>
+              <span class="herospace-slider__mobile__box__category">
+                <?php
+                  $cat = new WPSEO_Primary_Term('category', get_the_ID());
+                  $cat = $cat->get_primary_term();
+                  $catName = get_cat_name($cat);
+                  $catLink = get_category_link($cat);
+                  echo $catName;
+                ?>
+              </span>
               <h3 class="herospace-slider__mobile__box__title"><?php the_title() ?></h3>
               <small class="herospace-slider__mobile__box__author">Por <?php the_author(); ?></small>
             </div>
@@ -49,7 +73,15 @@
     <section class="herospace-articles">
       <?php while ( have_posts() ) : the_post(); ?>
         <a href="<?php the_permalink(); ?>" class="herospace-slider__mobile__box">
-          <span class="herospace-slider__mobile__box__category"><?php echo get_post_meta($post->ID, 'category', true); ?></span>
+          <span class="herospace-slider__mobile__box__category">
+            <?php
+              $cat = new WPSEO_Primary_Term('category', get_the_ID());
+              $cat = $cat->get_primary_term();
+              $catName = get_cat_name($cat);
+              $catLink = get_category_link($cat);
+              echo $catName;
+            ?>
+          </span>
           <h3 class="herospace-slider__mobile__box__title"><?php the_title() ?></h3>
           <small class="herospace-slider__mobile__box__author">Por <?php the_author(); ?></small>
         </a>
@@ -66,9 +98,25 @@
     <div class="change__container">
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <a href="<?php the_permalink(); ?>" class="change__wrapper" style="background-image: url('<?php the_post_thumbnail_url('full'); ?>')">
-          <span class="change__category"><?php echo get_post_meta($post->ID, 'category', true); ?></span>
+          <span class="change__category">
+            <?php
+              $cat = new WPSEO_Primary_Term('category', get_the_ID());
+              $cat = $cat->get_primary_term();
+              $catName = get_cat_name($cat);
+              $catLink = get_category_link($cat);
+              echo $catName;
+            ?>
+          </span>
           <div class="change__data">
-            <span class="change__data__category"><?php echo get_post_meta($post->ID, 'category', true); ?></span>
+            <span class="change__data__category">
+              <?php
+                $cat = new WPSEO_Primary_Term('category', get_the_ID());
+                $cat = $cat->get_primary_term();
+                $catName = get_cat_name($cat);
+                $catLink = get_category_link($cat);
+                echo $catName;
+              ?>
+            </span>
             <h2 class="change__data__title"><?php the_title() ?></h2>
             <p class="change__data__description"><?php dynamic_excerpt('250') ?></p>
             <small class="change__data__author">Por <?php the_author(); ?></small>
@@ -95,7 +143,7 @@
           <a href="<?php the_permalink(); ?>" class="change-slider__mobile__list__item__link">
             <div class="change-slider__mobile__box">
               <span class="change-slider__mobile__box__category"><?php the_title() ?></span>
-              <big class="change-slider__mobile__box__time">Hace 3 min</big>
+              <big class="change-slider__mobile__box__time">Hace <?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ); ?></big>
               <div class="change-slider__mobile__box__extra">
                 <p class="change-slider__mobile__box__extra__text"><?php the_excerpt(); ?></p>
               </div>
@@ -115,7 +163,7 @@
   <?php while ( have_posts() ) : the_post(); ?>
     <a href="<?php the_permalink(); ?>" class="change-slider__mobile__box">
       <span class="change-slider__mobile__box__category"><?php the_title(); ?></span>
-      <big class="change-slider__mobile__box__time">Hace 3 min</big>
+      <big class="change-slider__mobile__box__time">Hace <?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ); ?></big>
       <div class="change-slider__mobile__box__extra">
         <p class="change-slider__mobile__box__extra__text"><?php dynamic_excerpt('100'); ?></p>
       </div>
@@ -168,7 +216,7 @@
           <div class="news__content__box__data">
             <h3 class="news__content__box__data__title"><?php the_title(); ?></h3>
             <p class="news__content__box__data__description"><?php the_excerpt(); ?></p>
-            <span class="news__content__box__data__author">Por <?php echo get_post_meta($post->ID, 'writter', true); ?></span>
+            <span class="news__content__box__data__author">Por <?php the_author(); ?></span>
           </div>
         </div>
       <?php endwhile; ?>

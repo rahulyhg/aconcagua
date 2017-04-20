@@ -14,6 +14,7 @@
     @include size(rem(80));
     background: $header-lg url($images_dir + 'lg.png') center center no-repeat;
     background-size: rem(40);
+    z-index: 10;
 
     @include breakpoint('medium') {
       @include size(rem(170));
@@ -48,23 +49,46 @@
 
   &__share {
     display: none;
-    @include clearfix();
+    @include position(absolute, rem(27) null null rem(111));
+    @include transition(left 0.3s ease-in-out);
+    @include clearfix;
 
-    // @include breakpoint('large') {
-    //   display: block;
-    // }
+    @include breakpoint('large') {
+      display: block;
+    }
 
-    &__list {
+    &--show {
+      left: rem(215);
+    }
+
+    .addtoany_shortcode {
       float: left;
-      @include clearfix();
 
-      &__item {
-        float: left;
+      .a2a_button_twitter,
+      .a2a_button_facebook {
+        @include padding(null rem(10));
+
+        span {
+          background: transparent!important;
+          width: rem(25)!important;
+          height: rem(25)!important;
+        }
       }
     }
 
     &__link {
       float: left;
+      @include margin(null null null rem(33));
+      @include size(rem(25));
+      cursor: pointer;
+
+      &__icon {
+        display: block;
+        @include position(relative, rem(7) null null rem(5));
+        @include size(rem(13) rem(11));
+        background: url($images_dir + 'article-arrow.png') 0 0 no-repeat;
+        background-size: contain;
+      }
     }
   }
 
@@ -105,6 +129,13 @@
           text-decoration: none;
           //color: #2e2e2e;
           color: white;
+
+          &:hover {
+            @include breakpoint('large') {
+              color: #59c1c0;
+              @include transition(color 0.3s ease-in-out);
+            }
+          }
         }
       }
     }

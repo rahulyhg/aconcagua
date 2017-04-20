@@ -38,6 +38,13 @@ body {
     .header {
       &__nav__list__item a {
         color: #1a1a1a;
+
+        &:hover {
+          @include breakpoint('large') {
+            color: #59c1c0;
+            @include transition(color 0.3s ease-in-out);
+          }
+        }
       }
     }
   }
@@ -46,6 +53,13 @@ body {
     .header {
       &__nav__list__item a {
         color: #1a1a1a;
+
+        &:hover {
+          @include breakpoint('large') {
+            color: #59c1c0;
+            @include transition(color 0.3s ease-in-out);
+          }
+        }
       }
     }
 

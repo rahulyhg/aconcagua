@@ -1,12 +1,12 @@
 require.config({
-	"baseUrl": "wp-content/themes/yeopress/js",
+	"baseUrl": "http://localhost:8888/aconcagua/wp-content/themes/yeopress/js/",
 	"paths": {
 		"jquery": "vendor/jquery/jquery",
     "slick": "vendor/slick-carousel/slick/slick"
 	}
 });
 
-requirejs(['jquery', 'slick'], function( $ ) {
+requirejs(['jquery', 'slick'], function( $, slick ) {
 
   //Herospace
   if($('.herospace__container').length) {
@@ -153,6 +153,18 @@ requirejs(['jquery', 'slick'], function( $ ) {
     e.preventDefault();
 
     $('.footer__bottom').removeClass('footer__bottom--show');
+  });
+
+  $('.header__share__link').on('click', function(e) {
+    e.preventDefault();
+
+    var elem = $('.header__share');
+
+    if(elem.hasClass('header__share--show')) {
+      $('.header__share').removeClass('header__share--show');
+    } else {
+      $('.header__share').addClass('header__share--show');
+    }
   });
 
 });

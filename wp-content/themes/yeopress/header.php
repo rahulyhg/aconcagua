@@ -17,10 +17,11 @@
         <a class="header__lg" href="<?php bloginfo('url') ?>" title="<?php bloginfo('name') ?> - <?php bloginfo('description') ?>"></a>
         <div class="header__wrapper">
           <div class="header__share">
-            <ul class="header__share__list">
+            <?php echo do_shortcode('[addtoany buttons="facebook,twitter" title="Description" url="http://www.aconcagua.lat"]'); ?>
+            <!-- <ul class="header__share__list">
               <li class="header__share__list__item header__share__list__item--fb"><a href="#" class=""></a></li>
               <li class="header__share__list__item header__share__list__item--fb"><a href="#" class=""></a></li>
-            </ul>
+            </ul> -->
             <div class="header__share__link">
               <a href="#" class="header__share__link__icon"></a>
             </div>

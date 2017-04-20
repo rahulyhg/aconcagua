@@ -54,7 +54,8 @@
           </div>
           <div class="footer__bottom__wrapper__right">
             <div class="footer__bottom__wrapper__contact">
-              contact
+              <h3 class="footer__bottom__wrapper__contact__title">Escribinos y compartinos tus ideas!</h3>
+              <?php insert_cform('contact'); ?>
             </div>
             <div class="footer__bottom__wrapper__publicity">
               <div class="footer__bottom__wrapper__contact-publicity">

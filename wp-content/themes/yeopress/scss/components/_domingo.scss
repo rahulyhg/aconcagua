@@ -80,6 +80,12 @@
       background: $domingo-wrapper-email;
 
       .mymail-form-info {
+        &.error {
+          display: none!important;
+        }
+      }
+
+      .mymail-form-info {
         display: none;
       }
 
@@ -221,6 +227,12 @@
         @include breakpoint('large') {
           @include size(75% rem(36));
           @include margin(null 25% null null);
+        }
+
+        .mymail-form-info {
+          &.error {
+            display: none!important;
+          }
         }
 
         .mymail-form-info {

@@ -59,10 +59,23 @@
     &__btn {
       @include size(100% rem(60));
       box-sizing: border-box;
-      border: rem(1) solid #4a4a4a;
 
       @include breakpoint('large') {
         height: rem(40);
+      }
+
+      .mymail-form {
+        border: rem(1) solid #4a4a4a;
+
+        &.has-errors {
+          border-color: #f00;
+        }
+      }
+
+      .mymail-form-info {
+        &.error {
+          display: none!important;
+        }
       }
 
       .mymail-form-info {
@@ -105,6 +118,12 @@
             }
             &:-ms-input-placeholder {
               color: white;
+            }
+          }
+
+          &.error {
+            input {
+              outline: 0 none;
             }
           }
         }
@@ -359,6 +378,145 @@
 
         &--contact {
           display: block;
+          @include clearfix;
+
+          @include breakpoint('extra-large') {
+            width: rem(500);
+            padding-left: 0;
+            float: right;
+          }
+
+          .footer__bottom__wrapper__contact__title {
+            @include padding(rem(10) null rem(20));
+
+            font-family: $platin;
+            font-size: rem(16);
+            font-style: italic;
+            color: white;
+
+            @include breakpoint('extra-large') {
+              width: rem(500);
+            }
+          }
+
+          .cform {
+            float: right;
+            @include position(relative, null null nul null);
+            @include size(100% auto);
+
+            @include breakpoint('extra-large') {
+              width: rem(500);
+            }
+          }
+
+          .cf_hidden {
+            display: none;
+          }
+
+          .cf-ol {
+            list-style: none;
+            @include padding(0);
+            @include margin(0);
+
+            li {
+              @include padding(null null rem(20));
+
+              &:last-child {
+                padding-bottom: 0;
+              }
+
+              label {
+                display: none;
+              }
+
+              .emailreqtxt,
+              .reqtxt {
+                display: none;
+              }
+
+              input {
+                @include size(100% rem(40));
+                @include padding(null rem(10));
+                background: #1a1a1a;
+                border: rem(1) solid #4c4c4c;
+                box-sizing: border-box;
+
+                font-family: $mono;
+                font-size: rem(11);
+                line-height: rem(40);
+                color: rgba(255, 255, 255, 0.4);
+
+                @include breakpoint('extra-large') {
+                  @include size(rem(500) rem(40));
+                }
+
+                &:focus {
+                  outline: 0 none;
+                }
+              }
+
+              textarea {
+                @include size(100% rem(100));
+                @include padding(rem(10));
+                background: #1a1a1a;
+                border: rem(1) solid #4c4c4c;
+                resize: none;
+                box-sizing: border-box;
+
+                font-family: $mono;
+                font-size: rem(11);
+                line-height: rem(14);
+                color: rgba(255, 255, 255, 0.4);
+
+                @include breakpoint('extra-large') {
+                  @include size(rem(500) rem(100));
+                }
+
+                &:focus {
+                  outline: 0 none;
+                }
+              }
+            }
+          }
+
+          .cf-sb {
+            @include position(absolute, null 0 rem(3) null);
+
+            input {
+              @include size(rem(40));
+              background: red;
+              border: 0 none;
+              cursor: pointer;
+              text-indent: rem(-9999);
+              background: url($images_dir + 'article-arrow.png') center center no-repeat;
+              background-size: rem(17);
+              @include filter(brightness(0) invert(0.5));
+
+              &:focus {
+                outline: 0 none;
+              }
+            }
+          }
+
+          .cf_info {
+            clear: both;
+            @include padding(rem(10) null null null);
+
+            font-family: $roboto;
+            font-size: rem(11);
+
+            &.failure {
+              color: #f00;
+            }
+
+            &.waiting {
+              color: rgba(255, 255, 255, 0.8);
+            }
+
+            &.success {
+              color: rgba(255, 255, 255, 0.8);
+            }
+          }
 
           .footer__bottom__wrapper__contact {
             display: block;

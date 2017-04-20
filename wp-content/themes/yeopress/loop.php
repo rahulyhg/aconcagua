@@ -14,7 +14,7 @@
             </div>
     				<div class="article__data">
               <div class="article__data__content">
-                <h3 class="article__data__category">Full story</h3>
+                <!-- <h3 class="article__data__category">Full story</h3> -->
                 <h3 class="article__data__title"><?php the_title(); ?></h3>
                 <p class="article__data__description"><?php dynamic_excerpt('100'); ?></p>
                 <span class="article__data__author">Por <?php the_author(); ?></span>
@@ -76,9 +76,25 @@
 
     <section class="herospace herospace--full herospace--static">
         <div class="herospace__wrapper" style="background-image: url('<?php the_post_thumbnail_url('full'); ?>')">
-          <span class="herospace__category"><?php echo get_post_meta($post->ID, 'category', true); ?></span>
+          <span class="herospace__category">
+            <?php
+              $cat = new WPSEO_Primary_Term('category', get_the_ID());
+              $cat = $cat->get_primary_term();
+              $catName = get_cat_name($cat);
+              $catLink = get_category_link($cat);
+              echo $catName;
+            ?>
+          </span>
           <div class="herospace__data">
-            <span class="herospace__data__category"><?php echo get_post_meta($post->ID, 'category', true); ?></span>
+            <span class="herospace__data__category">
+              <?php
+                $cat = new WPSEO_Primary_Term('category', get_the_ID());
+                $cat = $cat->get_primary_term();
+                $catName = get_cat_name($cat);
+                $catLink = get_category_link($cat);
+                echo $catName;
+              ?>
+            </span>
             <h2 class="herospace__data__title"><?php the_title(); ?></h2>
             <p class="herospace__data__description"><?php dynamic_excerpt('250') ?></p>
           </div>
@@ -108,6 +124,7 @@
 
         <div class="article__left__share">
           <div class="article__left__share__link"></div>
+          <?php echo do_shortcode('[addtoany buttons="facebook,twitter"]'); ?>
         </div>
       </div>
       <div class="article__center">

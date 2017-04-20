@@ -216,6 +216,7 @@ img {
   width: 5rem;
   background: #59c1c0 url("/aconcagua/wp-content/themes/yeopress/images/lg.png") center center no-repeat;
   background-size: 2.5rem;
+  z-index: 10;
 }
 @media (min-width: 768px) {
   .header__lg {
@@ -257,25 +258,56 @@ img {
 }
 .header__share {
   display: none;
+  position: absolute;
+  top: 1.6875rem;
+  left: 6.9375rem;
+  -webkit-transition: left 0.3s ease-in-out;
+  -moz-transition: left 0.3s ease-in-out;
+  transition: left 0.3s ease-in-out;
 }
 .header__share::after {
   clear: both;
   content: "";
   display: table;
 }
-.header__share__list {
+@media (min-width: 1024px) {
+  .header__share {
+    display: block;
+  }
+}
+.header__share--show {
+  left: 13.4375rem;
+}
+.header__share .addtoany_shortcode {
   float: left;
 }
-.header__share__list::after {
-  clear: both;
-  content: "";
-  display: table;
+.header__share .addtoany_shortcode .a2a_button_twitter,
+.header__share .addtoany_shortcode .a2a_button_facebook {
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
 }
-.header__share__list__item {
-  float: left;
+.header__share .addtoany_shortcode .a2a_button_twitter span,
+.header__share .addtoany_shortcode .a2a_button_facebook span {
+  background: transparent !important;
+  width: 1.5625rem !important;
+  height: 1.5625rem !important;
 }
 .header__share__link {
   float: left;
+  margin-left: 2.0625rem;
+  height: 1.5625rem;
+  width: 1.5625rem;
+  cursor: pointer;
+}
+.header__share__link__icon {
+  display: block;
+  position: relative;
+  top: 0.4375rem;
+  left: 0.3125rem;
+  height: 0.6875rem;
+  width: 0.8125rem;
+  background: url("/aconcagua/wp-content/themes/yeopress/images/article-arrow.png") 0 0 no-repeat;
+  background-size: contain;
 }
 .header__nav {
   display: none;
@@ -318,6 +350,14 @@ img {
   line-height: 2.5rem;
   text-decoration: none;
   color: white;
+}
+@media (min-width: 1024px) {
+  .header__nav__list__item a:hover {
+    color: #59c1c0;
+    -webkit-transition: color 0.3s ease-in-out;
+    -moz-transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
+  }
 }
 
 .herospace {
@@ -956,12 +996,20 @@ img {
   height: 3.75rem;
   width: 100%;
   box-sizing: border-box;
-  border: 0.0625rem solid #4a4a4a;
 }
 @media (min-width: 1024px) {
   .footer__newsletter__btn {
     height: 2.5rem;
   }
+}
+.footer__newsletter__btn .mymail-form {
+  border: 0.0625rem solid #4a4a4a;
+}
+.footer__newsletter__btn .mymail-form.has-errors {
+  border-color: #f00;
+}
+.footer__newsletter__btn .mymail-form-info.error {
+  display: none !important;
 }
 .footer__newsletter__btn .mymail-form-info {
   display: none;
@@ -1006,6 +1054,9 @@ img {
 }
 .footer__newsletter__btn .mymail-form-fields .mymail-email-wrapper input:-ms-input-placeholder {
   color: white;
+}
+.footer__newsletter__btn .mymail-form-fields .mymail-email-wrapper.error input {
+  outline: 0 none;
 }
 .footer__newsletter__btn .mymail-form-fields .mymail-submit-wrapper {
   float: left;
@@ -1247,6 +1298,142 @@ img {
 }
 .footer__bottom__wrapper__right--contact {
   display: block;
+}
+.footer__bottom__wrapper__right--contact::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+@media (min-width: 1441px) {
+  .footer__bottom__wrapper__right--contact {
+    width: 31.25rem;
+    padding-left: 0;
+    float: right;
+  }
+}
+.footer__bottom__wrapper__right--contact .footer__bottom__wrapper__contact__title {
+  padding-top: 0.625rem;
+  padding-bottom: 1.25rem;
+  font-family: "PlantinStd";
+  font-size: 1rem;
+  font-style: italic;
+  color: white;
+}
+@media (min-width: 1441px) {
+  .footer__bottom__wrapper__right--contact .footer__bottom__wrapper__contact__title {
+    width: 31.25rem;
+  }
+}
+.footer__bottom__wrapper__right--contact .cform {
+  float: right;
+  position: relative;
+  height: auto;
+  width: 100%;
+}
+@media (min-width: 1441px) {
+  .footer__bottom__wrapper__right--contact .cform {
+    width: 31.25rem;
+  }
+}
+.footer__bottom__wrapper__right--contact .cf_hidden {
+  display: none;
+}
+.footer__bottom__wrapper__right--contact .cf-ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer__bottom__wrapper__right--contact .cf-ol li {
+  padding-bottom: 1.25rem;
+}
+.footer__bottom__wrapper__right--contact .cf-ol li:last-child {
+  padding-bottom: 0;
+}
+.footer__bottom__wrapper__right--contact .cf-ol li label {
+  display: none;
+}
+.footer__bottom__wrapper__right--contact .cf-ol li .emailreqtxt,
+.footer__bottom__wrapper__right--contact .cf-ol li .reqtxt {
+  display: none;
+}
+.footer__bottom__wrapper__right--contact .cf-ol li input {
+  height: 2.5rem;
+  width: 100%;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  background: #1a1a1a;
+  border: 0.0625rem solid #4c4c4c;
+  box-sizing: border-box;
+  font-family: "SpaceMono-Bold";
+  font-size: 0.6875rem;
+  line-height: 2.5rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+@media (min-width: 1441px) {
+  .footer__bottom__wrapper__right--contact .cf-ol li input {
+    height: 2.5rem;
+    width: 31.25rem;
+  }
+}
+.footer__bottom__wrapper__right--contact .cf-ol li input:focus {
+  outline: 0 none;
+}
+.footer__bottom__wrapper__right--contact .cf-ol li textarea {
+  height: 6.25rem;
+  width: 100%;
+  padding: 0.625rem;
+  background: #1a1a1a;
+  border: 0.0625rem solid #4c4c4c;
+  resize: none;
+  box-sizing: border-box;
+  font-family: "SpaceMono-Bold";
+  font-size: 0.6875rem;
+  line-height: 0.875rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+@media (min-width: 1441px) {
+  .footer__bottom__wrapper__right--contact .cf-ol li textarea {
+    height: 6.25rem;
+    width: 31.25rem;
+  }
+}
+.footer__bottom__wrapper__right--contact .cf-ol li textarea:focus {
+  outline: 0 none;
+}
+.footer__bottom__wrapper__right--contact .cf-sb {
+  position: absolute;
+  right: 0;
+  bottom: 0.1875rem;
+}
+.footer__bottom__wrapper__right--contact .cf-sb input {
+  height: 2.5rem;
+  width: 2.5rem;
+  background: red;
+  border: 0 none;
+  cursor: pointer;
+  text-indent: -624.9375rem;
+  background: url("/aconcagua/wp-content/themes/yeopress/images/article-arrow.png") center center no-repeat;
+  background-size: 1.0625rem;
+  -webkit-filter: brightness(0) invert(0.5);
+  filter: brightness(0) invert(0.5);
+}
+.footer__bottom__wrapper__right--contact .cf-sb input:focus {
+  outline: 0 none;
+}
+.footer__bottom__wrapper__right--contact .cf_info {
+  clear: both;
+  padding-top: 0.625rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.6875rem;
+}
+.footer__bottom__wrapper__right--contact .cf_info.failure {
+  color: #f00;
+}
+.footer__bottom__wrapper__right--contact .cf_info.waiting {
+  color: rgba(255, 255, 255, 0.8);
+}
+.footer__bottom__wrapper__right--contact .cf_info.success {
+  color: rgba(255, 255, 255, 0.8);
 }
 .footer__bottom__wrapper__right--contact .footer__bottom__wrapper__contact {
   display: block;
@@ -1945,6 +2132,9 @@ img {
 .camping__mobile__email .mymail-form-info.success {
   background: #59c1c0;
 }
+.camping__mobile__email .mymail-form-info.error {
+  display: none !important;
+}
 .camping__mobile__email .mymail-form-info {
   display: none;
 }
@@ -2100,6 +2290,9 @@ img {
     width: 75%;
     margin-left: 25%;
   }
+}
+.camping__desktop__data__input .mymail-form-info.error {
+  display: none !important;
 }
 .camping__desktop__data__input .mymail-form-info {
   display: none;
@@ -2485,6 +2678,9 @@ img {
   margin-left: 1.875rem;
   background: #59c1c0;
 }
+.domingo__mobile__email .mymail-form-info.error {
+  display: none !important;
+}
 .domingo__mobile__email .mymail-form-info {
   display: none;
 }
@@ -2639,6 +2835,9 @@ img {
     width: 75%;
     margin-right: 25%;
   }
+}
+.domingo__desktop__data__input .mymail-form-info.error {
+  display: none !important;
 }
 .domingo__desktop__data__input .mymail-form-info {
   display: none;
@@ -3567,8 +3766,24 @@ body.single {
 body.single .header__nav__list__item a {
   color: #1a1a1a;
 }
+@media (min-width: 1024px) {
+  body.single .header__nav__list__item a:hover {
+    color: #59c1c0;
+    -webkit-transition: color 0.3s ease-in-out;
+    -moz-transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
+  }
+}
 body.category .header__nav__list__item a {
   color: #1a1a1a;
+}
+@media (min-width: 1024px) {
+  body.category .header__nav__list__item a:hover {
+    color: #59c1c0;
+    -webkit-transition: color 0.3s ease-in-out;
+    -moz-transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
+  }
 }
 body.category .herospace__wrapper {
   background: white;
