@@ -3528,6 +3528,7 @@ img {
   display: none;
 }
 .article__left__share {
+  position: relative;
   border-top: 0.0625rem solid #ededed;
 }
 .article__left__share::after {
@@ -3536,10 +3537,70 @@ img {
   display: table;
 }
 .article__left__share__link {
+  position: relative;
   float: right;
   height: 4.125rem;
   width: 4.125rem;
   background: #59c1c0;
+  cursor: pointer;
+}
+.article__left__share__link:before {
+  position: absolute;
+  top: 0.875rem;
+  left: 0.625rem;
+  content: '';
+  height: 0.9375rem;
+  width: 1.125rem;
+  background: url("/aconcagua/wp-content/themes/yeopress/images/article-arrow.png") center center no-repeat;
+  background-size: 0.9375rem;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
+}
+.article__left__share__link span {
+  display: block;
+  position: absolute;
+  bottom: 0.625rem;
+  left: 0;
+  height: auto;
+  width: 100%;
+  font-family: "SpaceMono-Bold";
+  font-size: 0.6875rem;
+  color: white;
+  text-align: center;
+}
+.article__left__share .addtoany_shortcode {
+  position: absolute;
+  top: 5rem;
+  right: 0.75rem;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+.article__left__share .addtoany_shortcode .a2a_button_twitter,
+.article__left__share .addtoany_shortcode .a2a_button_facebook {
+  display: block;
+  padding-top: 0.625rem;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+}
+.article__left__share .addtoany_shortcode .a2a_button_twitter span,
+.article__left__share .addtoany_shortcode .a2a_button_facebook span {
+  background: transparent !important;
+  width: 1.5625rem !important;
+  height: 1.5625rem !important;
+}
+.article__left__share .addtoany_shortcode .a2a_button_twitter span svg path,
+.article__left__share .addtoany_shortcode .a2a_button_facebook span svg path {
+  fill: #1a1a1a;
+}
+.article__left__share--show .addtoany_shortcode {
+  opacity: 1;
 }
 .article__center {
   padding-top: 2.5rem;

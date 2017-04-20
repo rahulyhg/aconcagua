@@ -6,7 +6,7 @@ require.config({
 	}
 });
 
-requirejs(['jquery', 'slick'], function( $, slick ) {
+requirejs(['jquery', 'slick'], function( $ ) {
 
   //Herospace
   if($('.herospace__container').length) {
@@ -161,9 +161,21 @@ requirejs(['jquery', 'slick'], function( $, slick ) {
     var elem = $('.header__share');
 
     if(elem.hasClass('header__share--show')) {
-      $('.header__share').removeClass('header__share--show');
+      elem.removeClass('header__share--show');
     } else {
-      $('.header__share').addClass('header__share--show');
+      elem.addClass('header__share--show');
+    }
+  });
+
+  $('.article__left__share__link').on('click', function(e) {
+    e.preventDefault();
+
+    var elem = $('.article__left__share');
+
+    if(elem.hasClass('article__left__share--show')) {
+      elem.removeClass('article__left__share--show');
+    } else {
+      elem.addClass('article__left__share--show');
     }
   });
 

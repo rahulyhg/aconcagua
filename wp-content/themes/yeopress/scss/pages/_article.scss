@@ -102,12 +102,66 @@
 
     &__share {
       @include clearfix;
+      @include position(relative, null null null null);
       border-top: rem(1) solid #ededed;
 
       &__link {
+        @include position(relative, null null null null);
         float: right;
         @include size(rem(66));
         background: #59c1c0;
+        cursor: pointer;
+
+        &:before {
+          @include position(absolute, rem(14) null null rem(10));
+          content: '';
+          @include size(rem(18) rem(15));
+          background: url($images_dir + 'article-arrow.png') center center no-repeat;
+          background-size: rem(15);
+          @include transform(rotate(90deg));
+          @include filter(brightness(0) invert(1));
+        }
+
+        span {
+          display: block;
+          @include position(absolute, null null rem(10) 0);
+          @include size(100% auto);
+
+          font-family: $mono;
+          font-size: rem(11);
+          color: white;
+          text-align: center;
+        }
+      }
+
+      .addtoany_shortcode {
+        @include position(absolute, rem(80) rem(12) null null);
+        opacity: 0;
+        @include transition(opacity 0.3s ease-in-out);
+
+        .a2a_button_twitter,
+        .a2a_button_facebook {
+          display: block;
+          @include padding(rem(10) rem(10) null);
+
+          span {
+            background: transparent!important;
+            width: rem(25)!important;
+            height: rem(25)!important;
+
+            svg {
+              path {
+                fill: #1a1a1a;
+              }
+            }
+          }
+        }
+      }
+
+      &--show {
+        .addtoany_shortcode {
+          opacity: 1;
+        }
       }
     }
   }

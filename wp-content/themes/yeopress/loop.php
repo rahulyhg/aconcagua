@@ -53,7 +53,9 @@
         </div>
 
         <div class="article__left__share">
-          <div class="article__left__share__link"></div>
+          <div class="article__left__share__link">
+            <span>Share</span>
+          </div>
           <?php echo do_shortcode('[addtoany buttons="facebook,twitter"]'); ?>
         </div>
       </div>
