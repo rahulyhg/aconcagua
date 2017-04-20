@@ -3774,6 +3774,30 @@ body.single .header__nav__list__item a {
     transition: color 0.3s ease-in-out;
   }
 }
+body.tag .header__nav__list__item a {
+  color: #1a1a1a;
+}
+@media (min-width: 1024px) {
+  body.tag .header__nav__list__item a:hover {
+    color: #59c1c0;
+    -webkit-transition: color 0.3s ease-in-out;
+    -moz-transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
+  }
+}
+body.tag .herospace__wrapper {
+  background: white;
+  background-image: none !important;
+}
+body.tag .herospace__data__title {
+  color: #1a1a1a;
+}
+body.tag .herospace__data__description {
+  color: #1a1a1a;
+}
+body.tag .herospace--small .article__data__author {
+  color: #1a1a1a;
+}
 body.category .header__nav__list__item a {
   color: #1a1a1a;
 }

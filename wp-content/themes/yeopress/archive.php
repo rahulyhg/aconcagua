@@ -23,5 +23,22 @@
       </div>
     </section>
   <?php endif; ?>
+
+  <?php if(is_tag()): ?>
+    <section class="herospace herospace--full herospace--small">
+        <div class="herospace__wrapper" style="background-image: url('/aconcagua/wp-content/themes/yeopress/images/herospace.jpg')">
+          <div class="herospace__data">
+            <h2 class="herospace__data__title"><?php single_tag_title(); ?></h2>
+            <p class="herospace__data__description"><?php echo tag_description(); ?></p>
+          </div>
+        </div>
+    </section>
+
+    <section class="category-page">
+      <div class="category-page__content">
+        <?php get_template_part('loop', 'archive'); ?>
+      </div>
+    </section>
+  <?php endif; ?>
 </div>
 <?php get_footer(); ?>

@@ -49,6 +49,42 @@ body {
     }
   }
 
+  &.tag {
+    .header {
+      &__nav__list__item a {
+        color: #1a1a1a;
+
+        &:hover {
+          @include breakpoint('large') {
+            color: #59c1c0;
+            @include transition(color 0.3s ease-in-out);
+          }
+        }
+      }
+    }
+
+    .herospace {
+      &__wrapper {
+        background: white;
+        background-image: none!important;
+      }
+
+      &__data__title {
+        color: #1a1a1a;
+      }
+
+      &__data__description {
+        color: #1a1a1a;
+      }
+
+      &--small {
+        .article__data__author {
+          color: #1a1a1a;
+        }
+      }
+    }
+  }
+
   &.category {
     .header {
       &__nav__list__item a {
