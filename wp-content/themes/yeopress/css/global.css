@@ -217,6 +217,7 @@ img {
   background: #59c1c0 url("/aconcagua/wp-content/themes/yeopress/images/lg.png") center center no-repeat;
   background-size: 2.5rem;
   z-index: 10;
+  text-decoration: none;
 }
 @media (min-width: 768px) {
   .header__lg {
@@ -233,6 +234,51 @@ img {
     background-position: 2.1875rem 2.1875rem;
     background-size: 5rem;
   }
+}
+.header__lg #simpleweather-widget {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100% !important;
+  padding-left: 2.1875rem !important;
+  padding-right: 2.1875rem !important;
+  padding-bottom: 1.25rem !important;
+  box-sizing: border-box;
+}
+.header__lg #simpleweather-widget::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+@media (min-width: 1024px) {
+  .header__lg #simpleweather-widget {
+    display: block;
+  }
+}
+.header__lg #simpleweather-widget h3 {
+  float: right;
+  width: calc(100% - 40px);
+  font-family: "SpaceMono-Bold";
+  font-size: 0.6875rem;
+  color: white;
+}
+.header__lg #simpleweather-widget #current_weather_image {
+  float: left;
+  clear: inherit;
+  width: 2.5rem !important;
+  height: auto !important;
+}
+.header__lg #simpleweather-widget #current_temperature {
+  float: left;
+  margin: 0;
+  width: calc(100% - 40px);
+  font-family: "SpaceMono-Bold";
+  font-size: 0.6875rem;
+  color: white;
+}
+.header__lg #simpleweather-widget #current_weather {
+  display: none;
 }
 .header__hamb {
   display: block;

@@ -8,13 +8,17 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <meta name="viewport" content="width=device-width">
       <title><?php wp_title( '|', true, 'right' ) ?></title>
+      <link rel="icon" href="wp-content/themes/yeopress/images/favicon.png" type="image/x-icon" />
+      <link rel="shortcut icon" href="wp-content/themes/yeopress/images/favicon.png" type="image/x-icon" />
       <meta name="author" content="">
       <link rel="author" href="">
       <?php wp_head() ?>
     </head>
     <body <?php body_class() ?>>
       <header class="header">
-        <a class="header__lg" href="<?php bloginfo('url') ?>" title="<?php bloginfo('name') ?> - <?php bloginfo('description') ?>"></a>
+        <a class="header__lg" href="<?php bloginfo('url') ?>" title="<?php bloginfo('name') ?> - <?php bloginfo('description') ?>">
+          <?php echo do_shortcode('[wp-simpleweather]'); ?>
+        </a>
         <div class="header__wrapper">
           <div class="header__share">
             <ul class="header__share__list">
