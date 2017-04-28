@@ -44,9 +44,8 @@
                 <li class="footer__who__box">
                   <h2 class="footer__who__box__title"><?php the_title(); ?></h2>
                   <h3 class="footer__who__box__rol"><?php echo get_post_meta($post->ID, 'rol', true); ?></h3>
-                  <p class="footer__who__box__desc"><a href="mailto:romina@aconcagua.lat" target="_blank"><?php echo get_post_meta($post->ID, 'mail', true); ?></a></p>
-                  <p class="footer__who__box__desc"><?php echo get_post_meta($post->ID, 'phone', true); ?></p>
-                  <p class="footer__who__box__desc"><a href="@promieda" target="_blank"><?php echo get_post_meta($post->ID, 'hash', true); ?></a></p>
+                  <p class="footer__who__box__desc"><a href="<?php echo get_post_meta($post->ID, 'mail', true); ?>" target="_blank"><?php echo get_post_meta($post->ID, 'mail', true); ?></a></p>
+                  <p class="footer__who__box__desc"><a href="<?php echo get_post_meta($post->ID, 'hash', true); ?>" target="_blank"><?php echo get_post_meta($post->ID, 'hash', true); ?></a></p>
                 </li>
               <?php endwhile; ?>
               <?php wp_reset_query(); ?>

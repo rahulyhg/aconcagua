@@ -17,11 +17,11 @@
         <a class="header__lg" href="<?php bloginfo('url') ?>" title="<?php bloginfo('name') ?> - <?php bloginfo('description') ?>"></a>
         <div class="header__wrapper">
           <div class="header__share">
-            <?php echo do_shortcode('[addtoany buttons="facebook,twitter" title="Description" url="http://www.aconcagua.lat"]'); ?>
-            <!-- <ul class="header__share__list">
-              <li class="header__share__list__item header__share__list__item--fb"><a href="#" class=""></a></li>
-              <li class="header__share__list__item header__share__list__item--fb"><a href="#" class=""></a></li>
-            </ul> -->
+            <ul class="header__share__list">
+              <li class="header__share__list__item header__share__list__item--fb"><a href="https://www.facebook.com/AconcaguaLat" target="_blank"></a></li>
+              <li class="header__share__list__item header__share__list__item--tw"><a href="https://twitter.com/AconcaguaLat" target="_blank"></a></li>
+              <li class="header__share__list__item header__share__list__item--inst"><a href="https://www.instagram.com/AconcaguaLat/" target="_blank"></a></li>
+            </ul>
             <div class="header__share__link">
               <a href="#" class="header__share__link__icon"></a>
             </div>

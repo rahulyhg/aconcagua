@@ -49,7 +49,7 @@
 
   &__share {
     display: none;
-    @include position(absolute, rem(27) null null rem(111));
+    @include position(absolute, rem(27) null null rem(105));
     @include transition(left 0.3s ease-in-out);
     @include clearfix;
 
@@ -58,27 +58,12 @@
     }
 
     &--show {
-      left: rem(215);
-    }
-
-    .addtoany_shortcode {
-      float: left;
-
-      .a2a_button_twitter,
-      .a2a_button_facebook {
-        @include padding(null rem(10));
-
-        span {
-          background: transparent!important;
-          width: rem(25)!important;
-          height: rem(25)!important;
-        }
-      }
+      left: rem(225);
     }
 
     &__link {
       float: left;
-      @include margin(null null null rem(33));
+      @include margin(null null null rem(10));
       @include size(rem(25));
       cursor: pointer;
 
@@ -88,6 +73,41 @@
         @include size(rem(13) rem(11));
         background: url($images_dir + 'article-arrow.png') 0 0 no-repeat;
         background-size: contain;
+      }
+    }
+
+    &__list {
+      float: left;
+
+      &__item {
+        float: left;
+        @include padding(null rem(15) null null);
+
+        a {
+          display: block;
+          @include size(rem(20));
+        }
+
+        &--fb {
+          a {
+            background: url($images_dir + 'facebook.png') center center no-repeat;
+            background-size: contain;
+          }
+        }
+
+        &--tw {
+          a {
+            background: url($images_dir + 'twitter.png') center center no-repeat;
+            background-size: contain;
+          }
+        }
+
+        &--inst {
+          a {
+            background: url($images_dir + 'instagram.png') center center no-repeat;
+            background-size: contain;
+          }
+        }
       }
     }
   }
@@ -119,7 +139,7 @@
         }
 
         a {
-          display: brun-in;
+          display: block;
           @include size(auto rem(40));
           @include padding(null rem(30));
 
@@ -127,7 +147,6 @@
           font-size: rem(14);
           line-height: rem(40);
           text-decoration: none;
-          //color: #2e2e2e;
           color: white;
 
           &:hover {

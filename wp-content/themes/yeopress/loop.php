@@ -44,7 +44,7 @@
           <div class="article__left__author__data">
             <h3 class="article__left__author__data__name"><?php the_author(); ?></h3>
             <span class="article__left__author__data__twitter">@<?php the_author_meta('twitter'); ?></span>
-            <p class="article__left__author__data__email"><?php the_author_meta('user_email'); ?></p>
+            <!-- <p class="article__left__author__data__email"><?php //the_author_meta('user_email'); ?></p> -->
           </div>
         </div>
 

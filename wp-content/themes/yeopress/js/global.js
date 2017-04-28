@@ -69,6 +69,10 @@ requirejs(['jquery', 'slick'], function( $ ) {
 
 
     $('.change__dots__actions__total').html('0' + totalChangeSlides);
+
+    if(totalChangeSlides == 1) {
+      $('.change__dots').hide();
+    }
   }
 
   //Change Secondary
@@ -109,8 +113,11 @@ requirejs(['jquery', 'slick'], function( $ ) {
 
     var totalNewsSlides = $('.news__wrapper .news__content__box').length;
 
-
     $('.news__dots__actions__total').html('0' + totalNewsSlides);
+
+    if(totalNewsSlides == 1) {
+      $('.news__dots').hide();
+    }
   }
 
   $('.footer__about__list__items--who').on('click', function(e) {

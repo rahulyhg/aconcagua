@@ -229,6 +229,18 @@
           @include margin(null 25% null null);
         }
 
+        .mymail-form {
+          &.has-errors {
+            .mymail-form-fields {
+              .mymail-email-wrapper {
+                input {
+                  border: 1px solid #f00;
+                  border-left: 0;
+                }
+              }
+            }
+          }
+        }
         .mymail-form-info {
           &.error {
             display: none!important;
@@ -244,7 +256,8 @@
 
           .mymail-email-wrapper {
             float: left;
-            @include size(calc(100% - 36px) rem(36));
+            @include size(100% rem(36));
+            @include margin(0);
 
             input {
               @include size(100% rem(36));
@@ -275,13 +288,19 @@
                 color: white;
               }
             }
+
+            &.error {
+              input {
+                outline: 0 none;
+              }
+            }
           }
 
           .mymail-submit-wrapper {
             float: left;
             @include size(rem(36));
             @include margin(0);
-            @include position(relative, null rem(23) null null);
+            @include position(absolute, null rem(25) null null);
 
             input {
               @include size(rem(36));

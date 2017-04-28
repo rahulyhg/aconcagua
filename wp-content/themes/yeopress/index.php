@@ -3,7 +3,7 @@
   <?php query_posts('category_name=herospace'); ?>
   <div class="herospace__container">
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-      <a href="<?php the_permalink(); ?>" class="herospace__wrapper herospace__wrapper--hover" style="background-image: url('<?php the_post_thumbnail_url('full'); ?>')">
+      <div class="herospace__wrapper herospace__wrapper--hover" style="background-image: url('<?php the_post_thumbnail_url('full'); ?>')">
         <span class="herospace__category">
           <?php
             $cat = new WPSEO_Primary_Term('category', get_the_ID());
@@ -23,11 +23,11 @@
               echo $catName;
             ?>
           </span>
-          <h2 class="herospace__data__title"><?php the_title() ?></h2>
-          <p class="herospace__data__description"><?php dynamic_excerpt('250') ?></p>
+          <a href="<?php the_permalink(); ?>" class="herospace__data__title"><?php the_title() ?></a>
+          <a href="<?php the_permalink(); ?>" class="herospace__data__description"><?php dynamic_excerpt('210') ?></a>
           <small class="herospace__data__author">Por <?php the_author(); ?></small>
         </div>
-      </a>
+      </div>
     <?php endwhile; endif; ?>
   </div>
 
@@ -118,7 +118,7 @@
               ?>
             </span>
             <h2 class="change__data__title"><?php the_title() ?></h2>
-            <p class="change__data__description"><?php dynamic_excerpt('250') ?></p>
+            <p class="change__data__description"><?php dynamic_excerpt('210') ?></p>
             <small class="change__data__author">Por <?php the_author(); ?></small>
           </div>
         </a>
@@ -172,7 +172,7 @@
   <?php wp_reset_query(); ?>
 </section>
 
-<section class="camping">
+<!-- <section class="camping">
   <div class="camping__mobile">
     <div class="camping__mobile__header">
       <div class="camping__mobile__header__content">
@@ -184,7 +184,7 @@
       <p class="camping__mobile__wrapper__text">Se parte de nuestra<br> comunidad y participá de<br> foros actividades únicas!</p>
     </div>
     <div class="camping__mobile__email">
-      <?php mymail_form( $id = 1 ) ?>
+      <?php //mymail_form( $id = 1 ) ?>
     </div>
   </div>
 
@@ -196,11 +196,11 @@
     <div class="camping__desktop__data">
       <p class="camping__desktop__data__text">Se parte de nuestra<br> comunidad y participá de<br> foros actividades únicas!</p>
       <div class="camping__desktop__data__input">
-        <?php mymail_form( $id = 1 ) ?>
+        <?php //mymail_form( $id = 1 ) ?>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
   <section class="banner banner--bottom">
     <?php wp_banner_manager(1);?>

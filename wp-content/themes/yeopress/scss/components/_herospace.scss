@@ -89,11 +89,24 @@
     }
 
     &--hover {
+      &:before {
+        content: '';
+        @include size(calc(100%) rem(700));
+        background: rgba(0, 0, 0, 0.2);
+        @include position(absolute, 0 null null 0);
+        @include transition(all 0.3s ease-in-out);
+
+      }
+
       &:hover {
         @include breakpoint('large') {
-          background: white;
-          background-image: none!important;
+          //background: white;
+          //background-image: none!important;
           @include transition(all 0.3s ease-in-out);
+        }
+
+        &:before {
+          background: rgba(0, 0, 0, 0);
         }
 
         .herospace__data {
@@ -104,40 +117,40 @@
             }
           }
         }
-        .herospace__data__category {
-          @include breakpoint('large') {
-            color: $change-text-title;
-            @include transition(color 0.3s ease-in-out);
-          }
-        }
+        // .herospace__data__category {
+        //   @include breakpoint('large') {
+        //     color: $change-text-title;
+        //     @include transition(color 0.3s ease-in-out);
+        //   }
+        // }
 
-        .herospace__data__title {
-          @include breakpoint('large') {
-            color: $change-text-title;
-            @include transition(color 0.3s ease-in-out);
-          }
-        }
+        // .herospace__data__title {
+        //   @include breakpoint('large') {
+        //     color: $change-text-title;
+        //     @include transition(color 0.3s ease-in-out);
+        //   }
+        // }
 
-        .herospace__data__description {
-          @include breakpoint('large') {
-            color: $change-text-desc;
-            @include transition(color 0.3s ease-in-out);
-          }
-        }
-
-        .herospace__data__author {
-          @include breakpoint('large') {
-            color: $change-text-desc;
-            @include transition(color 0.3s ease-in-out);
-          }
-
-          &:before {
-            @include breakpoint('large') {
-              @include filter(brightness(1) invert(0));
-              @include transition(all 0.3s ease-in-out);
-            }
-          }
-        }
+        // .herospace__data__description {
+        //   @include breakpoint('large') {
+        //     color: $change-text-desc;
+        //     @include transition(color 0.3s ease-in-out);
+        //   }
+        // }
+        //
+        // .herospace__data__author {
+        //   @include breakpoint('large') {
+        //     color: $change-text-desc;
+        //     @include transition(color 0.3s ease-in-out);
+        //   }
+        //
+        //   &:before {
+        //     @include breakpoint('large') {
+        //       @include filter(brightness(1) invert(0));
+        //       @include transition(all 0.3s ease-in-out);
+        //     }
+        //   }
+        // }
       }
     }
   }
@@ -209,6 +222,8 @@
       font-size: rem(24);
       line-height: rem(26);
       color: $herospace-text;
+      text-decoration: none;
+      @include transition(color 0.3s ease-in-out);
 
       @include breakpoint('small-landscape') {
         font-size: rem(29);
@@ -219,15 +234,31 @@
         font-size: rem(70);
         line-height: rem(78);
       }
+
+      &:hover {
+        @include breakpoint('large') {
+          color: $change-text-title;
+        }
+      }
+
+      &:focus {
+        outline: 0 none;
+      }
     }
 
     &__description {
-      @include padding(rem(30) null);
+      @include margin(rem(30) null);
+      display: block;
 
       font-family: $platin;
       font-size: rem(16);
       line-height: rem(21);
       color: $herospace-text;
+      text-decoration: none;
+
+      &:focus {
+        outline: 0 none;
+      }
     }
 
     &__author {

@@ -181,6 +181,14 @@
       @include padding(0  rem(80) null rem(80));
     }
 
+    h2 {
+      @include padding(null null rem(35));
+      font-family: $platin-semibold;
+      font-size: rem(20);
+      line-height: rem(26);
+      color: #1a1a1a;
+    }
+
     h3 {
       @include padding(null null rem(35));
       font-family: $platin-semibold;
@@ -193,8 +201,8 @@
       @include padding(null null rem(25));
 
       font-family: $platin;
-      font-size: rem(15);
-      line-height: rem(25);
+      font-size: rem(18);
+      line-height: rem(28);
       color: #1a1a1a;
 
       strong {
@@ -243,6 +251,20 @@
       }
     }
 
+    iframe {
+      width: 100%!important;
+      height: rem(440)!important;
+
+      &.instagram-media {
+        width: 100%!important;
+      }
+    }
+
+    img {
+      width: 100%!important;
+      height: auto!important;
+    }
+
     .wp-caption {
       @include position(relative, null null null null);
       width: 100%!important;
@@ -254,16 +276,17 @@
       }
 
       .wp-caption-text {
-        @include position(absolute, null null 0 0);
+        //@include position(absolute, null null 0 0);
         @include size(100% auto);
-        @include padding(rem(24) rem(20) rem(20));
-        background: rgba(26, 26, 26, 0.8);
+        //@include padding(rem(24) rem(20) rem(20));
+        @include padding(rem(10) null null);
+        //background: rgba(26, 26, 26, 1);
         box-sizing: border-box;
 
-        font-family: $platin;
+        font-family: $roboto;
         font-size: rem(13);
         line-height: rem(13);
-        color: white;
+        color: rgba(0, 0, 0, 0.8);
       }
     }
   }
