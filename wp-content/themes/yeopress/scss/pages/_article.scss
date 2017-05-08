@@ -1,5 +1,5 @@
 .article {
-  @include padding(0 rem(50));
+  @include padding(0 rem(25));
 
   @include breakpoint('medium') {
     @include clearfix;
@@ -140,7 +140,8 @@
         @include transition(opacity 0.3s ease-in-out);
 
         .a2a_button_twitter,
-        .a2a_button_facebook {
+        .a2a_button_facebook,
+        .a2a_button_email {
           display: block;
           @include padding(rem(10) rem(10) null);
 
@@ -246,6 +247,85 @@
 
           @include breakpoint('large') {
             left: rem(-66);
+          }
+        }
+
+        &:after {
+          content: '“';
+          display: block;
+          @include position(absolute, null rem(-33) rem(-10) null);
+
+          font-family: $platin;
+          font-size: rem(62);
+          line-height: rem(62);
+          color: #59c1c0;
+          @include transform(scale(-1, 1));
+
+          @include breakpoint('large') {
+            right: rem(-66);
+          }
+        }
+      }
+    }
+
+    .easingslider {
+      @include position(relative, null null null null);
+      padding-bottom: rem(50);
+
+      @include breakpoint('medium') {
+        padding-bottom: rem(25);
+      }
+
+      .easingslider-slide {
+        .easingslider-image {
+          max-width: 100%;
+        }
+      }
+
+      .easingslider-controls {
+        @include position(absolute, null null rem(20) null);
+        @include size(calc(100% - 60px) rem(60));
+        @include margin(null rem(30));
+        box-sizing: border-box;
+        background: $herospace-dots;
+
+        @include breakpoint('medium') {
+          @include size(rem(140) rem(60));
+          @include margin(0);
+          bottom: rem(50);
+          left: rem(-70);
+        }
+
+        @include breakpoint('large') {
+          @include size(rem(160) rem(75));
+          bottom: rem(50);
+          left: rem(-80);
+        }
+
+        .easingslider-prev {
+          display: block;
+          @include position(absolute, rem(40) rem(60) null null);
+          @include size(rem(20) rem(10));
+          background: url($images_dir + 'submit.png') center center no-repeat;
+          background-size: contain;
+          @include transform(rotate(-180deg));
+
+          @include breakpoint('large') {
+            top: rem(48);
+            left: rem(20);
+          }
+        }
+
+        .easingslider-next {
+          display: block;
+          @include position(absolute, rem(40) rem(15) null null);
+          @include size(rem(20) rem(10));
+          background: url($images_dir + 'submit.png') center center no-repeat;
+          background-size: contain;
+
+          @include breakpoint('large') {
+            top: rem(48);
+            right: rem(20);
           }
         }
       }

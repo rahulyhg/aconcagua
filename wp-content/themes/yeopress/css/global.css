@@ -214,7 +214,7 @@ img {
   left: 0;
   height: 5rem;
   width: 5rem;
-  background: #59c1c0 url("/aconcagua/wp-content/themes/yeopress/images/lg.png") center center no-repeat;
+  background: #59c1c0 url("/wp-content/themes/yeopress/images/lg.png") center center no-repeat;
   background-size: 2.5rem;
   z-index: 10;
   text-decoration: none;
@@ -268,6 +268,8 @@ img {
   clear: inherit;
   width: 2.5rem !important;
   height: auto !important;
+  padding-right: 0.625rem;
+  box-sizing: border-box;
 }
 .header__lg #simpleweather-widget #current_temperature {
   float: left;
@@ -287,7 +289,7 @@ img {
   right: 0.625rem;
   height: 1.875rem;
   width: 1.875rem;
-  background: url("/aconcagua/wp-content/themes/yeopress/images/hamb.png") center center no-repeat;
+  background: url("/wp-content/themes/yeopress/images/hamb.png") center center no-repeat;
   background-size: contain;
 }
 @media (min-width: 768px) {
@@ -338,7 +340,7 @@ img {
   left: 0.3125rem;
   height: 0.6875rem;
   width: 0.8125rem;
-  background: url("/aconcagua/wp-content/themes/yeopress/images/article-arrow.png") 0 0 no-repeat;
+  background: url("/wp-content/themes/yeopress/images/article-arrow.png") 0 0 no-repeat;
   background-size: contain;
 }
 .header__share__list {
@@ -354,15 +356,15 @@ img {
   width: 1.25rem;
 }
 .header__share__list__item--fb a {
-  background: url("/aconcagua/wp-content/themes/yeopress/images/facebook.png") center center no-repeat;
+  background: url("/wp-content/themes/yeopress/images/facebook.png") center center no-repeat;
   background-size: contain;
 }
 .header__share__list__item--tw a {
-  background: url("/aconcagua/wp-content/themes/yeopress/images/twitter.png") center center no-repeat;
+  background: url("/wp-content/themes/yeopress/images/twitter.png") center center no-repeat;
   background-size: contain;
 }
 .header__share__list__item--inst a {
-  background: url("/aconcagua/wp-content/themes/yeopress/images/instagram.png") center center no-repeat;
+  background: url("/wp-content/themes/yeopress/images/instagram.png") center center no-repeat;
   background-size: contain;
 }
 .header__nav {
@@ -431,6 +433,7 @@ img {
   .herospace {
     height: 43.75rem;
     width: 100%;
+    overflow: hidden;
   }
 }
 @media (min-width: 768px) {
@@ -680,7 +683,7 @@ img {
   display: block;
   height: 0.6875rem;
   width: 0.8125rem;
-  background: url("/aconcagua/wp-content/themes/yeopress/images/article-arrow.png") 0 0 no-repeat;
+  background: url("/wp-content/themes/yeopress/images/article-arrow.png") 0 0 no-repeat;
   background-size: contain;
   -webkit-filter: brightness(0) invert(1);
   filter: brightness(0) invert(1);
@@ -758,7 +761,7 @@ img {
   display: block;
   height: 0.625rem;
   width: 1.25rem;
-  background: url("/aconcagua/wp-content/themes/yeopress/images/submit.png") center center no-repeat;
+  background: url("/wp-content/themes/yeopress/images/submit.png") center center no-repeat;
   background-size: contain;
 }
 .herospace__dots__btn.slick-disabled {
@@ -844,7 +847,7 @@ img {
   bottom: 1.875rem;
   height: 0.6875rem;
   width: 0.8125rem;
-  background: url("/aconcagua/wp-content/themes/yeopress/images/article-arrow.png") 0 0 no-repeat;
+  background: url("/wp-content/themes/yeopress/images/article-arrow.png") 0 0 no-repeat;
   background-size: contain;
 }
 .herospace-slider__mobile__box__category {
@@ -960,7 +963,7 @@ img {
   float: left;
   height: 16.3125rem;
   width: 16.3125rem;
-  background: #1a1a1a;
+  background: #c7c7c7;
 }
 @media (min-width: 1024px) {
   .herospace-banner {
@@ -1113,7 +1116,7 @@ img {
   height: 2.25rem;
   width: 2.25rem;
   border: 0 none;
-  background: url("/aconcagua/wp-content/themes/yeopress/images/submit.png") center center no-repeat;
+  background: url("/wp-content/themes/yeopress/images/submit.png") center center no-repeat;
   background-size: 1.125rem;
   text-indent: -624.9375rem;
 }
@@ -1221,7 +1224,7 @@ img {
   left: 0;
   height: 1.25rem;
   width: 1.25rem;
-  background: url("/aconcagua/wp-content/themes/yeopress/images/ft-icon.png") center center no-repeat;
+  background: url("/wp-content/themes/yeopress/images/ft-icon.png") center center no-repeat;
   background-size: 1rem;
 }
 @media (min-width: 768px) {
@@ -1253,15 +1256,15 @@ img {
   width: 1.25rem;
 }
 .footer__down__social__list__item--fb a {
-  background: url("/aconcagua/wp-content/themes/yeopress/images/facebook.png") center center no-repeat;
+  background: url("/wp-content/themes/yeopress/images/facebook.png") center center no-repeat;
   background-size: contain;
 }
 .footer__down__social__list__item--tw a {
-  background: url("/aconcagua/wp-content/themes/yeopress/images/twitter.png") center center no-repeat;
+  background: url("/wp-content/themes/yeopress/images/twitter.png") center center no-repeat;
   background-size: contain;
 }
 .footer__down__social__list__item--inst a {
-  background: url("/aconcagua/wp-content/themes/yeopress/images/instagram.png") center center no-repeat;
+  background: url("/wp-content/themes/yeopress/images/instagram.png") center center no-repeat;
   background-size: contain;
 }
 .footer__bottom {
@@ -1277,7 +1280,7 @@ img {
   display: block;
   height: 1.5625rem;
   width: 1.5625rem;
-  background: url("/aconcagua/wp-content/themes/yeopress/images/footer-close.png") center center no-repeat;
+  background: url("/wp-content/themes/yeopress/images/footer-close.png") center center no-repeat;
   background-size: 0.75rem;
 }
 @media (min-width: 768px) {
@@ -1457,7 +1460,7 @@ img {
   border: 0 none;
   cursor: pointer;
   text-indent: -624.9375rem;
-  background: url("/aconcagua/wp-content/themes/yeopress/images/article-arrow.png") center center no-repeat;
+  background: url("/wp-content/themes/yeopress/images/article-arrow.png") center center no-repeat;
   background-size: 1.0625rem;
   -webkit-filter: brightness(0) invert(0.5);
   filter: brightness(0) invert(0.5);
@@ -1519,7 +1522,7 @@ img {
 .footer__bottom__wrapper__contact-publicity__lg {
   height: 0.9375rem;
   width: 7.0625rem;
-  background: url("/aconcagua/wp-content/themes/yeopress/images/footer-aconcagua.png") 0 0 no-repeat;
+  background: url("/wp-content/themes/yeopress/images/footer-aconcagua.png") 0 0 no-repeat;
 }
 @media (min-width: 1024px) {
   .footer__bottom__wrapper__download {
@@ -1553,7 +1556,7 @@ img {
 }
 @media (min-width: 1441px) {
   .footer__bottom__wrapper__download__link a {
-    background: #59c1c0 url("/aconcagua/wp-content/themes/yeopress/images/footer-download.png") 18.125rem center no-repeat;
+    background: #59c1c0 url("/wp-content/themes/yeopress/images/footer-download.png") 18.125rem center no-repeat;
     height: auto;
     width: 16.25rem;
     text-align: left;
@@ -1836,7 +1839,7 @@ img {
   display: block;
   height: 0.6875rem;
   width: 0.8125rem;
-  background: url("/aconcagua/wp-content/themes/yeopress/images/article-arrow.png") 0 0 no-repeat;
+  background: url("/wp-content/themes/yeopress/images/article-arrow.png") 0 0 no-repeat;
   background-size: contain;
   -webkit-filter: brightness(0) invert(1);
   filter: brightness(0) invert(1);
@@ -1916,7 +1919,7 @@ img {
   display: block;
   height: 0.625rem;
   width: 1.25rem;
-  background: url("/aconcagua/wp-content/themes/yeopress/images/submit.png") center center no-repeat;
+  background: url("/wp-content/themes/yeopress/images/submit.png") center center no-repeat;
   background-size: contain;
 }
 .change__dots__btn.slick-disabled {
@@ -2079,13 +2082,27 @@ img {
 .change-articles .change-slider__mobile__box {
   float: left;
   height: 25vw;
-  width: 30%;
+  width: 50%;
+}
+@media (min-width: 1024px) {
+  .change-articles .change-slider__mobile__box {
+    height: 25vw;
+    width: 30%;
+  }
 }
 .change-articles .change-slider__mobile__box:nth-child(3) {
   display: none;
 }
 @media (min-width: 1024px) {
   .change-articles .change-slider__mobile__box:nth-child(3) {
+    display: block;
+  }
+}
+.change-articles .change-slider__mobile__box:nth-child(4) {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .change-articles .change-slider__mobile__box:nth-child(4) {
     display: block;
   }
 }
@@ -2112,7 +2129,7 @@ img {
   height: calc(100vw - 60px);
   width: 100%;
   padding: 1.875rem;
-  background: url("/aconcagua/wp-content/themes/yeopress/images/camping.jpg") center center no-repeat;
+  background: url("/wp-content/themes/yeopress/images/camping.jpg") center center no-repeat;
   background-size: cover;
   box-sizing: border-box;
 }
@@ -2231,7 +2248,7 @@ img {
   height: 2.25rem;
   width: 2.25rem;
   border: 0 none;
-  background: url("/aconcagua/wp-content/themes/yeopress/images/submit.png") center center no-repeat;
+  background: url("/wp-content/themes/yeopress/images/submit.png") center center no-repeat;
   background-size: 1.125rem;
   text-indent: -624.9375rem;
 }
@@ -2254,7 +2271,7 @@ img {
   height: 13.125rem;
   width: 66.66%;
   padding: 2.5rem;
-  background: url("/aconcagua/wp-content/themes/yeopress/images/camping.jpg") center center no-repeat;
+  background: url("/wp-content/themes/yeopress/images/camping.jpg") center center no-repeat;
   background-size: cover;
   box-sizing: border-box;
 }
@@ -2398,7 +2415,7 @@ img {
   height: 2.25rem;
   width: 2.25rem;
   border: 0 none;
-  background: url("/aconcagua/wp-content/themes/yeopress/images/submit.png") center center no-repeat;
+  background: url("/wp-content/themes/yeopress/images/submit.png") center center no-repeat;
   background-size: 1.125rem;
   text-indent: -624.9375rem;
 }
@@ -2429,6 +2446,14 @@ img {
 .news__content__box {
   position: relative;
   float: left;
+}
+.news__content__box:focus {
+  outline: 0 none;
+}
+@media (min-width: 768px) {
+  .news__content__box:first-child .news__content__box__data {
+    display: block;
+  }
 }
 .news__content__box__image {
   height: 100vw;
@@ -2466,6 +2491,7 @@ img {
 }
 @media (min-width: 768px) {
   .news__content__box__data {
+    display: none;
     position: absolute;
     right: 0;
     bottom: -1.875rem;
@@ -2497,6 +2523,7 @@ img {
   }
 }
 .news__content__box__data__description {
+  display: none;
   padding-top: 0.9375rem;
   font-family: "PlantinStd";
   font-size: 0.8125rem;
@@ -2508,6 +2535,11 @@ img {
     padding-top: 1.875rem;
     font-size: 1.0625rem;
     line-height: 1.5625rem;
+  }
+}
+@media (min-width: 768px) {
+  .news__content__box__data__description {
+    display: block;
   }
 }
 .news__content__box__data__author {
@@ -2532,7 +2564,7 @@ img {
   content: '';
   height: 0.9375rem;
   width: 1.125rem;
-  background: url("/aconcagua/wp-content/themes/yeopress/images/news-icon.png") center center no-repeat;
+  background: url("/wp-content/themes/yeopress/images/news-icon.png") center center no-repeat;
   background-size: 1.125rem;
 }
 .news__dots {
@@ -2609,7 +2641,7 @@ img {
   display: block;
   height: 0.625rem;
   width: 1.25rem;
-  background: url("/aconcagua/wp-content/themes/yeopress/images/submit.png") center center no-repeat;
+  background: url("/wp-content/themes/yeopress/images/submit.png") center center no-repeat;
   background-size: contain;
 }
 .news__dots__btn.slick-disabled {
@@ -2661,7 +2693,7 @@ img {
   height: calc(100vw - 60px);
   width: 100%;
   padding: 1.875rem;
-  background: url("/aconcagua/wp-content/themes/yeopress/images/domingo.jpg") center center no-repeat;
+  background: url("/wp-content/themes/yeopress/images/domingo.jpg") center center no-repeat;
   background-size: cover;
   box-sizing: border-box;
 }
@@ -2777,7 +2809,7 @@ img {
   height: 2.25rem;
   width: 2.25rem;
   border: 0 none;
-  background: url("/aconcagua/wp-content/themes/yeopress/images/submit.png") center center no-repeat;
+  background: url("/wp-content/themes/yeopress/images/submit.png") center center no-repeat;
   background-size: 1.125rem;
   text-indent: -624.9375rem;
 }
@@ -2809,7 +2841,7 @@ img {
 }
 @media (min-width: 768px) {
   .domingo__desktop__content {
-    background: white url("/aconcagua/wp-content/themes/yeopress/images/domingo-desktop.png") 0 0 no-repeat;
+    background: white url("/wp-content/themes/yeopress/images/domingo-desktop.png") 0 0 no-repeat;
     background-size: auto 17.5rem;
   }
 }
@@ -2945,7 +2977,7 @@ img {
   height: 2.25rem;
   width: 2.25rem;
   border: 0 none;
-  background: url("/aconcagua/wp-content/themes/yeopress/images/submit.png") center center no-repeat;
+  background: url("/wp-content/themes/yeopress/images/submit.png") center center no-repeat;
   background-size: 1.125rem;
   text-indent: -624.9375rem;
 }
@@ -3185,7 +3217,7 @@ img {
   display: block;
   height: 0.6875rem;
   width: 0.8125rem;
-  background: url("/aconcagua/wp-content/themes/yeopress/images/article-arrow.png") 0 0 no-repeat;
+  background: url("/wp-content/themes/yeopress/images/article-arrow.png") 0 0 no-repeat;
   background-size: contain;
   -webkit-transition: all 0.3s ease-in;
   -moz-transition: all 0.3s ease-in;
@@ -3211,7 +3243,7 @@ img {
   display: block;
   height: 0.6875rem;
   width: 0.8125rem;
-  background: url("/aconcagua/wp-content/themes/yeopress/images/article-arrow.png") 0 0 no-repeat;
+  background: url("/wp-content/themes/yeopress/images/article-arrow.png") 0 0 no-repeat;
   background-size: contain;
   -webkit-transition: all 0.3s ease-in;
   -moz-transition: all 0.3s ease-in;
@@ -3321,7 +3353,7 @@ img {
   display: block;
   height: 0.6875rem;
   width: 0.8125rem;
-  background: url("/aconcagua/wp-content/themes/yeopress/images/article-arrow.png") 0 0 no-repeat;
+  background: url("/wp-content/themes/yeopress/images/article-arrow.png") 0 0 no-repeat;
   background-size: contain;
 }
 
@@ -3444,7 +3476,7 @@ img {
 }
 .comments-feed a {
   padding-left: 1.5625rem;
-  background: url("/aconcagua/wp-content/themes/yeopress/images/feed.png") 0 0.125rem no-repeat;
+  background: url("/wp-content/themes/yeopress/images/feed.png") 0 0.125rem no-repeat;
   background-size: 0.9375rem;
   font-family: "SpaceMono-Bold";
   font-size: 0.625rem;
@@ -3488,7 +3520,7 @@ img {
 }
 
 .article {
-  padding: 0 3.125rem;
+  padding: 0 1.5625rem;
 }
 @media (min-width: 768px) {
   .article {
@@ -3604,7 +3636,7 @@ img {
   content: '';
   height: 0.9375rem;
   width: 1.125rem;
-  background: url("/aconcagua/wp-content/themes/yeopress/images/article-arrow.png") center center no-repeat;
+  background: url("/wp-content/themes/yeopress/images/article-arrow.png") center center no-repeat;
   background-size: 0.9375rem;
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
@@ -3636,20 +3668,23 @@ img {
   transition: opacity 0.3s ease-in-out;
 }
 .article__left__share .addtoany_shortcode .a2a_button_twitter,
-.article__left__share .addtoany_shortcode .a2a_button_facebook {
+.article__left__share .addtoany_shortcode .a2a_button_facebook,
+.article__left__share .addtoany_shortcode .a2a_button_email {
   display: block;
   padding-top: 0.625rem;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
 }
 .article__left__share .addtoany_shortcode .a2a_button_twitter span,
-.article__left__share .addtoany_shortcode .a2a_button_facebook span {
+.article__left__share .addtoany_shortcode .a2a_button_facebook span,
+.article__left__share .addtoany_shortcode .a2a_button_email span {
   background: transparent !important;
   width: 1.5625rem !important;
   height: 1.5625rem !important;
 }
 .article__left__share .addtoany_shortcode .a2a_button_twitter span svg path,
-.article__left__share .addtoany_shortcode .a2a_button_facebook span svg path {
+.article__left__share .addtoany_shortcode .a2a_button_facebook span svg path,
+.article__left__share .addtoany_shortcode .a2a_button_email span svg path {
   fill: #1a1a1a;
 }
 .article__left__share--show .addtoany_shortcode {
@@ -3743,6 +3778,103 @@ img {
 @media (min-width: 1024px) {
   .article__center blockquote p:before {
     left: -4.125rem;
+  }
+}
+.article__center blockquote p:after {
+  content: '“';
+  display: block;
+  position: absolute;
+  right: -2.0625rem;
+  bottom: -0.625rem;
+  font-family: "PlantinStd";
+  font-size: 3.875rem;
+  line-height: 3.875rem;
+  color: #59c1c0;
+  -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+@media (min-width: 1024px) {
+  .article__center blockquote p:after {
+    right: -4.125rem;
+  }
+}
+.article__center .easingslider {
+  position: relative;
+  padding-bottom: 3.125rem;
+}
+@media (min-width: 768px) {
+  .article__center .easingslider {
+    padding-bottom: 1.5625rem;
+  }
+}
+.article__center .easingslider .easingslider-slide .easingslider-image {
+  max-width: 100%;
+}
+.article__center .easingslider .easingslider-controls {
+  position: absolute;
+  bottom: 1.25rem;
+  height: 3.75rem;
+  width: calc(100% - 60px);
+  margin-right: 1.875rem;
+  margin-left: 1.875rem;
+  box-sizing: border-box;
+  background: #1a1a1a;
+}
+@media (min-width: 768px) {
+  .article__center .easingslider .easingslider-controls {
+    height: 3.75rem;
+    width: 8.75rem;
+    margin: 0;
+    bottom: 3.125rem;
+    left: -4.375rem;
+  }
+}
+@media (min-width: 1024px) {
+  .article__center .easingslider .easingslider-controls {
+    height: 4.6875rem;
+    width: 10rem;
+    bottom: 3.125rem;
+    left: -5rem;
+  }
+}
+.article__center .easingslider .easingslider-controls .easingslider-prev {
+  display: block;
+  position: absolute;
+  top: 2.5rem;
+  right: 3.75rem;
+  height: 0.625rem;
+  width: 1.25rem;
+  background: url("/wp-content/themes/yeopress/images/submit.png") center center no-repeat;
+  background-size: contain;
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+@media (min-width: 1024px) {
+  .article__center .easingslider .easingslider-controls .easingslider-prev {
+    top: 3rem;
+    left: 1.25rem;
+  }
+}
+.article__center .easingslider .easingslider-controls .easingslider-next {
+  display: block;
+  position: absolute;
+  top: 2.5rem;
+  right: 0.9375rem;
+  height: 0.625rem;
+  width: 1.25rem;
+  background: url("/wp-content/themes/yeopress/images/submit.png") center center no-repeat;
+  background-size: contain;
+}
+@media (min-width: 1024px) {
+  .article__center .easingslider .easingslider-controls .easingslider-next {
+    top: 3rem;
+    right: 1.25rem;
   }
 }
 .article__center iframe {

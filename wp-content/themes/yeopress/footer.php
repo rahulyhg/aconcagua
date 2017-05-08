@@ -1,22 +1,20 @@
 		</div>
 		<footer class="footer">
-			<!-- <p class="footer-copyright">Copyright &copy; <?= date('Y') ?> <?php bloginfo('name') ?></p> -->
-
       <div class="footer__top">
         <div class="footer__newsletter">
           <h2 class="footer__newsletter__title">Suscribite a nuestro newsletter</h2>
           <div class="footer__newsletter__btn">
-            <?php mymail_form( $id = 3 ) ?>
+            <?php mymail_form( $id = 3 ); ?>
           </div>
         </div>
 
         <div class="footer__sections">
           <h2 class="footer__sections__title">Secciones</h2>
           <ul class="footer__sections__list">
-            <li class="footer__sections__list__items"><a href="/aconcagua/hacer">Hacer</a></li>
-            <li class="footer__sections__list__items"><a href="/aconcagua/pensar">Pensar</a></li>
-            <li class="footer__sections__list__items"><a href="/aconcagua/explorar">Explorar</a></li>
-            <li class="footer__sections__list__items"><a href="/aconcagua/cambiar">Cambiar</a></li>
+            <li class="footer__sections__list__items"><a href="/hacer">Hacer</a></li>
+            <li class="footer__sections__list__items"><a href="/pensar">Pensar</a></li>
+            <li class="footer__sections__list__items"><a href="/explorar">Explorar</a></li>
+            <li class="footer__sections__list__items"><a href="/cambiar">Cambiar</a></li>
           </ul>
         </div>
 
@@ -74,7 +72,7 @@
       </div>
 
       <div class="footer__down">
-        <p class="footer__down__copyright">Copyright <?= date('Y') ?> <?php bloginfo('name') ?></p>
+        <p class="footer__down__copyright">Copyright <?= date('Y'); ?> <?php bloginfo('name'); ?></p>
         <div class="footer__down__social">
           <ul class="footer__down__social__list">
             <li class="footer__down__social__list__item footer__down__social__list__item--fb"><a href="https://www.facebook.com/AconcaguaLat" target="_blank"></a></li>

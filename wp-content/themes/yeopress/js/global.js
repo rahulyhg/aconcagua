@@ -1,5 +1,5 @@
 require.config({
-	"baseUrl": "http://localhost:8888/aconcagua/wp-content/themes/yeopress/js/",
+	"baseUrl": "/wp-content/themes/yeopress/js/",
 	"paths": {
 		"jquery": "vendor/jquery/jquery",
     "slick": "vendor/slick-carousel/slick/slick"
@@ -122,6 +122,7 @@ requirejs(['jquery', 'slick'], function( $ ) {
 
   $('.footer__about__list__items--who').on('click', function(e) {
     e.preventDefault();
+    $('html,body').animate({scrollTop: ($('.footer__down').offset().top) + 200}, 1000);
 
     $('.footer__bottom__wrapper__right').removeClass().addClass('footer__bottom__wrapper__right footer__bottom__wrapper__right--who');
 
@@ -134,6 +135,7 @@ requirejs(['jquery', 'slick'], function( $ ) {
 
   $('.footer__about__list__items--publicity').on('click', function(e) {
     e.preventDefault();
+    $('html,body').animate({scrollTop: ($('.footer__down').offset().top) + 200}, 1000);
 
     $('.footer__bottom__wrapper__right').removeClass().addClass('footer__bottom__wrapper__right footer__bottom__wrapper__right--publicity');
 
@@ -146,6 +148,7 @@ requirejs(['jquery', 'slick'], function( $ ) {
 
   $('.footer__about__list__items--contact').on('click', function(e) {
     e.preventDefault();
+    $('html,body').animate({scrollTop: ($('.footer__down').offset().top) + 200}, 1000);
 
     $('.footer__bottom__wrapper__right').removeClass().addClass('footer__bottom__wrapper__right footer__bottom__wrapper__right--contact');
 

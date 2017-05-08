@@ -26,7 +26,7 @@
               ?>
             </span>
             <h2 class="herospace__data__title"><?php the_title(); ?></h2>
-            <p class="herospace__data__description"><?php dynamic_excerpt('250') ?></p>
+            <p class="herospace__data__description"><?php dynamic_excerpt2('250') ?></p>
           </div>
         </div>
     </section>
@@ -44,7 +44,6 @@
           <div class="article__left__author__data">
             <h3 class="article__left__author__data__name"><?php the_author(); ?></h3>
             <span class="article__left__author__data__twitter">@<?php the_author_meta('twitter'); ?></span>
-            <!-- <p class="article__left__author__data__email"><?php //the_author_meta('user_email'); ?></p> -->
           </div>
         </div>
 
@@ -56,7 +55,7 @@
           <div class="article__left__share__link">
             <span>Share</span>
           </div>
-          <?php echo do_shortcode('[addtoany buttons="facebook,twitter"]'); ?>
+          <?php echo do_shortcode('[addtoany buttons="facebook,twitter,email"]'); ?>
         </div>
       </div>
       <div class="article__center">
@@ -79,7 +78,7 @@
       $args=array(
       'category__in' => $category_ids,
       'post__not_in' => array($post->ID),
-      'posts_per_page'=> 2, // Number of related posts that will be shown.
+      'posts_per_page'=> 2,
       'caller_get_posts'=>1
       );
       $my_query = new wp_query( $args );
@@ -155,7 +154,6 @@
             </div>
     				<div class="article__data">
               <div class="article__data__content">
-                <!-- <h3 class="article__data__category">Full story</h3> -->
                 <h3 class="article__data__title"><?php the_title(); ?></h3>
                 <p class="article__data__description"><?php dynamic_excerpt('100'); ?></p>
                 <span class="article__data__author">Por <?php the_author(); ?></span>
@@ -178,7 +176,7 @@
   </div>
 
   <section class="banner banner--bottom">
-    <?php wp_banner_manager(2);?>
+    <?php wp_banner_manager(2); ?>
   </section>
 
   <section class="domingo domingo--grey">
@@ -193,7 +191,7 @@
         <p class="domingo__mobile__wrapper__text">Suscribite a nuestro<br> newsletter y recibí noticias<br> sustentables pensadas para vos</p>
       </div>
       <div class="domingo__mobile__email">
-        <?php mymail_form( $id = 2 ) ?>
+        <?php mymail_form( $id = 2 ); ?>
       </div>
     </div>
 
@@ -205,7 +203,7 @@
       <div class="domingo__desktop__data">
         <p class="domingo__desktop__data__text">Suscribite a nuestro<br> newsletter y recibí noticias<br> sustentables pensadas para vos</p>
         <div class="domingo__desktop__data__input">
-          <?php mymail_form( $id = 2 ) ?>
+          <?php mymail_form( $id = 2 ); ?>
         </div>
       </div>
     </div>
@@ -223,7 +221,6 @@
             </div>
     				<div class="article__data">
               <div class="article__data__content">
-                <!-- <h3 class="article__data__category">Full story</h3> -->
                 <h3 class="article__data__title"><?php the_title(); ?></h3>
                 <p class="article__data__description"><?php dynamic_excerpt('100'); ?></p>
                 <span class="article__data__author">Por <?php the_author(); ?></span>
@@ -235,19 +232,19 @@
       </ul>
 
     <?php
-    the_posts_pagination( array(
-      'screen_reader_text' => ' ',
-      'mid_size'  => 10,
-      'prev_text' => __( 'Anterior', 'textdomain' ),
-      'next_text' => __( 'Siguiente', 'textdomain' ),
-    ));
-     ?>
-	<?php  endif; ?>
+      the_posts_pagination( array(
+        'screen_reader_text' => ' ',
+        'mid_size'  => 10,
+        'prev_text' => __( 'Anterior', 'textdomain' ),
+        'next_text' => __( 'Siguiente', 'textdomain' ),
+      ));
+    ?>
+	<?php endif; ?>
   </div>
 
 
   <section class="banner banner--bottom">
-    <?php wp_banner_manager(2);?>
+    <?php wp_banner_manager(2); ?>
   </section>
 
   <section class="domingo domingo--grey">
@@ -262,7 +259,7 @@
         <p class="domingo__mobile__wrapper__text">Suscribite a nuestro<br> newsletter y recibí noticias<br> sustentables pensadas para vos</p>
       </div>
       <div class="domingo__mobile__email">
-        <?php mymail_form( $id = 2 ) ?>
+        <?php mymail_form( $id = 2 ); ?>
       </div>
     </div>
 
@@ -274,7 +271,7 @@
       <div class="domingo__desktop__data">
         <p class="domingo__desktop__data__text">Suscribite a nuestro<br> newsletter y recibí noticias<br> sustentables pensadas para vos</p>
         <div class="domingo__desktop__data__input">
-          <?php mymail_form( $id = 2 ) ?>
+          <?php mymail_form( $id = 2 ); ?>
         </div>
       </div>
     </div>

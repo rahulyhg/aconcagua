@@ -57,6 +57,8 @@
         clear: inherit;
         width: rem(40)!important;
         height: auto!important;
+        padding-right: rem(10);
+        box-sizing: border-box;
       }
 
       #current_temperature {

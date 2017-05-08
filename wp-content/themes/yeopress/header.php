@@ -12,13 +12,12 @@
       <link rel="shortcut icon" href="wp-content/themes/yeopress/images/favicon.png" type="image/x-icon" />
       <meta name="author" content="">
       <link rel="author" href="">
+      <meta name="google-site-verification" content="mBHffqf5-Me9U-77lo1GjUZL7jD5_jWn14NfhmhDAcY" />
       <?php wp_head() ?>
     </head>
     <body <?php body_class() ?>>
       <header class="header">
-        <a class="header__lg" href="<?php bloginfo('url') ?>" title="<?php bloginfo('name') ?> - <?php bloginfo('description') ?>">
-          <?php echo do_shortcode('[wp-simpleweather]'); ?>
-        </a>
+        <a class="header__lg" href="<?php bloginfo('url') ?>" title="<?php bloginfo('name') ?> - <?php bloginfo('description') ?>"></a>
         <div class="header__wrapper">
           <div class="header__share">
             <ul class="header__share__list">
@@ -32,10 +31,10 @@
           </div>
           <nav class="header__nav">
             <ul class="header__nav__list">
-              <li class="header__nav__list__item"><a href="/aconcagua/hacer">Hacer</a></li>
-              <li class="header__nav__list__item"><a href="/aconcagua/pensar">Pensar</a></li>
-              <li class="header__nav__list__item"><a href="/aconcagua/explorar">Explorar</a></li>
-              <li class="header__nav__list__item"><a href="/aconcagua/cambiar">Cambiar</a></li>
+              <li class="header__nav__list__item"><a href="/hacer">Hacer</a></li>
+              <li class="header__nav__list__item"><a href="/pensar">Pensar</a></li>
+              <li class="header__nav__list__item"><a href="/explorar">Explorar</a></li>
+              <li class="header__nav__list__item"><a href="/cambiar">Cambiar</a></li>
             </ul>
           </nav>
         </div>

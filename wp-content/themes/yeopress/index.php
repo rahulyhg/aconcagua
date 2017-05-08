@@ -24,7 +24,7 @@
             ?>
           </span>
           <a href="<?php the_permalink(); ?>" class="herospace__data__title"><?php the_title() ?></a>
-          <a href="<?php the_permalink(); ?>" class="herospace__data__description"><?php dynamic_excerpt('210') ?></a>
+          <a href="<?php the_permalink(); ?>" class="herospace__data__description"><?php dynamic_excerpt2('210') ?></a>
           <small class="herospace__data__author">Por <?php the_author(); ?></small>
         </div>
       </div>
@@ -118,7 +118,7 @@
               ?>
             </span>
             <h2 class="change__data__title"><?php the_title() ?></h2>
-            <p class="change__data__description"><?php dynamic_excerpt('210') ?></p>
+            <p class="change__data__description"><?php dynamic_excerpt2('210') ?></p>
             <small class="change__data__author">Por <?php the_author(); ?></small>
           </div>
         </a>
@@ -136,7 +136,7 @@
 
 <section class="change-slider">
   <div class="change-slider__mobile">
-    <?php query_posts('category_name=herospace-think-secondary&posts_per_page=3'); ?>
+    <?php query_posts('category_name=herospace-think-secondary&posts_per_page=4'); ?>
     <div class="change-slider__mobile__list">
       <?php while ( have_posts() ) : the_post(); ?>
         <div class="change-slider__mobile__list__item">
@@ -145,7 +145,7 @@
               <span class="change-slider__mobile__box__category"><?php the_title() ?></span>
               <big class="change-slider__mobile__box__time">Hace <?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ); ?></big>
               <div class="change-slider__mobile__box__extra">
-                <p class="change-slider__mobile__box__extra__text"><?php the_excerpt(); ?></p>
+                <p class="change-slider__mobile__box__extra__text"><?php dynamic_excerpt(60); ?></p>
               </div>
             </div>
           </a>
@@ -159,7 +159,7 @@
 </section>
 
 <section class="change-articles">
-  <?php query_posts('category_name=herospace-think-secondary&posts_per_page=3'); ?>
+  <?php query_posts('category_name=herospace-think-secondary&posts_per_page=4'); ?>
   <?php while ( have_posts() ) : the_post(); ?>
     <a href="<?php the_permalink(); ?>" class="change-slider__mobile__box">
       <span class="change-slider__mobile__box__category"><?php the_title(); ?></span>
@@ -212,7 +212,7 @@
     <div class="news__wrapper">
       <?php while ( have_posts() ) : the_post(); ?>
         <div class="news__content__box">
-          <div class="news__content__box__image" style="background-image: url('/aconcagua/wp-content/themes/yeopress/images/news.jpg')"></div>
+          <div class="news__content__box__image" style="background-image: url('<?php the_post_thumbnail_url('full'); ?>')"></div>
           <div class="news__content__box__data">
             <h3 class="news__content__box__data__title"><?php the_title(); ?></h3>
             <p class="news__content__box__data__description"><?php the_excerpt(); ?></p>

@@ -9,6 +9,7 @@
 
   @include breakpoint('large') {
     @include size(100% rem(700));
+    overflow: hidden;
   }
 
   &--full {
@@ -535,7 +536,7 @@
   display: none;
   float: left;
   @include size(rem(261));
-  background: #1a1a1a;
+  background: #c7c7c7;
 
   @include breakpoint('large') {
     display: block;

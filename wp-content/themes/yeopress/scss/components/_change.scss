@@ -424,10 +424,21 @@
 
   .change-slider__mobile__box {
     float: left;
-    @include size(30% 25vw);
+    @include size(50% 25vw);
 
+    @include breakpoint('large') {
+      @include size(30% 25vw);
+    }
 
     &:nth-child(3) {
+      display: none;
+
+      @include breakpoint('large') {
+        display: block;
+      }
+    }
+
+    &:nth-child(4) {
       display: none;
 
       @include breakpoint('large') {
