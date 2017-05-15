@@ -1,5 +1,5 @@
 .banner {
-  @include padding(rem(30) null);
+  @include padding(rem(30));
 
   @include breakpoint('medium') {
     @include padding(rem(30));
@@ -32,5 +32,23 @@
     @include breakpoint('medium') {
       @include size(100% rem(120));
     }
+  }
+}
+
+.article-top-banner {
+  @include padding(null null rem(30));
+
+  img {
+    width: 100%;
+    max-width: 100%!important;
+  }
+}
+
+.article-bottom-banner {
+  @include padding(rem(30) null null);
+
+  img {
+    width: 100%;
+    max-width: 100%!important;
   }
 }

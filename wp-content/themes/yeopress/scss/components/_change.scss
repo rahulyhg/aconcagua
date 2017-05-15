@@ -180,9 +180,14 @@
       @include padding(rem(30) null);
 
       font-family: $platin;
-      font-size: rem(16);
-      line-height: rem(21);
+      font-size: rem(13);
+      line-height: rem(17);
       color: $herospace-text;
+
+      @include breakpoint('medium') {
+        font-size: rem(16);
+        line-height: rem(21);
+      }
     }
 
     &__author {

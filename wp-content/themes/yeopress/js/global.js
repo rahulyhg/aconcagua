@@ -1,5 +1,5 @@
 require.config({
-	"baseUrl": "/wp-content/themes/yeopress/js/",
+	"baseUrl": "http://localhost:8888/aconcagua/wp-content/themes/yeopress/js/",
 	"paths": {
 		"jquery": "vendor/jquery/jquery",
     "slick": "vendor/slick-carousel/slick/slick"
@@ -15,6 +15,8 @@ requirejs(['jquery', 'slick'], function( $ ) {
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: true,
+      autoplay: true,
+      autoplaySpeed: 5000,
       appendArrows: $('.herospace__dots'),
       prevArrow: '<a href="" class="herospace__dots__btn herospace__dots__prev"></a>',
       nextArrow: '<a href="" class="herospace__dots__btn herospace__dots__next"></a>'
@@ -54,6 +56,8 @@ requirejs(['jquery', 'slick'], function( $ ) {
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: true,
+      autoplay: true,
+      autoplaySpeed: 5000,
       appendArrows: $('.change__dots'),
       prevArrow: '<a href="" class="change__dots__btn change__dots__prev"></a>',
       nextArrow: '<a href="" class="change__dots__btn change__dots__next"></a>'

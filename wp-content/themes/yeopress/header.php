@@ -10,8 +10,7 @@
       <title><?php wp_title( '|', true, 'right' ) ?></title>
       <link rel="icon" href="wp-content/themes/yeopress/images/favicon.png" type="image/x-icon" />
       <link rel="shortcut icon" href="wp-content/themes/yeopress/images/favicon.png" type="image/x-icon" />
-      <meta name="author" content="">
-      <link rel="author" href="">
+      <meta name="author" content="Patricio Testolin">
       <meta name="google-site-verification" content="mBHffqf5-Me9U-77lo1GjUZL7jD5_jWn14NfhmhDAcY" />
       <?php wp_head() ?>
     </head>

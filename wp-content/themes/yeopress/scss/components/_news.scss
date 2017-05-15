@@ -95,6 +95,7 @@
           color: white;
 
           @include breakpoint('small-landscape') {
+            display: block;
             @include padding(rem(30) null null);
 
             font-size: rem(17);

@@ -171,7 +171,7 @@
 
       @include breakpoint('large') {
         @include size(66.66% rem(280));
-        @include padding(rem(50) rem(80) rem(80) 30%);
+        @include padding(rem(50) rem(80) rem(80) 33.33%);
       }
 
       &__title {

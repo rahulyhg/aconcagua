@@ -45,6 +45,13 @@
           font-family: $mono;
           font-size: rem(12);
           color: #59c1c0;
+          text-decoration: none;
+
+          &:hover {
+            @include breakpoint('medium') {
+              text-decoration: underline;
+            }
+          }
         }
 
         &__email {
@@ -62,7 +69,7 @@
         overflow: hidden;
 
         img {
-          width: 100%;
+          @include size(100%);
         }
       }
     }
@@ -217,7 +224,7 @@
 
     blockquote {
       @include margin(0);
-      @include padding(rem(25) null rem(25) rem(33));
+      @include padding(rem(25) rem(33) rem(25) rem(33));
 
       @include breakpoint('large') {
         @include padding(rem(25) null rem(25) rem(66));
@@ -332,8 +339,10 @@
     }
 
     iframe {
-      width: 100%!important;
-      height: rem(440)!important;
+      &.youtube {
+        width: 100%!important;
+        height: rem(440)!important;
+      }
 
       &.instagram-media {
         width: 100%!important;

@@ -43,7 +43,7 @@
           </div>
           <div class="article__left__author__data">
             <h3 class="article__left__author__data__name"><?php the_author(); ?></h3>
-            <span class="article__left__author__data__twitter">@<?php the_author_meta('twitter'); ?></span>
+            <a href="https://twitter.com/<?php the_author_meta('twitter'); ?>" target="_blank" class="article__left__author__data__twitter">@<?php the_author_meta('twitter'); ?></a>
           </div>
         </div>
 
@@ -64,7 +64,13 @@
         <?php comments_template(); ?>
       </div>
       <div class="article__right">
+        <div class="article-top-banner">
+          <?php wp_banner_manager(4);?>
+        </div>
         <?php if ( function_exists( 'tptn_show_pop_posts' ) ) { tptn_show_pop_posts(); } ?>
+        <div class="article-bottom-banner">
+          <?php wp_banner_manager(5);?>
+        </div>
       </div>
     </section>
 

@@ -165,7 +165,7 @@
       <span class="change-slider__mobile__box__category"><?php the_title(); ?></span>
       <big class="change-slider__mobile__box__time">Hace <?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ); ?></big>
       <div class="change-slider__mobile__box__extra">
-        <p class="change-slider__mobile__box__extra__text"><?php dynamic_excerpt('100'); ?></p>
+        <p class="change-slider__mobile__box__extra__text"><?php the_excerpt(); ?></p>
       </div>
     </a>
   <?php endwhile; ?>
@@ -241,7 +241,7 @@
       </div>
     </div>
     <div class="domingo__mobile__wrapper">
-      <p class="domingo__mobile__wrapper__text">Suscribite a nuestro<br> newsletter y recibí noticias<br> sustentables pensadas para vos</p>
+      <p class="domingo__mobile__wrapper__text">Suscribite a nuestro newsletter y recibí noticias sustentables pensadas para vos</p>
     </div>
     <div class="domingo__mobile__email">
       <?php mymail_form( $id = 2 ) ?>
