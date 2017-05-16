@@ -25,7 +25,7 @@
           </span>
           <a href="<?php the_permalink(); ?>" class="herospace__data__title"><?php the_title() ?></a>
           <a href="<?php the_permalink(); ?>" class="herospace__data__description"><?php dynamic_excerpt2('210') ?></a>
-          <small class="herospace__data__author">Por <?php the_author(); ?></small>
+          <small class="herospace__data__author icon-arrow-next">Por <?php the_author(); ?></small>
         </div>
       </div>
     <?php endwhile; endif; ?>
@@ -57,7 +57,7 @@
                 ?>
               </span>
               <h3 class="herospace-slider__mobile__box__title"><?php the_title() ?></h3>
-              <small class="herospace-slider__mobile__box__author">Por <?php the_author(); ?></small>
+              <small class="herospace-slider__mobile__box__author ">Por <?php the_author(); ?></small>
             </div>
           </a>
         </div>
@@ -119,7 +119,7 @@
             </span>
             <h2 class="change__data__title"><?php the_title() ?></h2>
             <p class="change__data__description"><?php dynamic_excerpt2('210') ?></p>
-            <small class="change__data__author">Por <?php the_author(); ?></small>
+            <small class="change__data__author icon-arrow-next">Por <?php the_author(); ?></small>
           </div>
         </a>
       <?php endwhile; endif; ?>

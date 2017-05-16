@@ -108,8 +108,6 @@
 
       &:hover {
         @include breakpoint('large') {
-          //background: white;
-          //background-image: none!important;
           @include transition(all 0.3s ease-in-out);
         }
 
@@ -125,40 +123,6 @@
             }
           }
         }
-        // .herospace__data__category {
-        //   @include breakpoint('large') {
-        //     color: $change-text-title;
-        //     @include transition(color 0.3s ease-in-out);
-        //   }
-        // }
-
-        // .herospace__data__title {
-        //   @include breakpoint('large') {
-        //     color: $change-text-title;
-        //     @include transition(color 0.3s ease-in-out);
-        //   }
-        // }
-
-        // .herospace__data__description {
-        //   @include breakpoint('large') {
-        //     color: $change-text-desc;
-        //     @include transition(color 0.3s ease-in-out);
-        //   }
-        // }
-        //
-        // .herospace__data__author {
-        //   @include breakpoint('large') {
-        //     color: $change-text-desc;
-        //     @include transition(color 0.3s ease-in-out);
-        //   }
-        //
-        //   &:before {
-        //     @include breakpoint('large') {
-        //       @include filter(brightness(1) invert(0));
-        //       @include transition(all 0.3s ease-in-out);
-        //     }
-        //   }
-        // }
       }
     }
   }
@@ -284,13 +248,9 @@
       color: $herospace-text;
 
       &:before {
-        @include position(absolute, rem(3) null null 0);
-        content: '';
+        @include position(absolute, rem(-4) null null rem(-3));
         display: block;
-        @include size(rem(13) rem(11));
-        background: url($images_dir + 'article-arrow.png') 0 0 no-repeat;
-        background-size: contain;
-        @include filter(brightness(0) invert(1));
+        font-size: rem(23);
       }
     }
   }
@@ -352,9 +312,16 @@
 
     &__btn {
       display: block;
+      @include position(relative, null null null null);
       @include size(rem(20) rem(10));
-      background: url($images_dir + 'submit.png') center center no-repeat;
-      background-size: contain;
+      text-decoration: none;
+
+      &:before {
+        content: "\e904";
+        font-family: 'aconcagua' !important;
+        font-size: rem(23);
+        color: white;
+      }
 
       &.slick-disabled {
         opacity: 0.5;
@@ -369,6 +336,10 @@
         top: rem(20);
         right: rem(20);
       }
+
+      &:before {
+        @include position(relative, rem(-7) null null 0);
+      }
     }
 
     &__prev {
@@ -377,6 +348,10 @@
 
       @include breakpoint('large') {
         top: rem(20);
+      }
+
+      &:before {
+        @include position(relative, rem(-7) null null 0);
       }
     }
   }
@@ -424,12 +399,13 @@
       box-sizing: border-box;
 
       &:before {
-        content: '';
         display: block;
-        @include position(absolute, null rem(30) rem(30) null);
-        @include size(rem(13) rem(11));
-        background: url($images_dir + 'article-arrow.png') 0 0 no-repeat;
-        background-size: contain;
+        @include position(absolute, null rem(30) rem(25) null);
+
+        content: "\e904";
+        font-family: 'aconcagua' !important;
+        font-size: rem(23);
+        color: #0d0d0d;
       }
 
       &__category {

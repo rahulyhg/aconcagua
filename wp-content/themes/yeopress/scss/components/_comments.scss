@@ -75,7 +75,8 @@
 
     &__image {
       float: left;
-      @include size(rem(70) auto);
+      @include size(rem(50) auto);
+      margin-right: rem(20);
 
       img {
         @include size(rem(32));
@@ -124,13 +125,20 @@
   @include padding(rem(33) null null);
 
   a {
+    @include position(relative, null null null null);
     @include padding(null null null rem(25));
-    background: url($images_dir + 'feed.png') 0 rem(2) no-repeat;
-    background-size: rem(15);
 
     font-family: $mono;
     font-size: rem(10);
     color: #2f2f2f;
     text-decoration: none;
+
+    &:before {
+      @include position(absolute, rem(-8) null null rem(-10));
+      content: "\e909";
+      font-family: 'aconcagua' !important;
+      font-size: rem(33);
+      color: #2f2f2f;
+    }
   }
 }

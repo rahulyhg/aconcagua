@@ -8,16 +8,17 @@
   }
 
   &:before {
-    content: '';
+    content: "\e90c";
     display: block;
     @include position(absolute, null rem(30) rem(30) null);
-    @include size(rem(11) rem(14));
-    background: url('../images/footer-arrow-up.png') 0 0 no-repeat;
-    background-size: contain;
+
+    font-family: 'aconcagua' !important;
+    font-size: rem(23);
+    color: #59c1c0;
 
     @include breakpoint('large') {
-      right: rem(80);
-      bottom: rem(80);
+      right: rem(75);
+      bottom: rem(75);
     }
   }
 
@@ -266,34 +267,22 @@
 
       &__list {
         @include clearfix;
+        @include position(relative, null null null rem(-2));
 
         &__item {
           float: left;
           @include padding(null rem(15) null null);
 
           a {
+            @include position(relative, rem(-2) null null null);
             display: block;
             @include size(rem(20));
-          }
+            text-decoration: none;
 
-          &--fb {
-            a {
-              background: url($images_dir + 'facebook.png') center center no-repeat;
-              background-size: contain;
-            }
-          }
-
-          &--tw {
-            a {
-              background: url($images_dir + 'twitter.png') center center no-repeat;
-              background-size: contain;
-            }
-          }
-
-          &--inst {
-            a {
-              background: url($images_dir + 'instagram.png') center center no-repeat;
-              background-size: contain;
+            &:before {
+              @include position(relative, rem(-7) null null rem(-6));
+              font-size: rem(38);
+              color: white;
             }
           }
         }
@@ -482,15 +471,22 @@
           .cf-sb {
             @include position(absolute, null 0 rem(3) null);
 
+            &:before {
+              @include position(absolute, rem(5) null null rem(6));
+              display: block;
+              content: "\e904";
+              font-family: 'aconcagua' !important;
+              font-size: rem(30);
+              color: rgba(255, 255, 255, 0.4);
+              pointer-events: none;
+            }
+
             input {
               @include size(rem(40));
-              background: red;
               border: 0 none;
               cursor: pointer;
               text-indent: rem(-9999);
-              background: url($images_dir + 'article-arrow.png') center center no-repeat;
-              background-size: rem(17);
-              @include filter(brightness(0) invert(0.5));
+              background: transparent;
 
               &:focus {
                 outline: 0 none;
@@ -582,6 +578,7 @@
           @include padding(rem(30) null null);
 
           a {
+            @include position(relative, null null null null);
             display: inline-block;
             background: #59c1c0;
             @include padding(rem(15) rem(35));
@@ -592,8 +589,18 @@
             text-align: center;
             text-decoration: none;
 
+            &:before {
+              display: none;
+              @include position(absolute, rem(12) rem(20) null null);
+              font-size: rem(27);
+              color: white;
+
+              @include breakpoint('extra-large') {
+                display: block;
+              }
+            }
+
             @include breakpoint('extra-large') {
-              background: #59c1c0 url($images_dir + 'footer-download.png') rem(290) center no-repeat;
               @include size(rem(260) auto);
               text-align: left;
             }

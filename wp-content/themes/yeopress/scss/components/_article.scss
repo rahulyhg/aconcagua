@@ -38,11 +38,12 @@
   }
 
   &__image {
-    @include size(calc(100vw - 100px) rem(200));
+    @include size(calc(100vw - 80px) rem(200));
     overflow: hidden;
     background-color: #f6f6f6;
     background-position: center;
     background-size: cover;
+    @include margin(0 auto);
 
     @include breakpoint('medium') {
       width: 100%;

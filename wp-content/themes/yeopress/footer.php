@@ -63,7 +63,7 @@
               <div class="footer__bottom__wrapper__download">
                 <p class="footer__bottom__wrapper__download__description">Acceda al Media Kit<br> y conozca los formatos<br> disponibles</p>
                 <div class="footer__bottom__wrapper__download__link">
-                  <a href="#" target="_blank">Descargar Media Kit</a>
+                  <a href="#" target="_blank" class="icon-arrow-down">Descargar Media Kit</a>
                 </div>
               </div>
             </div>
@@ -75,9 +75,9 @@
         <p class="footer__down__copyright">Copyright <?= date('Y'); ?> <?php bloginfo('name'); ?></p>
         <div class="footer__down__social">
           <ul class="footer__down__social__list">
-            <li class="footer__down__social__list__item footer__down__social__list__item--fb"><a href="https://www.facebook.com/AconcaguaLat" target="_blank"></a></li>
-            <li class="footer__down__social__list__item footer__down__social__list__item--tw"><a href="https://twitter.com/AconcaguaLat" target="_blank"></a></li>
-            <li class="footer__down__social__list__item footer__down__social__list__item--inst"><a href="https://www.instagram.com/AconcaguaLat/" target="_blank"></a></li>
+            <li class="footer__down__social__list__item"><a href="https://www.facebook.com/AconcaguaLat" target="_blank" class="icon-facebook"></a></li>
+            <li class="footer__down__social__list__item"><a href="https://twitter.com/AconcaguaLat" target="_blank" class="icon-twitter"></a></li>
+            <li class="footer__down__social__list__item"><a href="https://www.instagram.com/AconcaguaLat/" target="_blank" class="icon-instagram"></a></li>
           </ul>
         </div>
       </div>

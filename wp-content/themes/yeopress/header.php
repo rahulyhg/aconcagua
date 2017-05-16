@@ -11,7 +11,7 @@
       <link rel="icon" href="wp-content/themes/yeopress/images/favicon.png" type="image/x-icon" />
       <link rel="shortcut icon" href="wp-content/themes/yeopress/images/favicon.png" type="image/x-icon" />
       <meta name="author" content="Patricio Testolin">
-      <meta name="google-site-verification" content="mBHffqf5-Me9U-77lo1GjUZL7jD5_jWn14NfhmhDAcY" />
+      <meta name="google-site-verification" content="miM-HeYubOPHdbwSZPTxGS8OIL5PQxYtTi04TEFp35w" />
       <?php wp_head() ?>
     </head>
     <body <?php body_class() ?>>
@@ -20,12 +20,12 @@
         <div class="header__wrapper">
           <div class="header__share">
             <ul class="header__share__list">
-              <li class="header__share__list__item header__share__list__item--fb"><a href="https://www.facebook.com/AconcaguaLat" target="_blank"></a></li>
-              <li class="header__share__list__item header__share__list__item--tw"><a href="https://twitter.com/AconcaguaLat" target="_blank"></a></li>
-              <li class="header__share__list__item header__share__list__item--inst"><a href="https://www.instagram.com/AconcaguaLat/" target="_blank"></a></li>
+              <li class="header__share__list__item"><a href="https://www.facebook.com/AconcaguaLat" target="_blank" class="icon-facebook"></a></li>
+              <li class="header__share__list__item"><a href="https://twitter.com/AconcaguaLat" target="_blank" class="icon-twitter"></a></li>
+              <li class="header__share__list__item"><a href="https://www.instagram.com/AconcaguaLat/" target="_blank" class="icon-instagram"></a></li>
             </ul>
             <div class="header__share__link">
-              <a href="#" class="header__share__link__icon"></a>
+              <a href="#" class="header__share__link__icon icon-arrow-next"></a>
             </div>
           </div>
           <nav class="header__nav">

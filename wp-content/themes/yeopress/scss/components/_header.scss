@@ -119,8 +119,19 @@
         display: block;
         @include position(relative, rem(7) null null rem(5));
         @include size(rem(13) rem(11));
-        background: url($images_dir + 'article-arrow.png') 0 0 no-repeat;
-        background-size: contain;
+        text-decoration: none;
+
+        &:focus {
+          &:before {
+            color: #0d0d0d;
+          }
+        }
+
+        &:before {
+          @include position(relative, rem(-7) null null rem(-6));
+          font-size: rem(25);
+          color: #0d0d0d;
+        }
       }
     }
 
@@ -133,27 +144,14 @@
 
         a {
           display: block;
+          @include position(relative, null null null null);
           @include size(rem(20));
-        }
+          text-decoration: none;
+          color: white;
 
-        &--fb {
-          a {
-            background: url($images_dir + 'facebook.png') center center no-repeat;
-            background-size: contain;
-          }
-        }
-
-        &--tw {
-          a {
-            background: url($images_dir + 'twitter.png') center center no-repeat;
-            background-size: contain;
-          }
-        }
-
-        &--inst {
-          a {
-            background: url($images_dir + 'instagram.png') center center no-repeat;
-            background-size: contain;
+          &:before {
+            font-size: rem(38);
+            @include position(absolute, rem(-7) null null rem(-9));
           }
         }
       }
