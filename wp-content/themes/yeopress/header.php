@@ -15,6 +15,19 @@
       <?php wp_head() ?>
     </head>
     <body <?php body_class() ?>>
+      <div class="overlay-menu">
+        <a href="#" class="overlay-menu__title icon-arrow-back"></a>
+        <div class="overlay-menu__wrapper">
+          <ul class="overlay-menu__list">
+            <li class="overlay-menu__list__item"><a href="/">Inicio</a></li>
+            <li class="overlay-menu__list__item"><a href="/hacer">Hacer</a></li>
+            <li class="overlay-menu__list__item"><a href="/pensar">Pensar</a></li>
+            <li class="overlay-menu__list__item"><a href="/explorar">Explorar</a></li>
+            <li class="overlay-menu__list__item"><a href="/cambiar">Cambiar</a></li>
+          </ul>
+        </div>
+      </div>
+
       <header class="header">
         <a class="header__lg" href="<?php bloginfo('url') ?>" title="<?php bloginfo('name') ?> - <?php bloginfo('description') ?>"></a>
         <div class="header__wrapper">

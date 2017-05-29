@@ -124,6 +124,21 @@ requirejs(['jquery', 'slick'], function( $ ) {
     }
   }
 
+  //Menu
+  $('.header__hamb').on('click', function(e) {
+    e.preventDefault();
+
+    $('.overlay-menu').addClass('overlay-menu--show');
+  });
+
+  $('.overlay-menu__title').on('click', function(e) {
+    e.preventDefault();
+
+    if($('.overlay-menu').hasClass('overlay-menu--show')) {
+      $('.overlay-menu').removeClass('overlay-menu--show');
+    }
+  });
+
   $('.footer__about__list__items--who').on('click', function(e) {
     e.preventDefault();
     $('html,body').animate({scrollTop: ($('.footer__down').offset().top) + 200}, 1000);

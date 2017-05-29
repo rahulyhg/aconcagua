@@ -1,0 +1,58 @@
+.overlay-menu {
+  @include position(fixed, 0 null null 100%);
+  z-index: 150;
+  @include size(100%);
+  background: rgba(255, 255, 255, 0.5);
+  @include transition(left 0.3s ease-in-out);
+
+  &--show {
+    left: 0;
+  }
+
+  &__title {
+    display: block;
+    @include position(relative, null null null null);
+    @include size(100% rem(80));
+    background: #c7c7c7;
+
+    text-decoration: none;
+
+    &:before {
+      @include position(absolute, 50% null null rem(20));
+      @include transform(translateY(-50%));
+      font-size: rem(30);
+      color: #2e2e2e;
+    }
+  }
+
+  &__wrapper {
+    @include position(relative, null null null rem(80));
+    @include size(calc(100% - 80px) 100%);
+    background: #c7c7c7;
+  }
+
+  &__list {
+    &__item {
+      @include size(100% rem(50));
+      border-bottom: rem(1) solid #959595;
+
+      &:last-child {
+        border-bottom: 0 none;
+      }
+
+      a {
+        display: block;
+        @include size(100%);
+        @include padding(null rem(20));
+        box-sizing: border-box;
+
+        font-family: $mono;
+        font-size: rem(14);
+        line-height: rem(50);
+        color: #2e2e2e;
+        text-decoration: none;
+        text-align: right;
+      }
+    }
+  }
+}

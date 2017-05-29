@@ -145,7 +145,7 @@
     </section>
 
     <section class="banner banner--bottom">
-      <?php wp_banner_manager(2);?>
+      <?php wp_banner_manager(9);?>
     </section>
   <?php endif; ?>
 
@@ -250,7 +250,7 @@
 
 
   <section class="banner banner--bottom">
-    <?php wp_banner_manager(2); ?>
+    <?php wp_banner_manager(10); ?>
   </section>
 
   <section class="domingo domingo--grey">

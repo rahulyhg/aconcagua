@@ -4,6 +4,7 @@
 @import 'reset', 'variables', 'mixin', 'fonts';
 @import "bourbon/bourbon";
 @import 'components/header',
+        'components/overlay-menu',
         'components/herospace',
         'components/footer',
         'components/change',
