@@ -33,9 +33,23 @@
     }
   }
 
+  &--static {
+    .herospace__data {
+      @include breakpoint('extra-large') {
+        padding-left: rem(70);
+        width: calc(60% + 20px);
+      }
+    }
+  }
   &--small {
     @include breakpoint('large') {
       @include size(100% rem(400));
+    }
+
+    .herospace__data {
+      @include breakpoint('extra-large') {
+        padding-left: rem(70);
+      }
     }
 
     .herospace__wrapper {
@@ -154,14 +168,18 @@
       left: calc(50% + -40px);
       bottom: inherit;
       @include transform(translate(-50%, -50%));
-      @include size(calc(50%) auto);
+      @include size(60% auto);
       @include padding(0);
+    }
+
+    @include breakpoint('extra-large') {
+      @include size(60% auto);
     }
 
     &:before {
       display: none;
       content: '';
-      @include position(absolute, rem(63) null null rem(-280));
+      @include position(absolute, rem(63) null null rem(-114));
       @include size(rem(50) rem(1));
       background: rgba(255, 255, 255, 0.2);
 
@@ -406,6 +424,10 @@
         font-family: 'aconcagua' !important;
         font-size: rem(23);
         color: #0d0d0d;
+
+        @include breakpoint('large') {
+          @include transition(color 0.3s ease-in-out);
+        }
       }
 
       &__category {
@@ -427,6 +449,10 @@
         @include breakpoint('small-landscape') {
           font-size: rem(20);
           line-height: rem(22);
+        }
+
+        @include breakpoint('large') {
+          @include transition(color 0.3s ease-in-out);
         }
       }
 
@@ -502,9 +528,17 @@
       @include padding(rem(33));
     }
 
+    @include breakpoint('extra-large') {
+      @include size(rem(315) rem(261));
+    }
+
     &:nth-child(3) {
       @include breakpoint('medium') {
         border-right: 0 none;
+      }
+
+      @include breakpoint('extra-large') {
+        width: rem(309);
       }
     }
 
@@ -519,6 +553,18 @@
     .herospace-slider__mobile__box__author {
       @include breakpoint('large') {
         left: rem(33);
+      }
+    }
+
+    &:hover {
+      &:before {
+        @include breakpoint('large') {
+          color: #59c1c0;
+        }
+      }
+
+      .herospace-slider__mobile__box__title {
+        color: #59c1c0;
       }
     }
   }
@@ -540,6 +586,8 @@
   }
 
   img {
-    @include size(rem(261));
+    max-width: rem(261)!important;
+    width: rem(261)!important;
+    height: rem(261)!important;
   }
 }

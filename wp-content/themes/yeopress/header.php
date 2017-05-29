@@ -37,7 +37,7 @@
             </ul>
           </nav>
         </div>
-        <a href="#" class="header__hamb"></a>
+        <a href="#" class="header__hamb icon-hamb"></a>
       </header>
 
     <div class="main">

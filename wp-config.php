@@ -27,10 +27,10 @@ if (!defined('DB_USER')) {
 	define('DB_USER', 'root');
 }
 if (!defined('DB_PASSWORD')) {
-	define('DB_PASSWORD', '');
+	define('DB_PASSWORD', 'root');
 }
 if (!defined('DB_HOST')) {
-	define('DB_HOST', '127.0.0.1');
+	define('DB_HOST', 'localhost');
 }
 
 /** Database Charset to use in creating database tables. */

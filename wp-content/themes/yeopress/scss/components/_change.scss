@@ -31,7 +31,6 @@
     @include breakpoint('medium') {
       @include size(calc(100% - 40px) rem(530));
       margin-left: rem(40);
-      //background: $change-bg;
     }
 
     @include breakpoint('large') {
@@ -124,14 +123,18 @@
     @include breakpoint('medium') {
       @include position(absolute, calc(50% + 20px) null null calc(50% + -40px));
       @include transform(translate(-50%, -50%));
-      @include size(calc(50%) auto);
+      @include size(calc(60%) auto);
       @include padding(0);
+    }
+
+    @include breakpoint('extra-large') {
+      @include size(60% auto);
     }
 
     &:before {
       display: none;
       content: '';
-      @include position(absolute, rem(63) null null rem(-280));
+      @include position(absolute, rem(63) null null rem(-114));
       @include size(rem(50) rem(1));
       background: rgba(255, 255, 255, 0.2);
 
@@ -355,7 +358,12 @@
       &__category {
         font-family: $mono;
         font-size: rem(13);
+        line-height: rem(15);
         color: $change-slider-category;
+
+        @include breakpoint('large') {
+          @include transition(color 0.3s ease-in);
+        }
       }
 
       &__time {
@@ -367,6 +375,10 @@
         font-weight: 100;
         font-size: rem(11);
         color: $change-slider-time;
+
+        @include breakpoint('extra-large') {
+          @include padding(rem(8) null null null);
+        }
       }
 
       &__extra {
@@ -382,6 +394,24 @@
           @include breakpoint('small-landscape') {
             font-size: rem(15);
             line-height: rem(20);
+          }
+
+          @include breakpoint('large') {
+            @include transition(color 0.3s ease-in);
+          }
+        }
+      }
+
+      &:hover {
+        .change-slider__mobile__box__category {
+          @include breakpoint('large') {
+            color: white;
+          }
+        }
+
+        .change-slider__mobile__box__extra__text {
+          @include breakpoint('large') {
+            color: white;
           }
         }
       }
@@ -456,15 +486,15 @@
 
     &:nth-child(4) {
       display: none;
-
-      @include breakpoint('large') {
-        display: block;
-      }
     }
 
     @include breakpoint('large') {
-      @include size(22% rem(261));
+      @include size(30% rem(261));
       @include padding(rem(33));
+    }
+
+    @include breakpoint('extra-large') {
+      width: rem(347);
     }
   }
 }

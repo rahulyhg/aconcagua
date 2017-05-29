@@ -129,15 +129,24 @@
 
         .mymail-submit-wrapper {
           float: left;
+          @include position(relative, null null null null);
           @include size(rem(36));
           @include margin(0);
+
+          &:before {
+            @include position(absolute, rem(2) null null rem(2));
+            display: block;
+            content: "\e904";
+            font-family: 'aconcagua' !important;
+            font-size: rem(32);
+            color: white;
+            pointer-events: none;
+          }
 
           input {
             @include size(rem(36));
             border: 0 none;
-            background: url($images_dir + 'submit.png') center center no-repeat;
-            background-size: rem(18);
-
+            background: transparent;
             text-indent: rem(-9999);
           }
         }
@@ -170,6 +179,7 @@
       }
 
       @include breakpoint('large') {
+        background-position: rem(-110) 0;
         @include size(66.66% rem(280));
         @include padding(rem(50) rem(80) rem(80) 33.33%);
       }
@@ -180,7 +190,12 @@
         letter-spacing: rem(3);
         color: #c7c7c7;
 
+        @include breakpoint('medium') {
+          display: none;
+        }
+
         @include breakpoint('large') {
+          display: block;
           font-size: rem(50);
         }
       }
@@ -191,6 +206,14 @@
         font-size: rem(16);
         line-height: rem(19);
         color: #333;
+
+        @include breakpoint('medium') {
+          display: none;
+        }
+
+        @include breakpoint('large') {
+          display: block;
+        }
       }
     }
 
@@ -298,15 +321,25 @@
 
           .mymail-submit-wrapper {
             float: left;
+            @include position(relative, null null null null);
             @include size(rem(36));
             @include margin(0);
             @include position(absolute, null rem(25) null null);
 
+            &:before {
+              @include position(absolute, rem(2) null null rem(2));
+              display: block;
+              content: "\e904";
+              font-family: 'aconcagua' !important;
+              font-size: rem(32);
+              color: white;
+              pointer-events: none;
+            }
+
             input {
               @include size(rem(36));
               border: 0 none;
-              background: url($images_dir + 'submit.png') center center no-repeat;
-              background-size: rem(18);
+              background: transparent;
               text-indent: rem(-9999);
             }
           }

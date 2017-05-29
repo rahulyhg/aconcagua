@@ -98,8 +98,8 @@
             <div class="related-posts__list__item__data">
               <div class="related-posts__list__item__content">
                 <h3 class="related-posts__list__item__data__title"><?php the_title(); ?></h3>
-                <p class="related-posts__list__item__data__description"><?php dynamic_excerpt('100') ?></p>
-                <span class="related-posts__list__item__data__author">Por <?php the_author(); ?></span>
+                <p class="related-posts__list__item__data__description"><?php the_excerpt() ?></p>
+                <span class="related-posts__list__item__data__author icon-arrow-next">Por <?php the_author(); ?></span>
               </div>
             </div>
           </a>
@@ -133,10 +133,10 @@
       <div class="domingo__desktop">
         <div class="domingo__desktop__content">
           <h3 class="domingo__desktop__content__title">Domingo</h3>
-          <p class="domingo__desktop__content__description">Periodismo positivo, contenidos inspiradores,<br> información para vivir mejor. En tu día de descanso,<br> lo mejor de Aconcagua en la palma de tu mano.</p>
+          <p class="domingo__desktop__content__description">Periodismo positivo, contenidos inspiradores, información para vivir mejor. En tu día de descanso, lo mejor de Aconcagua en la palma de tu mano.</p>
         </div>
         <div class="domingo__desktop__data">
-          <p class="domingo__desktop__data__text">Suscribite a nuestro<br> newsletter y recibí noticias<br> sustentables pensadas para vos</p>
+          <p class="domingo__desktop__data__text">Suscribite a nuestro newsletter y recibí noticias sustentables pensadas para vos</p>
           <div class="domingo__desktop__data__input">
             <?php mymail_form( $id = 2 ) ?>
           </div>
@@ -204,10 +204,10 @@
     <div class="domingo__desktop">
       <div class="domingo__desktop__content">
         <h3 class="domingo__desktop__content__title">Domingo</h3>
-        <p class="domingo__desktop__content__description">Periodismo positivo, contenidos inspiradores,<br> información para vivir mejor. En tu día de descanso,<br> lo mejor de Aconcagua en la palma de tu mano.</p>
+        <p class="domingo__desktop__content__description">Periodismo positivo, contenidos inspiradores, información para vivir mejor. En tu día de descanso, lo mejor de Aconcagua en la palma de tu mano.</p>
       </div>
       <div class="domingo__desktop__data">
-        <p class="domingo__desktop__data__text">Suscribite a nuestro<br> newsletter y recibí noticias<br> sustentables pensadas para vos</p>
+        <p class="domingo__desktop__data__text">Suscribite a nuestro newsletter y recibí noticias sustentables pensadas para vos</p>
         <div class="domingo__desktop__data__input">
           <?php mymail_form( $id = 2 ); ?>
         </div>
@@ -272,10 +272,10 @@
     <div class="domingo__desktop">
       <div class="domingo__desktop__content">
         <h3 class="domingo__desktop__content__title">Domingo</h3>
-        <p class="domingo__desktop__content__description">Periodismo positivo, contenidos inspiradores,<br> información para vivir mejor. En tu día de descanso,<br> lo mejor de Aconcagua en la palma de tu mano.</p>
+        <p class="domingo__desktop__content__description">Periodismo positivo, contenidos inspiradores, información para vivir mejor. En tu día de descanso, lo mejor de Aconcagua en la palma de tu mano.</p>
       </div>
       <div class="domingo__desktop__data">
-        <p class="domingo__desktop__data__text">Suscribite a nuestro<br> newsletter y recibí noticias<br> sustentables pensadas para vos</p>
+        <p class="domingo__desktop__data__text">Suscribite a nuestro newsletter y recibí noticias sustentables pensadas para vos</p>
         <div class="domingo__desktop__data__input">
           <?php mymail_form( $id = 2 ); ?>
         </div>

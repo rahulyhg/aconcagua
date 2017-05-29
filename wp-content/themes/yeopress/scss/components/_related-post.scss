@@ -7,6 +7,10 @@
     @include padding(rem(80) rem(80));
   }
 
+  @include breakpoint('extra-large') {
+    @include padding(rem(80) 0);
+  }
+
   &__title {
     h3 {
       @include padding(0 null rem(30));
@@ -46,8 +50,29 @@
         @include size(25% auto);
       }
 
+      @include breakpoint('extra-large') {
+        @include size(33.33% auto);
+      }
+
       a {
+        display: block;
         text-decoration: none;
+
+        &:hover {
+          .related-posts__list__item__data__title {
+            @include breakpoint('large') {
+              color:#59c1c0;
+            }
+          }
+
+          .related-posts__list__item__data__author {
+            &:before {
+              @include breakpoint('large') {
+                color:#59c1c0;
+              }
+            }
+          }
+        }
       }
 
       &__image {
@@ -70,6 +95,14 @@
           font-family: $platin-semibold;
           font-size: rem(18);
           color: #0d0d0d;
+
+          @include breakpoint('large') {
+            @include transition(color 0.3s ease-in-out);
+          }
+
+          @include breakpoint('extra-large') {
+            min-height: rem(44);
+          }
         }
 
         &__description {
@@ -91,12 +124,14 @@
           color: #0d0d0d;
 
           &:before {
-            @include position(absolute, rem(3) 0 null null);
-            content: '';
+            @include position(absolute, rem(-7) rem(5) null null);
             display: block;
-            @include size(rem(13) rem(11));
-            background: url($images_dir + 'article-arrow.png') 0 0 no-repeat;
-            background-size: contain;
+            font-size: rem(23);
+            color: #0d0d0d;
+
+            @include breakpoint('large') {
+              @include transition(color 0.3s ease-in-out);
+            }
           }
         }
       }

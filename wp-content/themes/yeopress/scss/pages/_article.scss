@@ -6,6 +6,10 @@
     @include padding(rem(50));
   }
 
+  @include breakpoint('extra-large') {
+    @include padding(rem(50) 0);
+  }
+
   &__left {
     @include breakpoint('medium') {
       float: left;
@@ -87,6 +91,13 @@
             font-family: $mono;
             font-size: rem(12);
             color: rgba(35, 35, 35, 0.5);
+            text-decoration: underline;
+
+            &:hover {
+              @include breakpoint('large') {
+                text-decoration: none;
+              }
+            }
           }
 
           span {
@@ -180,13 +191,17 @@
     @include breakpoint('medium') {
       float: left;
       @include size(calc(100% - 250px) auto);
-      @include padding(0  null null rem(50));
+      @include padding(0 null null rem(50));
       box-sizing: border-box;
     }
 
     @include breakpoint('large') {
       @include size(calc(100% - 550px) auto);
-      @include padding(0  rem(80) null rem(80));
+      @include padding(0 rem(80) null rem(80));
+    }
+
+    @include breakpoint('extra-large') {
+      @include padding(0 rem(40) null);
     }
 
     h2 {
@@ -240,6 +255,10 @@
 
         @include breakpoint('large') {
           max-width: 60%;
+        }
+
+        @include breakpoint('extra-large') {
+          max-width: 70%;
         }
 
         &:before {
@@ -313,9 +332,17 @@
           display: block;
           @include position(absolute, rem(40) rem(60) null null);
           @include size(rem(20) rem(10));
-          background: url($images_dir + 'submit.png') center center no-repeat;
-          background-size: contain;
-          @include transform(rotate(-180deg));
+          background: transparent;
+
+          &:before {
+            @include position(absolute, rem(-8) null null rem(-1));
+            display: block;
+            content: "\e900";
+            font-family: 'aconcagua' !important;
+            font-size: rem(24);
+            color: white;
+            pointer-events: none;
+          }
 
           @include breakpoint('large') {
             top: rem(48);
@@ -327,8 +354,17 @@
           display: block;
           @include position(absolute, rem(40) rem(15) null null);
           @include size(rem(20) rem(10));
-          background: url($images_dir + 'submit.png') center center no-repeat;
-          background-size: contain;
+          background: transparent;
+
+          &:before {
+            @include position(absolute, rem(-8) null null rem(-1));
+            display: block;
+            content: "\e904";
+            font-family: 'aconcagua' !important;
+            font-size: rem(24);
+            color: white;
+            pointer-events: none;
+          }
 
           @include breakpoint('large') {
             top: rem(48);

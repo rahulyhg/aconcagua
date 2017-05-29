@@ -8,6 +8,12 @@
     @include size(100% rem(80));
   }
 
+  @include breakpoint('extra-large') {
+    max-width: rem(1200);
+    left: 50%;
+    @include transform(translateX(-50%));
+  }
+
   &__lg {
     display: block;
     @include position(absolute, 0 null null 0);
@@ -81,11 +87,15 @@
     display: block;
     @include position(absolute, rem(10) rem(10) null null);
     @include size(rem(30));
-    background: url($images_dir + 'hamb.png') center center no-repeat;
-    background-size: contain;
+    text-decoration: none;
 
     @include breakpoint('medium') {
       display: none;
+    }
+
+    &:before {
+      font-size: rem(30);
+      color: #1a1a1a;
     }
   }
 

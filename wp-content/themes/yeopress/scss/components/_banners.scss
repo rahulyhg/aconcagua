@@ -1,7 +1,9 @@
 .banner {
   @include padding(rem(30));
+  display: none;
 
   @include breakpoint('medium') {
+    display: block;
     @include padding(rem(30));
   }
 
@@ -50,5 +52,26 @@
   img {
     width: 100%;
     max-width: 100%!important;
+  }
+}
+
+.banner-mobile {
+  @include padding(rem(30));
+
+  &--bottom {
+    padding-top: 0;
+  }
+
+  a {
+    display: block;
+    width: 100%;
+
+    img {
+      max-width: 100%!important;
+    }
+  }
+
+  @include breakpoint('medium') {
+    display: none;
   }
 }

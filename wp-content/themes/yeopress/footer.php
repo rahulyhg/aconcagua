@@ -33,7 +33,7 @@
       </div>
 
       <div class="footer__bottom">
-        <a href="#" class="footer__bottom__close"></a>
+        <a href="#" class="footer__bottom__close icon-close"></a>
         <div class="footer__bottom__wrapper">
           <div class="footer__bottom__wrapper__left">
             <ul class="footer__who">
@@ -80,6 +80,7 @@
             <li class="footer__down__social__list__item"><a href="https://www.instagram.com/AconcaguaLat/" target="_blank" class="icon-instagram"></a></li>
           </ul>
         </div>
+        <a href="#" class="footer__down__go icon-arrow-up"></a>
       </div>
 		</footer>
 		<?php wp_footer() ?>

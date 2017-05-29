@@ -125,16 +125,25 @@
         }
 
         .mymail-submit-wrapper {
+          @include position(relative, null null null null);
           float: left;
           @include size(rem(36));
           @include margin(0);
 
+          &:before {
+            @include position(absolute, rem(2) null null rem(2));
+            display: block;
+            content: "\e904";
+            font-family: 'aconcagua' !important;
+            font-size: rem(32);
+            color: white;
+            pointer-events: none;
+          }
+
           input {
             @include size(rem(36));
             border: 0 none;
-            background: url($images_dir + 'submit.png') center center no-repeat;
-            background-size: rem(18);
-
+            background: transparent;
             text-indent: rem(-9999);
           }
         }
@@ -284,15 +293,25 @@
 
           .mymail-submit-wrapper {
             float: left;
+            @include position(relative, null null null null);
             @include size(rem(36));
             @include margin(0);
             @include position(relative, null rem(26) null null);
 
+            &:before {
+              @include position(absolute, rem(2) null null rem(2));
+              display: block;
+              content: "\e904";
+              font-family: 'aconcagua' !important;
+              font-size: rem(32);
+              color: white;
+              pointer-events: none;
+            }
+
             input {
               @include size(rem(36));
               border: 0 none;
-              background: url($images_dir + 'submit.png') center center no-repeat;
-              background-size: rem(18);
+              background: transparent;
               text-indent: rem(-9999);
             }
           }

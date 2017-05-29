@@ -134,7 +134,7 @@
     text-decoration: none;
 
     &:before {
-      @include position(absolute, rem(-8) null null rem(-10));
+      @include position(absolute, rem(-9) null null rem(-10));
       content: "\e909";
       font-family: 'aconcagua' !important;
       font-size: rem(33);

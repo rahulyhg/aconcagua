@@ -93,6 +93,10 @@
   <?php } ?>
 <?php wp_reset_query(); ?>
 
+<section class="banner-mobile">
+  <?php wp_banner_manager(6);?>
+</section>
+
 <section class="change">
   <?php query_posts('category_name=herospace-think'); ?>
     <div class="change__container">
@@ -202,9 +206,13 @@
   </div>
 </section> -->
 
-  <section class="banner banner--bottom">
-    <?php wp_banner_manager(1);?>
-  </section>
+<section class="banner banner--bottom">
+  <?php wp_banner_manager(1);?>
+</section>
+
+<section class="banner-mobile banner-mobile--bottom">
+  <?php wp_banner_manager(8);?>
+</section>
 
 <section class="news">
   <div class="news__content">
@@ -216,7 +224,7 @@
           <div class="news__content__box__data">
             <h3 class="news__content__box__data__title"><?php the_title(); ?></h3>
             <p class="news__content__box__data__description"><?php the_excerpt(); ?></p>
-            <span class="news__content__box__data__author">Por <?php the_author(); ?></span>
+            <span class="news__content__box__data__author icon-camera">Por <?php the_author(); ?></span>
           </div>
         </div>
       <?php endwhile; ?>
@@ -251,10 +259,10 @@
   <div class="domingo__desktop">
     <div class="domingo__desktop__content">
       <h3 class="domingo__desktop__content__title">Domingo</h3>
-      <p class="domingo__desktop__content__description">Periodismo positivo, contenidos inspiradores,<br> información para vivir mejor. En tu día de descanso,<br> lo mejor de Aconcagua en la palma de tu mano.</p>
+      <p class="domingo__desktop__content__description">Periodismo positivo, contenidos inspiradores, información para vivir mejor. En tu día de descanso, lo mejor de Aconcagua en la palma de tu mano.</p>
     </div>
     <div class="domingo__desktop__data">
-      <p class="domingo__desktop__data__text">Suscribite a nuestro<br> newsletter y recibí noticias<br> sustentables pensadas para vos</p>
+      <p class="domingo__desktop__data__text">Suscribite a nuestro newsletter y recibí noticias sustentables pensadas para vos</p>
       <div class="domingo__desktop__data__input">
         <?php mymail_form( $id = 2 ) ?>
       </div>
@@ -265,4 +273,9 @@
 <section class="banner banner--bottom">
   <?php wp_banner_manager(2);?>
 </section>
+
+<section class="banner-mobile banner-mobile--bottom">
+  <?php wp_banner_manager(7);?>
+</section>
+
 <?php get_footer() ?>

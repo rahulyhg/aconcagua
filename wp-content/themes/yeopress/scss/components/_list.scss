@@ -9,6 +9,10 @@
       @include padding(null rem(55));
     }
 
+    @include breakpoint('extra-large') {
+      @include padding(null 0);
+    }
+
     &__item {
       @include breakpoint('medium') {
         float: left;
@@ -17,10 +21,6 @@
 
       @include breakpoint('large') {
         width: 33.33%;
-      }
-
-      @include breakpoint('extra-large') {
-        width: 25%;
       }
     }
   }

@@ -46,11 +46,11 @@
 
 @font-face {
   font-family: 'aconcagua';
-  src:  url('../fonts/icons/aconcagua.eot?q6pufu');
-  src:  url('../fonts/icons/aconcagua.eot?q6pufu#iefix') format('embedded-opentype'),
-    url('../fonts/icons/aconcagua.ttf?q6pufu') format('truetype'),
-    url('../fonts/icons/aconcagua.woff?q6pufu') format('woff'),
-    url('../fonts/icons/aconcagua.svg?q6pufu#aconcagua') format('svg');
+  src:  url('../fonts/icons/aconcagua.eot?taegfy');
+  src:  url('../fonts/icons/aconcagua.eot?taegfy#iefix') format('embedded-opentype'),
+    url('../fonts/icons/aconcagua.ttf?taegfy') format('truetype'),
+    url('../fonts/icons/aconcagua.woff?taegfy') format('woff'),
+    url('../fonts/icons/aconcagua.svg?taegfy#aconcagua') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -70,6 +70,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-hamb:before {
+  content: "\e90d";
+}
+.icon-camera:before {
+  content: "\e90e";
+}
+.icon-close:before {
+  content: "\e90f";
+}
 .icon-arrow-back:before {
   content: "\e900";
 }

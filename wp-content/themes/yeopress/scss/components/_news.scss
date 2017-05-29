@@ -6,7 +6,7 @@
   }
 
   @include breakpoint('large') {
-    padding-bottom: rem(130);
+    padding-bottom: rem(50);
   }
 
   &__wrapper {
@@ -15,6 +15,7 @@
 
   &__content {
     @include breakpoint('medium') {
+      overflow-x: hidden;
       @include position(relative, null null null);
     }
 
@@ -61,27 +62,27 @@
 
         @include breakpoint('medium') {
           display: none;
-          @include position(absolute, null 0 rem(-30) null);
+          @include position(absolute, null 0 0 null);
           @include size(60% rem(250));
         }
 
         @include breakpoint('large') {
-          @include position(absolute, null 0 rem(-80) null);
-          //@include size(40% rem(320));
-          @include size(40% rem(320));
-          @include padding(rem(66));
+          @include size(50% rem(230));
+          @include padding(rem(45) rem(66) rem(30));
           @include margin(0);
         }
 
         &__title {
-          font-family: $platin-semibold;
-          font-size: rem(24);
-          line-height: rem(28);
+          font-family: $platin;
+          font-style: italic;
+          font-weight: 100;
+          font-size: rem(18);
+          line-height: rem(20);
           color: white;
 
           @include breakpoint('small-landscape') {
-            font-size: rem(28);
-            line-height: rem(30);
+            font-size: rem(20);
+            line-height: rem(22);
           }
         }
 
@@ -98,8 +99,8 @@
             display: block;
             @include padding(rem(30) null null);
 
-            font-size: rem(17);
-            line-height: rem(25);
+            font-size: rem(15);
+            line-height: rem(20);
           }
 
           @include breakpoint('medium') {
@@ -108,6 +109,7 @@
 
           @include breakpoint('large') {
             //width: 60%;
+            @include padding(rem(20) null);
           }
         }
 
@@ -118,15 +120,13 @@
           color: white;
 
           @include breakpoint('large') {
-            @include position(absolute, null null rem(66) rem(90));
+            @include position(relative, null null 0 rem(25));
           }
 
           &:before {
-            @include position(absolute, 0 null null rem(-25));
-            content: '';
-            @include size(rem(18) rem(15));
-            background: url($images_dir + 'news-icon.png') center center no-repeat;
-            background-size: rem(18);
+            @include position(absolute, rem(-3) null null rem(-25));
+
+            font-size: rem(21);
           }
         }
       }
@@ -143,12 +143,14 @@
     @include breakpoint('medium') {
       top: inherit;
       bottom: rem(60);
+      left: rem(-30);
       @include size(rem(170) rem(60));
     }
 
     @include breakpoint('large') {
       @include size(rem(200) rem(75));
       bottom: rem(165);
+      left: 0;
       @include margin(0);
     }
 

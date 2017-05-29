@@ -7,25 +7,16 @@
     @include padding(rem(80));
   }
 
-  &:before {
-    content: "\e90c";
-    display: block;
-    @include position(absolute, null rem(30) rem(30) null);
-
-    font-family: 'aconcagua' !important;
-    font-size: rem(23);
-    color: #59c1c0;
-
-    @include breakpoint('large') {
-      right: rem(75);
-      bottom: rem(75);
-    }
-  }
-
   &__top {
     @include breakpoint('medium') {
       @include padding(null null rem(60));
       @include clearfix;
+    }
+
+    @include breakpoint('extra-large') {
+      max-width: rem(1200);
+      @include margin(0 auto);
+      box-sizing: border-box;
     }
   }
 
@@ -131,16 +122,34 @@
 
         .mymail-submit-wrapper {
           float: left;
+          @include position(relative, null null null null);
           @include size(rem(36));
           @include margin(0);
+
+          &:before {
+            @include position(absolute, rem(2) null null rem(2));
+            display: block;
+            content: "\e904";
+            font-family: 'aconcagua' !important;
+            font-size: rem(32);
+            color: white;
+            pointer-events: none;
+            @include transition(color 0.3s ease-in-out);
+          }
 
           input {
             @include size(rem(36));
             border: 0 none;
-            background: url($images_dir + 'submit.png') center center no-repeat;
-            background-size: rem(18);
-
             text-indent: rem(-9999);
+            background: transparent;
+          }
+
+          &:hover {
+            &:before {
+              @include breakpoint('large') {
+                color: #59c1c0;
+              }
+            }
           }
         }
       }
@@ -227,11 +236,18 @@
   }
 
   &__down {
+    @include position(relative, null null null null);
     @include clearfix;
+
+    @include breakpoint('extra-large') {
+      max-width: rem(1200);
+      @include margin(0 auto);
+      box-sizing: border-box;
+    }
 
     &__copyright {
       @include position(relative, null null null null);
-      @include padding(null null null rem(30));
+      @include padding(null null null rem(20));
 
       font-family: $arial;
       font-size: rem(12);
@@ -244,16 +260,13 @@
       }
 
       &:before {
-        content: '';
         display: block;
-        @include position(absolute, rem(-2) null null 0);
+        content: "\e906";
+        font-family: 'aconcagua' !important;
+        font-size: rem(23);
+        color: white;
+        @include position(absolute, rem(-5) null null rem(-6));
         @include size(rem(20));
-        background: url($images_dir + 'ft-icon.png') center center no-repeat;
-        background-size: rem(16);
-
-        @include breakpoint('medium') {
-          top: rem(-4);
-        }
       }
     }
 
@@ -283,7 +296,47 @@
               @include position(relative, rem(-7) null null rem(-6));
               font-size: rem(38);
               color: white;
+              @include transition(color 0.3s ease-in-out);
             }
+
+            &:hover {
+              &:before {
+                @include breakpoint('large') {
+                  color: #59c1c0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__go {
+      display: block;
+      @include position(absolute, null 0 0 null);
+      @include size(rem(20));
+      text-decoration: none;
+
+      &:before {
+        content: "\e90c";
+        display: block;
+        @include position(relative, rem(-2) null null rem(4));
+
+        font-family: 'aconcagua' !important;
+        font-size: rem(23);
+        color: #59c1c0;
+        @include transition(color 0.3s ease-in-out);
+
+        @include breakpoint('large') {
+          right: rem(75);
+          bottom: rem(75);
+        }
+      }
+
+      &:hover {
+        &:before {
+          @include breakpoint('large') {
+            color: white;
           }
         }
       }
@@ -295,6 +348,11 @@
     @include position(relative, null null null null);
     @include padding(rem(40) null rem(60));
 
+    @include breakpoint('extra-large') {
+      max-width: rem(1200);
+      @include margin(0 auto);
+      box-sizing: border-box;
+    }
     // @include breakpoint('extra-large') {
     //   padding-bottom: 0;
     // }
@@ -303,8 +361,13 @@
       @include position(absolute, 0 0 null null);
       display: block;
       @include size(rem(25));
-      background: url($images_dir + 'footer-close.png') center center no-repeat;
-      background-size: rem(12);
+      text-decoration: none;
+
+      &:before {
+        @include position(relative, rem(3) null null rem(3));
+        font-size: rem(19);
+        color: rgba(255, 255, 255, 0.8);
+      }
     }
 
     &__wrapper {
