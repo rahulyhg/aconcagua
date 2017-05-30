@@ -581,7 +581,7 @@ img {
   padding-left: 1.25rem;
   box-sizing: border-box;
   font-family: "SpaceMono-Bold";
-  font-size: 0.875rem;
+  font-size: 1.0625rem;
   line-height: 3.125rem;
   color: #2e2e2e;
   text-decoration: none;
@@ -3652,9 +3652,6 @@ img {
   max-width: 100% !important;
 }
 
-.article-bottom-banner {
-  padding-top: 1.875rem;
-}
 @media (min-width: 768px) {
   .article-bottom-banner {
     padding-top: 0;

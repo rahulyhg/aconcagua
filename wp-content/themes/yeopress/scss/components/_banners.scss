@@ -47,8 +47,6 @@
 }
 
 .article-bottom-banner {
-  @include padding(rem(30) null null);
-
   @include breakpoint('medium') {
     @include padding(0 null null);
   }
